@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.5">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Community Health – Organization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ff4371ef257df69894857e99c6ad0d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7eaa4246c4e146e9d203f8f9b1b84731.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script type="ojs-define">
+{"contents":[{"name":"models_in","value":{"package":["vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete"],"name":["final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy","final","collab_devel_index","comm_serv_support","comm_welcoming","community_activity","dev_responsiveness","oss_compliance","proj_awareness","proj_engagement","starter_health","viability_community","viability_gov","viability_starter","viability_strategy"],"value":[19.9059,6.0285,0.9601,0.8174,2.6156,1.1486,0.2305,2.0957,2.3933,0.7362,2.0623,0.2433,1.7905,-1.2162,18.4602,1.4891,-0.0606,0.6014,2.4714,2.3296,0.3626,3.263,2.6622,1.7498,2.1674,0.5305,1.7098,-0.816,14.6401,2.0373,0.4532,0.2843,1.9284,2.9448,0.7197,0.6196,1.8724,2.3555,1.6929,-0.1848,1.6827,-1.7658,14.1193,1.704,-0.0619,-0.8142,2.549,1.0584,0.6276,1.7848,2.4897,0.6921,2.5034,0.2603,2.3536,-1.0275,13.8131,2.2337,-0.0732,0.2617,1.7082,2.0028,0.4,2.385,1.9299,1.9809,1.397,-0.7007,1.2096,-0.9219,12.2131,0.8797,0.3223,1.0513,1.3569,3.0561,0.4321,-0.341,1.5435,0.4469,1.3313,0.4013,1.3548,0.3779,11.4334,2.5771,-0.0221,-0.9182,2.6869,0.5728,0.1554,1.3437,2.586,0.6427,1.6243,-0.4352,1.6758,-1.0559,9.9635,0.6611,-0.0498,0.6342,1.1606,1.8676,-0.2561,0.8122,1.4753,2.0353,1.5381,-0.2852,1.4603,-1.0901,9.5031,2.6429,-0.0742,0.0594,2.3219,0.9895,-0.5305,0.7219,1.9513,1.4399,1.2749,-0.7221,1.3891,-1.9609,8.8678,0.6836,-0.072,-0.6334,1.5233,0.5327,0.4018,2.0114,1.5432,0.5236,1.9163,-0.0714,1.4347,-0.9257,8.2202,0.6797,-0.0721,0.1791,1.0941,0.9418,0.5856,1.0942,0.977,2.3555,1.1391,-0.2282,1.2403,-1.7658,7.2579,0.5653,-0.0748,0.9498,0.4053,0.2916,-0.7525,1.0328,0.8049,0.4469,1.6981,0.1374,1.3752,0.3779,6.2838,0.7868,-0.0753,-1.0885,1.8013,0.2276,0.4996,0.1905,1.704,-0.4579,1.5657,0.0279,1.6116,-0.5096,6.2614,0.2064,-0.0723,0.5091,0.318,2.5171,0.4,-0.8724,0.6535,0.4469,0.7481,0.053,0.9761,0.3779,6.1207,0.8565,-0.0684,0.5463,1.3226,1.5713,-0.0291,-0.8724,1.0649,0.4469,0.5569,-0.2551,0.6024,0.3779,5.3956,0.904,-0.0758,-0.2715,1.2173,0.5707,-0.1817,0.1905,1.3179,0.0008,0.8524,-0.1376,0.7619,0.2466,4.2118,0.4916,-0.0748,0.1898,1.3268,0.6467,-1.0385,-0.8724,1.6614,-0.6872,1.1203,-0.3137,1.3839,0.3779,3.5768,0.4321,-0.0711,-0.0561,0.3147,-0.5247,0.3268,0.9661,0.4361,0.4469,0.6826,-0.2972,0.4115,0.5091,3.5063,0.3346,-0.026,1.7652,-0.208,-0.5247,0.6251,-0.8724,0.0866,0.4469,0.1859,1.0864,0.3602,0.2466,3.2911,0.4191,-0.0757,-0.4435,-0.3492,-0.5247,1.4623,1.151,-0.6015,3.4623,0.7872,0.1581,0.8547,-3.0091,2.084,0.2327,-0.0746,0.4462,-0.2788,-0.5247,0.8501,0.6196,-0.1038,0.4469,0.0105,0.0454,0.168,0.2466,1.6688,0.509,-0.0754,0.1569,0.3194,-0.1613,0.5729,-0.0301,0.3037,2.2602,0.3011,-1.1508,0.3221,-1.6588,1.1624,0.1905,-0.0757,-0.9298,0.989,1.157,-0.1362,0.9661,0.4998,1.7539,-0.1486,-0.8409,-0.1705,-2.0921,1.0404,-0.0344,-0.0739,-0.1527,0.2645,-0.5247,0.8501,-0.8724,0.4826,0.4469,0.4858,-0.7669,0.6888,0.2466,0.5213,0.0849,-0.0755,-1.0017,0.7625,0.6888,-0.2769,0.6196,0.8329,1.6555,0.4479,-1.2353,0.3868,-2.3681,0.4703,0.4714,-0.0754,0.2776,-0.208,-0.5247,-0.0291,-0.8724,0.0204,0.4469,0.0105,0.2761,0.168,0.5091,0.2535,-0.523,-0.0592,0.8734,-0.495,-0.5247,0.3276,0.5014,-0.5576,-0.488,-0.1394,1.1207,-0.1605,0.3779,0.189,-0.523,-0.0592,0.8734,-0.6551,-0.5247,0.2184,0.6196,-0.5576,-0.488,-0.2894,1.2261,-0.1605,0.5091,-0.0102,-0.523,-0.0758,-1.3866,-0.495,-0.5247,0.7442,1.5956,-0.5576,-0.488,0.3609,0.5795,0.3876,0.3779,-0.0102,-0.523,-0.0758,-1.3866,-0.495,-0.5247,0.7442,1.5956,-0.5576,-0.488,0.3609,0.5795,0.3876,0.3779,-0.3403,0.1453,-0.0757,-0.3091,-0.2481,-0.5247,0.4,-0.341,-0.4259,0.4469,0.0105,0.0355,0.168,0.3779,-0.3833,-0.523,-0.0592,0.8734,-0.6551,-0.5247,0.175,0.3616,-0.5576,-0.488,-0.2894,1.0864,-0.1605,0.3779,-0.4421,-0.1362,-0.0757,-1.3458,0.1693,-0.5247,0.5861,1.2039,-0.2429,-0.488,0.4016,-0.5826,0.2151,0.3779,-0.6057,-0.3998,-0.0758,-1.4026,-0.3349,-0.5247,0.5921,2.2408,-0.5576,1.7523,0.3367,-0.2908,0.1969,-2.1384,-0.6654,-0.6461,-0.0592,0.8734,-0.4014,-0.5247,0.2684,-0.341,-0.5576,-0.488,-0.0517,0.9139,-0.1605,0.5091,-0.7061,-0.523,-0.0592,0.8734,-0.5282,-0.5247,0.1368,-0.0301,-0.5576,-0.488,-0.2894,1.0666,-0.1605,0.3779,-0.9387,-0.523,-0.0592,0.8734,-0.6551,-0.5247,0.6251,-0.341,-0.5576,-0.488,-0.2894,0.7834,-0.1605,0.3779,-0.9583,-0.523,-0.0592,0.8734,-0.6551,-0.5247,0.2184,-0.0301,-0.5576,-0.488,-0.2894,0.8597,-0.1605,0.3779,-1.2368,-0.4642,-0.0592,0.8734,-0.5751,-0.5247,0.8501,-0.8724,-0.5576,-0.488,-0.2894,0.6529,-0.1605,0.3779,-1.2906,-0.523,-0.0592,0.8734,-0.495,-0.5247,0.6251,-0.8724,-0.5576,-0.488,-0.1394,0.6529,-0.1605,0.3779,-1.5403,-0.523,-0.0758,-1.404,-0.495,-0.5247,-0.0883,1.8751,-0.5576,-0.488,-0.1394,0.5318,-0.1605,0.5091,-1.7016,-0.1382,-0.0757,0.3778,-0.5751,-0.5247,0.2184,-0.8724,-0.5576,0.4469,-0.2894,-0.0602,-0.1605,0.5091,-1.7126,-0.523,-0.0592,0.8734,-0.4482,-0.5247,0.175,-0.8724,-0.5576,-0.488,-0.2894,0.6529,-0.1605,0.5091,-1.7323,-0.523,-0.0592,0.8734,-0.6551,-0.5247,0.4935,-0.8724,-0.5576,-0.488,-0.2894,0.6529,-0.1605,0.3779,-1.7671,-0.523,-0.0592,0.8734,-0.495,-0.5247,0.0174,-0.8724,-0.5576,-0.488,-0.1394,0.6529,-0.1605,0.5091,-1.8257,-0.523,-0.0592,0.8734,-0.6551,-0.5247,0.4,-0.8724,-0.5576,-0.488,-0.2894,0.6529,-0.1605,0.3779,-1.8555,-0.6461,-0.0592,0.8734,-0.6551,-0.5247,0.4935,-0.8724,-0.5576,-0.488,-0.2894,0.6529,-0.1605,0.3779,-2.3302,-0.523,-0.0757,-1.0294,-0.3213,-0.5247,0.3276,0.3616,-0.382,-0.488,-0.0517,-0.1033,-0.1605,0.6404,-2.4925,-0.3998,-0.0757,-0.9724,-0.5751,-0.5247,-0.2648,0.893,-0.4698,-0.488,-0.2894,0.1943,-0.1605,0.6404,-2.8284,-0.523,-0.0758,-1.4606,-0.495,-0.5247,0.6251,0.7219,-0.5576,-0.488,-0.1394,-0.2599,-0.1605,0.5091,-3.0323,-0.3998,-0.0752,-1.7086,0.9292,0.5636,-0.2011,0.7219,0.7258,0.4341,-0.2768,-1.6101,-0.1468,-1.9884,-3.0653,-0.523,-0.0757,-0.9226,-0.6551,-0.5247,-0.037,0.5014,-0.5576,-0.488,-0.2946,0.1688,-0.1663,0.5091,-3.6277,-0.1654,-0.0755,-0.5941,-0.2012,-0.5247,-1.4381,1.7605,-0.2355,0.4469,-1.0055,-0.8987,-1.2055,0.5091,-3.6448,-0.6461,-0.0757,-0.9632,-0.6551,-0.5247,0.8501,-0.341,-0.5576,-0.488,-0.2894,-0.1713,-0.1605,0.3779,-3.6915,-0.0479,-0.0756,-0.5121,-0.7197,-0.5247,0.4,-0.8724,-0.5576,-0.488,-0.2894,-0.2215,-0.1605,0.3779,-3.9099,-0.523,-0.0757,-0.7493,-0.6551,-0.5247,0.8501,-0.8724,-0.5576,-0.488,-0.2894,-0.3734,-0.1605,0.5091,-4.0822,-0.523,-0.0757,-0.9304,-0.415,-0.5247,0.8501,-0.8724,-0.4698,-0.488,-0.2894,-0.4301,-0.1605,0.2466,-4.1619,-0.6461,-0.0758,-1.3796,-0.6551,-0.5247,0.0434,0.3616,-0.5576,-0.488,-0.2894,-0.2991,-0.1605,0.5091,-4.205,-0.6461,-0.0758,-1.4972,-0.6551,-0.5247,0.4935,0.3616,-0.5576,-0.488,-0.2894,-0.5434,-0.1605,0.3779,-4.7145,-0.523,-0.0758,-1.0729,-0.5751,-0.5247,0.6251,-0.8724,-0.5576,-0.488,-0.2894,-0.5781,-0.1605,0.3779,-4.731,-0.523,-0.0758,-1.4975,-0.495,-0.5247,0.0174,-0.341,-0.5576,-0.488,-0.1394,-0.455,-0.1605,0.5091,-4.9328,-0.523,-0.0757,-0.9754,-0.6551,-0.5247,0.3276,-0.8724,-0.5576,-0.488,-0.2894,-0.5164,-0.1605,0.3779,-5.0887,-0.6461,-0.0757,-0.6466,-0.6551,-0.5247,0.6251,-0.8724,-0.5576,-0.488,-0.2894,-1.1754,-0.1605,0.3779,-5.0893,-0.523,-0.0758,-1.4744,-0.6551,-0.5247,-0.1679,-0.0301,-0.5576,-0.488,-0.2894,-0.3894,-0.1605,0.2466,-5.1002,-0.523,-0.0758,-1.062,-0.5282,-0.5247,0.0434,-0.8724,-0.5576,-0.488,-0.2894,-0.5711,-0.1605,0.5091,-5.5373,-0.523,-0.0758,-1.4261,-0.6551,-0.5247,0.3276,-0.8724,-0.5576,-0.488,-0.2894,-0.8014,-0.1605,0.5091,-5.6516,-0.523,-0.0757,-0.8196,-0.5751,-0.5247,-0.2435,-0.8724,-0.5576,-0.488,-0.4632,-0.5357,-0.351,0.3779,-5.7195,-0.523,-0.0758,-1.3672,-0.3213,-0.5247,-0.7214,1.3437,-0.5576,2.1608,-0.499,-1.3861,-0.6506,-2.5972,-5.7397,-0.523,-0.0758,-1.476,-0.6551,-0.5247,-0.0291,-0.8724,-0.5576,-0.488,-0.2894,-0.5972,-0.1605,0.5091,-6.1341,-0.523,-0.0758,-1.3395,-0.4482,-0.5247,-0.5191,0.9661,-0.5576,2.6167,-0.4388,-1.6924,-0.4885,-3.1093,-8.5854,-0.523,-0.0758,-1.3842,-0.6551,-0.5247,-1.1347,1.2999,-0.5576,2.458,-1.2242,-2.1481,-1.1848,-2.9311,-9.3609,-0.523,-0.0758,-1.3208,-0.495,-0.5247,-1.7937,1.3437,-0.5576,2.4484,-1.3152,-2.1782,-1.4487,-2.9203,-9.4486,-0.523,-0.0758,-1.4078,-0.415,-0.5247,-2.0533,0.8122,-0.5576,-0.488,-1.5364,-1.3662,-1.6911,0.3779,-9.7228,-0.523,-0.0758,-1.3484,-0.5751,-0.5247,-1.6984,0.1905,-0.5576,-0.488,-1.4893,-1.5356,-1.4753,0.3779,-13.3693,-0.523,-0.0592,0.8734,-0.495,-0.5247,-3.6309,-0.8724,-0.5576,-0.488,-2.7769,-1.6426,-3.0503,0.3779,-14.7871,-0.523,-0.0758,-1.3344,-0.6551,-0.5247,-3.0074,0.8122,-0.5576,2.5577,-2.4386,-3.482,-2.5154,-3.0431,-19.1271,-0.523,-0.0758,-1.4722,-0.3681,-0.5247,-4.7518,0.3616,-0.5576,-0.488,-3.5465,-3.5692,-3.9896,0.3779]}}]}
+</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Organization</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./models.html" aria-current="page"> 
+<span class="menu-text">Community Health</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./network.html"> 
+<span class="menu-text">Network</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/repometrics">
+ <span class="dropdown-text">Source Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/repometrics/issues/new">
+ <span class="dropdown-text">Request a Feature</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aggregate-community-health" id="toc-aggregate-community-health" class="nav-link active" data-scroll-target="#aggregate-community-health">Aggregate Community Health</a></li>
+  <li><a href="#individual-models-of-community-health" id="toc-individual-models-of-community-health" class="nav-link" data-scroll-target="#individual-models-of-community-health">Individual models of community health</a></li>
+  <li><a href="#community-health-for-individual-repositories" id="toc-community-health-for-individual-repositories" class="nav-link" data-scroll-target="#community-health-for-individual-repositories">Community health for individual repositories</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Community Health</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page summarises scores for the various <a href="https://chaoss.community/kb-metrics-and-metrics-models/">CHAOSS (<em>Community Health Analytics in Open Source Software</em>) models</a> for each repository. The CHAOSS project has developed a large range of individual metrics of community health. These metrics are aggregated into <a href="https://chaoss.community/kbtopic/all-metrics-models/">conceptual <em>models</em></a> which aim to synthesise prominent aspects of community health. This page provides insights into a range of those models, assessed for each repository in the <code>epiverse-trace</code> and <code>reconhub</code> GitHub organizations.</p>
+<section id="aggregate-community-health" class="level2">
+<h2 class="anchored" data-anchor-id="aggregate-community-health">Aggregate Community Health</h2>
+<p>This page shows aggregate community health scores for all repositories within the <code>reconhub</code> and <code>epiverse-trace</code> organizations. Higher values describe repositories with greater community health scores. Values for individual models are standardised across all repositories to have mean values of zero and standard deviations of one. These results are aggregated across thirteen distinct models, leading to maximal aggregated values slightly exceeding that value.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="44" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 43;"><span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>models_all <span class="op">=</span> {</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(models_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>models_final <span class="op">=</span> models_all<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">name</span><span class="op">.</span><span class="fu">includes</span>(<span class="st">"final"</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>models_len <span class="op">=</span> models_final<span class="op">.</span><span class="at">length</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="56" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 55;"><span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> models_len<span class="op">,</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Community Health"</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(models_final<span class="op">,</span> {</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(models_final<span class="op">,</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(models_final<span class="op">,</span> {</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="individual-models-of-community-health" class="level2">
+<h2 class="anchored" data-anchor-id="individual-models-of-community-health">Individual models of community health</h2>
+<p>The following section shows values for each individual model of community health for all repositories.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="110" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 109;"><span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>commHealthVars <span class="op">=</span> [</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>    <span class="st">"collab_devel_index"</span><span class="op">,</span></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>    <span class="st">"comm_serv_support"</span><span class="op">,</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>    <span class="st">"comm_welcoming"</span><span class="op">,</span></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">"community_activity"</span><span class="op">,</span></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dev_responsiveness"</span><span class="op">,</span></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>    <span class="st">"oss_compliance"</span><span class="op">,</span></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>    <span class="st">"proj_awareness"</span><span class="op">,</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>    <span class="st">"proj_engagement"</span><span class="op">,</span></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>    <span class="st">"starter_health"</span><span class="op">,</span></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>    <span class="st">"viability_community"</span><span class="op">,</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>    <span class="st">"viability_gov"</span><span class="op">,</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>    <span class="st">"viability_starter"</span><span class="op">,</span></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>    <span class="st">"viability_strategy"</span></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>viewof commHealthVar <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>    commHealthVars<span class="op">,</span></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>    { <span class="dt">multiple</span><span class="op">:</span> <span class="st">"false"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Community Health Variable"</span> }</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="131" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 130;"><span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>models_filtered <span class="op">=</span> models_all<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">name</span><span class="op">.</span><span class="fu">includes</span>(commHealthVar)</span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="138" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 137;"><span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> models_len<span class="op">,</span></span>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb5-147"><a href="#cb5-147" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Community Health"</span></span>
+<span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(models_filtered<span class="op">,</span> {</span>
+<span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb5-155"><a href="#cb5-155" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb5-156"><a href="#cb5-156" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb5-157"><a href="#cb5-157" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(models_filtered<span class="op">,</span></span>
+<span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb5-167"><a href="#cb5-167" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb5-169"><a href="#cb5-169" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(models_filtered<span class="op">,</span> {</span>
+<span id="cb5-170"><a href="#cb5-170" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
+<span id="cb5-171"><a href="#cb5-171" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb5-172"><a href="#cb5-172" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb5-173"><a href="#cb5-173" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb5-174"><a href="#cb5-174" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb5-175"><a href="#cb5-175" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb5-176"><a href="#cb5-176" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb5-177"><a href="#cb5-177" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span></span>
+<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="community-health-for-individual-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="community-health-for-individual-repositories">Community health for individual repositories</h2>
+<p>The following section shows all models of community health for a selected repository.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="193" data-source-offset="-54"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 192;"><span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a>reposAll <span class="op">=</span> models_all<span class="op">.</span><span class="fu">map</span>(<span class="kw">function</span>(item) {</span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> item<span class="op">.</span><span class="at">package</span><span class="op">;</span></span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>repos <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(reposAll))<span class="op">;</span></span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a>viewof repo <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(repos<span class="op">,</span> {<span class="dt">multiple</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Repository:"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-6-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-6-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-6-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="201" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 200;"><span id="cb7-201"><a href="#cb7-201" aria-hidden="true" tabindex="-1"></a>model_repo <span class="op">=</span> models_all<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
+<span id="cb7-202"><a href="#cb7-202" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">package</span><span class="op">.</span><span class="fu">includes</span>(repo) <span class="op">&amp;&amp;</span> mod<span class="op">.</span><span class="at">name</span> <span class="op">!==</span> <span class="st">"final"</span></span>
+<span id="cb7-203"><a href="#cb7-203" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-204"><a href="#cb7-204" aria-hidden="true" tabindex="-1"></a>model_repo_len <span class="op">=</span> model_repo<span class="op">.</span><span class="at">length</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-7-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-7-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="207" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 206;"><span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">40</span> <span class="op">*</span> model_repo_len<span class="op">,</span></span>
+<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Community Health"</span></span>
+<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(model_repo<span class="op">,</span> {</span>
+<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(model_repo<span class="op">,</span></span>
+<span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-231"><a href="#cb8-231" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb8-232"><a href="#cb8-232" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb8-234"><a href="#cb8-234" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb8-235"><a href="#cb8-235" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(model_repo<span class="op">,</span> {</span>
+<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
+<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb8-244"><a href="#cb8-244" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span></span>
+<span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1vZGVsc19hbGwgPSB7XG4gICAgcmV0dXJuIHRyYW5zcG9zZShtb2RlbHNfaW4pLm1hcChyb3cgPT4gKHtcbiAgICAgICAgLi4ucm93LFxuICAgIH0pKTtcbn1cbm1vZGVsc19maW5hbCA9IG1vZGVsc19hbGwuZmlsdGVyKGZ1bmN0aW9uKG1vZCkge1xuICAgIHJldHVybiBtb2QubmFtZS5pbmNsdWRlcyhcImZpbmFsXCIpXG59KVxubW9kZWxzX2xlbiA9IG1vZGVsc19maW5hbC5sZW5ndGhcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gICAgaGVpZ2h0OiAyMCAqIG1vZGVsc19sZW4sXG4gICAgbWFyZ2luTGVmdDogNjAsXG4gICAgbWFyZ2luUmlnaHQ6IDE2MCxcbiAgICBtYXJnaW5Ub3A6IDUwLFxuICAgIG1hcmdpbkJvdHRvbTogNTAsXG4gICAgYXhpczogbnVsbCxcbiAgICB4OiB7XG4gICAgICAgIGF4aXM6IFwidG9wXCIsXG4gICAgICAgIGdyaWQ6IHRydWUsXG4gICAgICAgIGxhYmVsOiBcIkNvbW11bml0eSBIZWFsdGhcIlxuICAgIH0sXG4gICAgeTogeyBncmlkOiB0cnVlIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsc19maW5hbCwge1xuICAgICAgICAgICAgeTogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB4OiBcInZhbHVlXCIsXG4gICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgIH0pLFxuICAgICAgICBQbG90LmJhclgobW9kZWxzX2ZpbmFsLFxuICAgICAgICAgICAgUGxvdC5wb2ludGVyKFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgICAgIHg6IFwidmFsdWVcIixcbiAgICAgICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICAgICAgc3Ryb2tlOiBcImdyYXlcIixcbiAgICAgICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgICAgICAgICAgc3Ryb2tlV2lkdGg6IDIsXG4gICAgICAgICAgICB9KVxuICAgICAgICApLFxuICAgICAgICBQbG90LnRleHQobW9kZWxzX2ZpbmFsLCB7XG4gICAgICAgICAgICB4OiAoZCkgPT4gZC52YWx1ZSA8IDAgPyAwIDogZC52YWx1ZSxcbiAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgdGV4dDogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsXG4gICAgICAgICAgICBmb250U2l6ZTogMTYsXG4gICAgICAgICAgICBkeDogNVxuICAgICAgICB9KVxuICAgIF0sXG4gICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIkNvb2xcIixcbiAgICAgICAgdHlwZTogXCJvcmRpbmFsXCJcbiAgICB9XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiY29tbUhlYWx0aFZhcnMgPSBbXG4gICAgXCJjb2xsYWJfZGV2ZWxfaW5kZXhcIixcbiAgICBcImNvbW1fc2Vydl9zdXBwb3J0XCIsXG4gICAgXCJjb21tX3dlbGNvbWluZ1wiLFxuICAgIFwiY29tbXVuaXR5X2FjdGl2aXR5XCIsXG4gICAgXCJkZXZfcmVzcG9uc2l2ZW5lc3NcIixcbiAgICBcIm9zc19jb21wbGlhbmNlXCIsXG4gICAgXCJwcm9qX2F3YXJlbmVzc1wiLFxuICAgIFwicHJval9lbmdhZ2VtZW50XCIsXG4gICAgXCJzdGFydGVyX2hlYWx0aFwiLFxuICAgIFwidmlhYmlsaXR5X2NvbW11bml0eVwiLFxuICAgIFwidmlhYmlsaXR5X2dvdlwiLFxuICAgIFwidmlhYmlsaXR5X3N0YXJ0ZXJcIixcbiAgICBcInZpYWJpbGl0eV9zdHJhdGVneVwiXG5dXG52aWV3b2YgY29tbUhlYWx0aFZhciA9IElucHV0cy5zZWxlY3QoXG4gICAgY29tbUhlYWx0aFZhcnMsXG4gICAgeyBtdWx0aXBsZTogXCJmYWxzZVwiLCBsYWJlbDogXCJDb21tdW5pdHkgSGVhbHRoIFZhcmlhYmxlXCIgfVxuKTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1vZGVsc19maWx0ZXJlZCA9IG1vZGVsc19hbGwuZmlsdGVyKGZ1bmN0aW9uKG1vZCkge1xuICAgIHJldHVybiBtb2QubmFtZS5pbmNsdWRlcyhjb21tSGVhbHRoVmFyKVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gICAgaGVpZ2h0OiAyMCAqIG1vZGVsc19sZW4sXG4gICAgbWFyZ2luTGVmdDogNjAsXG4gICAgbWFyZ2luUmlnaHQ6IDE2MCxcbiAgICBtYXJnaW5Ub3A6IDUwLFxuICAgIG1hcmdpbkJvdHRvbTogNTAsXG4gICAgYXhpczogbnVsbCxcbiAgICB4OiB7XG4gICAgICAgIGF4aXM6IFwidG9wXCIsXG4gICAgICAgIGdyaWQ6IHRydWUsXG4gICAgICAgIGxhYmVsOiBcIkNvbW11bml0eSBIZWFsdGhcIlxuICAgIH0sXG4gICAgeTogeyBncmlkOiB0cnVlIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsc19maWx0ZXJlZCwge1xuICAgICAgICAgICAgeTogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB4OiBcInZhbHVlXCIsXG4gICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgIH0pLFxuICAgICAgICBQbG90LmJhclgobW9kZWxzX2ZpbHRlcmVkLFxuICAgICAgICAgICAgUGxvdC5wb2ludGVyKFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgICAgIHg6IFwidmFsdWVcIixcbiAgICAgICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICAgICAgc3Ryb2tlOiBcImdyYXlcIixcbiAgICAgICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgICAgICAgICAgc3Ryb2tlV2lkdGg6IDIsXG4gICAgICAgICAgICB9KVxuICAgICAgICApLFxuICAgICAgICBQbG90LnRleHQobW9kZWxzX2ZpbHRlcmVkLCB7XG4gICAgICAgICAgICB4OiAoZCkgPT4gZC52YWx1ZSA8IDAgPyAwIDogZC52YWx1ZSxcbiAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgdGV4dDogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsXG4gICAgICAgICAgICBmb250U2l6ZTogMTYsXG4gICAgICAgICAgICBkeDogNVxuICAgICAgICB9KVxuICAgIF0sXG4gICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIkNvb2xcIixcbiAgICAgICAgdHlwZTogXCJvcmRpbmFsXCJcbiAgICB9XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy8gR2V0IGFycmF5IG9mIHVuaXF1ZSByZXBvIG5hbWVzIGZvciBpbnB1dCBzZWxlY3RvcjpcbnJlcG9zQWxsID0gbW9kZWxzX2FsbC5tYXAoZnVuY3Rpb24oaXRlbSkge1xuICAgIHJldHVybiBpdGVtLnBhY2thZ2U7XG59KTtcbnJlcG9zID0gQXJyYXkuZnJvbShuZXcgU2V0KHJlcG9zQWxsKSk7XG52aWV3b2YgcmVwbyA9IElucHV0cy5zZWxlY3QocmVwb3MsIHttdWx0aXBsZTogZmFsc2UsIGxhYmVsOiBcIlJlcG9zaXRvcnk6XCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoibW9kZWxfcmVwbyA9IG1vZGVsc19hbGwuZmlsdGVyKGZ1bmN0aW9uKG1vZCkge1xuICAgIHJldHVybiBtb2QucGFja2FnZS5pbmNsdWRlcyhyZXBvKSAmJiBtb2QubmFtZSAhPT0gXCJmaW5hbFwiXG59KVxubW9kZWxfcmVwb19sZW4gPSBtb2RlbF9yZXBvLmxlbmd0aFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgICBoZWlnaHQ6IDQwICogbW9kZWxfcmVwb19sZW4sXG4gICAgbWFyZ2luTGVmdDogNjAsXG4gICAgbWFyZ2luUmlnaHQ6IDE2MCxcbiAgICBtYXJnaW5Ub3A6IDUwLFxuICAgIG1hcmdpbkJvdHRvbTogNTAsXG4gICAgYXhpczogbnVsbCxcbiAgICB4OiB7XG4gICAgICAgIGF4aXM6IFwidG9wXCIsXG4gICAgICAgIGdyaWQ6IHRydWUsXG4gICAgICAgIGxhYmVsOiBcIkNvbW11bml0eSBIZWFsdGhcIlxuICAgIH0sXG4gICAgeTogeyBncmlkOiB0cnVlIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsX3JlcG8sIHtcbiAgICAgICAgICAgIHk6IFwibmFtZVwiLFxuICAgICAgICAgICAgeDogXCJ2YWx1ZVwiLFxuICAgICAgICAgICAgc29ydDoge3k6IFwiLXhcIiB9LFxuICAgICAgICAgICAgZmlsbDogXCJ2YWx1ZVwiLFxuICAgICAgICB9KSxcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsX3JlcG8sXG4gICAgICAgICAgICBQbG90LnBvaW50ZXIoXG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgeTogXCJuYW1lXCIsXG4gICAgICAgICAgICAgICAgeDogXCJ2YWx1ZVwiLFxuICAgICAgICAgICAgICAgIHNvcnQ6IHt5OiBcIi14XCIgfSxcbiAgICAgICAgICAgICAgICBzdHJva2U6IFwiZ3JheVwiLFxuICAgICAgICAgICAgICAgIGZpbGw6IFwidmFsdWVcIixcbiAgICAgICAgICAgICAgICBzdHJva2VXaWR0aDogMixcbiAgICAgICAgICAgIH0pXG4gICAgICAgICksXG4gICAgICAgIFBsb3QudGV4dChtb2RlbF9yZXBvLCB7XG4gICAgICAgICAgICB4OiAoZCkgPT4gZC52YWx1ZSA8IDAgPyAwIDogZC52YWx1ZSxcbiAgICAgICAgICAgIHk6IFwibmFtZVwiLFxuICAgICAgICAgICAgdGV4dDogXCJuYW1lXCIsXG4gICAgICAgICAgICB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsXG4gICAgICAgICAgICBmb250U2l6ZTogMTYsXG4gICAgICAgICAgICBkeDogNVxuICAgICAgICB9KVxuICAgIF0sXG4gICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIkNvb2xcIixcbiAgICAgICAgdHlwZTogXCJvcmRpbmFsXCJcbiAgICB9XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjb21tSGVhbHRoVmFyJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3JlcG8nKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
