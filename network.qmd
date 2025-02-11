@@ -10,7 +10,7 @@ format:
 ---
 
 This page shows an interactive network diagram of "epiverse" packages, intended
-to demonstrate possible ways to view relationships bewteen packages. The main
+to demonstrate possible ways to view relationships between packages. The main
 functional component is the slider for "*Dependencies vs Code Similarity". This
 controls the thickness of lines connecting packages, with lines only shown for
 packages which have direct dependencies on one another.
