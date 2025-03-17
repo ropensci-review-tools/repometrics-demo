@@ -1,0 +1,300 @@
+---
+title: "CHOASS Repo"
+execute:
+  echo: false
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: false
+---
+
+This page identifies maintenance priorities for a selected repository, in
+terms of both [CHAOSS
+models](https://chaoss.community/kbtopic/all-metrics-models/), and the
+individual [CHAOSS metrics](https://chaoss.community/kbtopic/all-metrics/)
+which comprise those models.
+
+The "Outliers only" selector immediate below determines whether values shown
+for both models and metrics are outliers only (default of "true"), or whether
+all values are shown ("false").
+
+
+```{r load-pkg, echo = FALSE, message = FALSE}
+library (orgmetrics)
+```
+
+```{r load-data}
+data_metrics <- readRDS ("results-metrics.Rds")
+data_metrics$value [which (is.na (data_metrics$value))] <- 0
+data_models <- readRDS ("results-models.Rds")
+data_repo_src <- readRDS ("results-data-repo-src.Rds")
+
+data_ctb_abs <- readRDS ("results-data-ctb-absence.Rds")
+data_issue_resp <- readRDS ("results-data-issue-resp.Rds")
+data_issue_bugs <- readRDS ("results-data-issue-bugs.Rds")
+```
+
+```{r data outliers}
+threshold <- 0.9
+data_metrics <- data_metrics |>
+    dplyr::group_by (name) |>
+    dplyr::arrange (value) |>
+    dplyr::mutate (
+        outlier = dplyr::row_number (value) <= dplyr::n () * (1 - threshold) |
+            dplyr::row_number (value) >= dplyr::n () * threshold
+    ) |>
+    dplyr::arrange (package, dplyr::desc (value))
+data_models <- data_models |>
+    dplyr::group_by (name) |>
+    dplyr::arrange (value) |>
+    dplyr::mutate (
+        outlier = dplyr::row_number (value) <= dplyr::n () * (1 - threshold) |
+            dplyr::row_number (value) >= dplyr::n () * threshold
+    ) |>
+    dplyr::arrange (package, dplyr::desc (value))
+```
+
+
+```{r ojs-in-metrics}
+ojs_define (metrics_in = data_metrics)
+ojs_define (models_in = data_models)
+ojs_define (repo_src_in = data_repo_src)
+ojs_define (ctb_abs_in = data_ctb_abs)
+ojs_define (issue_resp_in = data_issue_resp)
+ojs_define (issue_bugs_in = data_issue_bugs)
+```
+```{ojs}
+metricsTranspose = {
+    return transpose(metrics_in).map(row => ({
+        ...row,
+    }));
+}
+repo_src = {
+    return transpose(repo_src_in).map(row => ({
+        ...row,
+    }));
+}
+ctb_absTranspose = {
+    return transpose(ctb_abs_in).map(row => ({
+        ...row,
+    }));
+}
+issue_respTranspose = {
+    return transpose(issue_resp_in).map(row => ({
+        ...row,
+    }));
+}
+issue_bugsTranspose = {
+    return transpose(issue_bugs_in).map(row => ({
+        ...row,
+    }));
+}
+```
+
+```{ojs get-all-repos}
+// Get array of unique repo names for input selector:
+reposAll = metricsTranspose.map(function(item) {
+    return item.package;
+});
+repos = Array.from(new Set(reposAll));
+viewof repo = Inputs.select(
+    repos,
+    {
+        multiple: false,
+        label: htl.html`<b>Repository:</b>`
+    }
+)
+```
+
+<div style="margin-top: 20px; margin-bottom: 20px;"></div>
+
+```{ojs}
+// and get URL for selected repo
+repoURL = repo_src.filter(function(r) {
+    return r.package === repo
+})[0].url;
+htl.html`<div>Click here to see the <a href=${repoURL} target="_blank">${repo} repository</a>.</div>`
+```
+
+<div style="margin-top: 20px; margin-bottom: 20px;"></div>
+
+```{ojs}
+viewof outliersOnly = Inputs.radio(
+    ["true", "false"],
+    {
+        value: "true",
+        label: htl.html`<b>Outliers only:</b>`,
+    }
+)
+```
+
+```{ojs}
+ctb_abs = ctb_absTranspose.filter(function(r) {
+    return r.repo === repo
+})
+issue_resp = issue_respTranspose.filter(function(r) {
+    return r.repo === repo
+})
+issue_bugs = issue_bugsTranspose.filter(function(r) {
+    return r.repo === repo
+})
+```
+
+
+
+
+## CHAOSS models
+
+This first graph shows scores for the various [CHAOSS (*Community Health
+Analytics in Open Source Software*)
+models](https://chaoss.community/kbtopic/all-metrics-models/) for a selected
+repository. Each of these models is an aggregation of several underlying
+[metrics](https://chaoss.community/kbtopic/all-metrics/), which can be examined
+in the following sub-section.
+
+```{ojs}
+models_all = {
+    return transpose(models_in).map(row => ({
+        ...row,
+    }));
+}
+models_final = models_all.filter(function(mod) {
+    return mod.name === "final"
+})
+model_repoAll = models_all.filter(function(mod) {
+    return mod.package === repo && mod.name !== "final"
+})
+model_repo = outliersOnly === "true" ?
+    model_repoAll.filter(function(m) {
+        return m.outlier === true;
+    }) : model_repoAll;
+model_repo_len = model_repo.length
+model_repo_ht_mult = model_repo_len < 10 ? 80 : 40
+```
+
+```{ojs colour-scales}
+// Bar colours should be scaled to full data range, not just restricted range
+// of filtered data.
+fullScaleValues = model_repoAll.map(d => d.value);
+minVal = Math.min(...fullScaleValues);
+maxVal = Math.max(...fullScaleValues);
+```
+
+
+```{ojs plot-filtered-repo-models}
+Plot.plot({
+    height: model_repo_ht_mult * model_repo_len,
+    marginLeft: 60,
+    marginRight: 160,
+    marginTop: 50,
+    marginBottom: 50,
+    axis: null,
+    x: {
+        axis: "top",
+        grid: true,
+        label: "Model Scores"
+    },
+    y: { grid: true },
+    marks: [
+        Plot.barX(model_repo, {
+            y: "name",
+            x: "value",
+            sort: {y: "-x" },
+            fill: "value",
+        }),
+        Plot.barX(model_repo,
+            Plot.pointer(
+            {
+                y: "name",
+                x: "value",
+                sort: {y: "-x" },
+                stroke: "gray",
+                fill: "value",
+                strokeWidth: 2,
+            })
+        ),
+        Plot.text(model_repo, {
+            x: (d) => d.value < 0 ? 0 : d.value,
+            y: "name",
+            text: "name",
+            textAnchor: "start",
+            fontSize: 16,
+            dx: 5
+        })
+    ],
+    color: {
+        scheme: "Cool",
+        type: "linear",
+        domain: [minVal, maxVal]
+    }
+})
+```
+
+## CHAOSS metrics
+
+This graph provides more detailed insight into the state of the selected
+repository, through showing values for individual [CHAOSS
+metrics](https://chaoss.community/kbtopic/all-metrics/) used to inform the
+aggregate models.
+
+```{ojs}
+metrics = outliersOnly === "true" ?
+    metricsTranspose.filter(function(m) {
+        return m.outlier === true;
+    }) : metricsTranspose;
+
+metrics_repo = metrics.filter(function(mod) {
+    return mod.package === repo
+})
+metrics_repo_len = metrics_repo.length
+```
+
+
+```{ojs plot-filtered-repo-metrics}
+Plot.plot({
+    height: 40 * metrics_repo_len,
+    marginLeft: 60,
+    marginRight: 160,
+    marginTop: 50,
+    marginBottom: 50,
+    axis: null,
+    x: {
+        axis: "top",
+        grid: true,
+        label: "Metric Scores"
+    },
+    y: { grid: true },
+    marks: [
+        Plot.barX(metrics_repo, {
+            y: "name",
+            x: "value",
+            sort: {y: "-x" },
+            fill: "value",
+        }),
+        Plot.barX(metrics_repo,
+            Plot.pointer(
+            {
+                y: "name",
+                x: "value",
+                sort: {y: "-x" },
+                stroke: "gray",
+                fill: "value",
+                strokeWidth: 2,
+            })
+        ),
+        Plot.text(metrics_repo, {
+            x: (d) => d.value < 0 ? 0 : d.value,
+            y: "name",
+            text: "name",
+            textAnchor: "start",
+            fontSize: 16,
+            dx: 5
+        })
+    ],
+    color: {
+        scheme: "Cool",
+        type: "ordinal"
+    }
+})
+```

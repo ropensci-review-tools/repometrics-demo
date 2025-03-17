@@ -7,15 +7,17 @@ website:
     type: express
   navbar:
     left:
+      - chaoss-org.qmd
+      - chaoss-repo.qmd
       - models.qmd
       - network.qmd
     right:
       - icon: "github"
         menu:
           - text: Source Code
-            url: https://github.com/ropensci-review-tools/repometrics
+            url: https://github.com/ropensci-review-tools/orgmetrics
           - text: Request a Feature
-            url: https://github.com/ropensci-review-tools/repometrics/issues/new
+            url: https://github.com/ropensci-review-tools/orgmetrics/issues/new
 
 format:
   html:
