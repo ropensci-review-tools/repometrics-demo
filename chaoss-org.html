@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Organization - Maintenance: Org</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script type="ojs-define">
+{"contents":[{"name":"models_in","value":{"package":["sandpaper","epiparameter","incidence","outbreaker2","varnish","simulist","learn","serofoi","epicontacts","sivirep","recon.ui","cleanepi","distcrete","epiCo","trendbreaker","tracer","epiflows","dibbler","cfr","epicookbook","Severity_methods_assessment","contactsim","superspreading","howto","epidemics","tracetheme","finalsize","earlyR","matchmaker","datacomparator","episoap","epitrix","epiparameterDB","projections","epinetwork","vimes","rfextras","climateR0","aweek","branchr","etdev","ColOpenData","epiversedashboard","shinyHelpers","vaccineff","epichains","simulacr","readepi","epi-training-kit","epimaps","reconhub","safeframe","epishiny","occupancy","epiversetheme","llm-guidance","packagetemplate","epicontacts.ui","epirisk","numberize","nomad","epiverse","linelist","quickfit","epiparameterDashboard","etstats","scenarios","personas","ggpyramid","rmdscaffold","incidence.ui","recontools","hex-stickers","research-compendium","iraca","gisfirstaid"],"comm_engage":[1.2413,1.2487,0.5312,0.5032,0.6977,1.2221,0.6042,1.2548,0.4852,0.6157,-0.1852,1.1567,0.1248,0.1481,0.0466,-0.0989,0.1309,-0.3017,0.4551,-0.3497,-0.4216,-0.4216,0.2159,0.5379,-0.0059,-0.3786,0.5105,-0.0787,-0.1092,-0.3385,0.1143,-0.1138,0.1579,-0.155,-0.503,-0.2411,-0.2378,-0.3239,-0.1156,-0.3034,-0.412,0.3567,-0.321,-0.356,0.2456,0.0764,-0.3385,-0.2731,-0.2511,-0.3401,-0.3752,0.2828,-0.3572,-0.2714,-0.3973,-0.4024,0.1657,-0.4216,-0.4216,0.3013,-0.2187,-0.2945,-0.125,-0.3848,-0.1246,-0.0684,-0.404,-0.503,-0.5126,-0.5126,-0.404,-0.3592,-0.1986,-0.219,-0.3808,-0.4311],"dev_resp":[0.5258,0.6705,-0.0089,0.0037,0.2553,0.7869,0.1922,0.8548,0.1267,0.2587,-0.4949,0.8613,-0.1139,-0.0759,-0.1689,-0.3018,-0.0434,-0.4651,0.3031,-0.4748,-0.5265,-0.5191,0.1222,0.4505,-0.0853,-0.4478,0.4511,-0.1354,-0.1558,-0.3827,0.0766,-0.1458,0.1326,-0.1755,-0.5191,-0.252,-0.2458,-0.3279,-0.1113,-0.2897,-0.3979,0.3709,-0.3018,-0.3275,0.2782,0.1294,-0.2777,-0.207,-0.185,-0.2656,-0.2897,0.3697,-0.2686,-0.1826,-0.3061,-0.3018,0.2666,-0.3018,-0.3018,0.4255,-0.0942,-0.1698,0.0017,-0.2469,0.0135,0.0954,-0.2306,-0.3079,-0.3018,-0.2893,-0.1663,-0.1143,0.0481,0.0852,-0.0665,-0.1153],"maintenance":[0.7154,0.5782,0.5401,0.4995,0.4424,0.4352,0.412,0.4001,0.3585,0.357,0.3097,0.2954,0.2388,0.224,0.2155,0.2029,0.1743,0.1634,0.152,0.1251,0.1049,0.0975,0.0937,0.0874,0.0794,0.0691,0.0593,0.0567,0.0466,0.0442,0.0377,0.032,0.0253,0.0205,0.0161,0.011,0.0079,0.004,-0.0043,-0.0136,-0.0141,-0.0142,-0.0191,-0.0285,-0.0326,-0.053,-0.0608,-0.066,-0.066,-0.0745,-0.0855,-0.0869,-0.0887,-0.0888,-0.0912,-0.1006,-0.1008,-0.1197,-0.1197,-0.1243,-0.1244,-0.1246,-0.1268,-0.1379,-0.1381,-0.1639,-0.1734,-0.1951,-0.2108,-0.2233,-0.2376,-0.245,-0.2467,-0.3042,-0.3142,-0.3158]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"ctb_change_in","value":{"repo":["cfr","epichains","episoap"],"measure":[2.1911,17.9084,2.058]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"ctb_abs_repo_in","value":{"repo":["ColOpenData","aweek","branchr","contactsim","datacomparator","dibbler","distcrete","earlyR","epicontacts.ui","epicookbook","epiflows","epimaps","epinetwork","epirisk","epishiny","epitrix","epiversedashboard","etdev","ggpyramid","gisfirstaid","incidence.ui","iraca","llm-guidance","matchmaker","nomad","occupancy","outbreaker2","personas","recon.ui","reconhub","recontools","research-compendium","rfextras","rmdscaffold","sandpaper","scenarios","shinyHelpers","simulacr","tracer","trendbreaker","varnish"],"measure":[0.5306,1,0.5588,0.8571,0.6667,0.9877,0.575,0.8028,0.7586,0.5,0.7035,0.6667,1,1,0.9464,0.5811,0.8333,1,0.7143,0.6386,1,0.506,1,1,0.8,1,0.6674,0.9114,0.5714,1,0.8289,0.6739,0.8667,1,0.9205,1,1,0.6129,0.96,0.5915,0.8119],"name":["Julian Otero","Zhian N. Kamvar","pnouvellet","thibautjombart","Paul Campbell","thibautjombart","Rich FitzJohn","Thibaut Jombart","Dirk Schumacher","sdwfrost","Zhian N. Kamvar","Thibaut Jombart","lgs85","Thibaut Jombart","Paul Campbell","Thibaut Jombart","Jim Hester","Hugo Gruson","Thibaut Jombart","Dirk Schumacher","thibautjombart","jd-otero","adamkucharski","Zhian N. Kamvar","Rich FitzJohn","Tim Taylor","Thibaut Jombart","Andree Valle","Dirk Schumacher","Dirk Schumacher","Dirk Schumacher","Andree Valle","Thibaut Jombart","Hugo Gruson","Zhian N. Kamvar","Pratik Gupte","Dean Attali","Thibaut","Thibaut Jombart","Thibaut Jombart","Zhian N. Kamvar"]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"ctb_abs_ctb_in","value":{"name":["Andree Valle","Andree Valle Campos","Anne Cori","Dean Attali","Dirk Schumacher","Hugo Gruson","Jim Hester","Jonathan Polonsky","Julian Otero","Paul Campbell","Pawel Piatkowski","Pratik Gupte","Rich FitzJohn","Simon Frost","Steph Locke","Thibaut","Thibaut Jombart","Tim Taylor","VP Nagraj","Zhian N. Kamvar","adamkucharski","jd-otero","lgs85","pnouvellet","sdwfrost","thibautjombart"],"measure":[0.6561,0.2826,0.2792,0.6429,0.7595,1,0.8333,0.2857,0.5063,0.8065,0.3333,1,0.6875,0.5,0.225,0.4799,0.5254,0.6549,0.2286,0.7369,1,0.506,1,0.5588,0.5,0.9483],"n":[3,1,1,2,5,2,1,1,2,2,1,1,2,1,1,3,20,2,1,7,1,1,1,1,1,3]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"issue_resp_in","value":{"repo":["epicontacts","epi-training-kit","vaccineff","epiparameterDashboard","sivirep","safeframe","serofoi","climateR0","cleanepi","epiparameter","epiparameterDB","varnish","outbreaker2","packagetemplate","finalsize","epidemics","cfr","epiCo","numberize","howto","epichains","etdev","sandpaper","episoap","linelist","simulist","superspreading","epiversetheme","etstats","research-compendium"],"response":[136,126,42,35,34,31,25,24,23,23,19,19,13,13,12,11,9,8,8,7,6,6,6,4,4,2,2,0,0,0]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"issue_bugs_in","value":{"repo":["etdev","distcrete","epicontacts","epitrix","projections","epi-training-kit","numberize","varnish","Severity_methods_assessment","epiparameterDashboard","packagetemplate","sivirep","epiCo","epichains","climateR0","readepi","outbreaker2","cfr","epiparameterDB","epidemics","ColOpenData","safeframe","cleanepi","vaccineff","episoap","finalsize","sandpaper","howto","linelist","linelist","epiparameter","serofoi","superspreading","epiversetheme","simulist","research-compendium","epishiny","epiverse","etstats","hex-stickers","iraca","personas","quickfit","tracetheme"],"labels":[0,0,0,0,1,0,0.0769,0.0588,0,0.5294,0.3023,0.2432,0.0233,0.4133,0.3158,0.6667,0,0.1724,0.6,0.3833,0.5067,0.2,0.4336,0.0116,0.1379,0.0741,0.0339,0.5,0.0227,0.0227,0.4862,0.0896,0.6897,0,0.4867,0.7273,0,0,0,0,0,0.4,0,0],"bugs":[1,1,1,1,1,0.6667,0.5385,0.5294,0.5,0.4706,0.4651,0.4505,0.4419,0.44,0.3684,0.3333,0.3333,0.3276,0.32,0.3167,0.2933,0.2933,0.292,0.2791,0.2759,0.2593,0.2542,0.2273,0.2273,0.2273,0.221,0.2164,0.2069,0.1875,0.1858,0.0909,0,0,0,0,0,0,0,0]}}]}
+</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Organization</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./chaoss-org.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Maintenance: Org</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chaoss-repo.html" rel="" target="">
+ <span class="menu-text">CHOASS Repo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./models.html" rel="" target="">
+ <span class="menu-text">Community Health</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./network.html" rel="" target="">
+ <span class="menu-text">Network</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/orgmetrics" rel="" target="">
+ <span class="dropdown-text">Source Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/orgmetrics/issues/new" rel="" target="">
+ <span class="dropdown-text">Request a Feature</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#chaoss-metrics-and-models" id="toc-chaoss-metrics-and-models" class="nav-link active" data-scroll-target="#chaoss-metrics-and-models">CHAOSS metrics and models</a></li>
+  <li><a href="#proportion-of-bugs" id="toc-proportion-of-bugs" class="nav-link" data-scroll-target="#proportion-of-bugs">Proportion of bugs</a></li>
+  <li><a href="#issue-labelling" id="toc-issue-labelling" class="nav-link" data-scroll-target="#issue-labelling">Issue labelling</a></li>
+  <li><a href="#issue-response-time" id="toc-issue-response-time" class="nav-link" data-scroll-target="#issue-response-time">Issue response time</a></li>
+  <li><a href="#contributor-absence" id="toc-contributor-absence" class="nav-link" data-scroll-target="#contributor-absence">Contributor Absence</a>
+  <ul class="collapse">
+  <li><a href="#absence-for-repositories" id="toc-absence-for-repositories" class="nav-link" data-scroll-target="#absence-for-repositories">Absence for repositories</a></li>
+  <li><a href="#absence-for-contributors" id="toc-absence-for-contributors" class="nav-link" data-scroll-target="#absence-for-contributors">Absence for Contributors</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Maintenance: Org</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>All graphs on this page are displayed such that darker, more purple colours are worse than lighter, more green colours. Graphs are also generally displayed with repositories with greater maintenance need plotted near the top, and those with less maintenance need near the bottom (or not included at all).</p>
+<section id="chaoss-metrics-and-models" class="level2">
+<h2 class="anchored" data-anchor-id="chaoss-metrics-and-models">CHAOSS metrics and models</h2>
+<p>This page uses CHAOSS metrics and models to identify maintenance deficits across all repositories within the <code>reconhub</code> and <code>epiverse-trace</code> organizations. These deficits are higher for projects with more community engagement yet less developer responsiveness or activity. Repositories with higher maintenance deficits are presented first, with maintenance deficit decreasing down the page. Lengths of bars indicate community engagement minus developer responsiveness, so that:</p>
+<ul>
+<li>More positive bars are higher up the page, and have high engagement yet lower developer responsiveness.</li>
+<li>More negative bars are lower down the page, and have high developer activity yet low community engagement.</li>
+</ul>
+<p>Bars are coloured to provide insight into the relative contributions of community engagement versus developer responsiveness. Because organizations generally have more direct control over the latter than the former, bars are coloured by developer responsiveness. This means that:</p>
+<ul>
+<li>Bars with colours tending towards bright green have greater developer responsiveness.</li>
+<li>Bars tending toward darker purple have lower developer responsiveness.</li>
+</ul>
+<p>Maintenance priorities should likely be focussed on repositories with high values of maintenance deficit yet lower levels of developer responsiveness. These repositories will be higher up in the graph (more positive values), yet with more dark purple colours.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="81" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 80;"><span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>models <span class="op">=</span> {</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(models_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>models_len <span class="op">=</span> models<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>ctb_change <span class="op">=</span> {</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_change_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>ctb_change_len <span class="op">=</span> ctb_change<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>ctb_abs_repo <span class="op">=</span> {</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_abs_repo_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>ctb_abs_repo_len <span class="op">=</span> ctb_abs_repo<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb <span class="op">=</span> {</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_abs_ctb_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb_len <span class="op">=</span> ctb_abs_ctb<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>issue_resp <span class="op">=</span> {</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(issue_resp_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>issue_resp_len <span class="op">=</span> issue_resp<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>issue_bugs <span class="op">=</span> {</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(issue_bugs_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-9" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-10" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-11" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="121" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 120;"><span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> models_len<span class="op">,</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Maintenance Deficit"</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(models<span class="op">,</span> {</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"maintenance"</span><span class="op">,</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"dev_resp"</span><span class="op">,</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(models<span class="op">,</span></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"maintenance"</span><span class="op">,</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"maintenance"</span><span class="op">,</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(models<span class="op">,</span> {</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">maintenance</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">maintenance</span><span class="op">,</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"package"</span><span class="op">,</span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="proportion-of-bugs" class="level2">
+<h2 class="anchored" data-anchor-id="proportion-of-bugs">Proportion of bugs</h2>
+<p>This plot shows the proportion of all recent issues that are bug reports. Values are only shown for repositories for which &gt; 25% of all issues are bugs.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="177" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 176;"><span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>issue_bugs_filt <span class="op">=</span> issue_bugs<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(i) {</span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> i<span class="op">.</span><span class="at">bugs</span> <span class="op">&gt;=</span> <span class="fl">0.25</span></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>bugs_len <span class="op">=</span> issue_bugs_filt<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>issue_labs_filt <span class="op">=</span> issue_bugs<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(i) {</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> i<span class="op">.</span><span class="at">labels</span> <span class="op">&lt;=</span> <span class="fl">0.5</span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>labs_len <span class="op">=</span> issue_labs_filt<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="187" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 186;"><span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> bugs_len<span class="op">,</span></span>
+<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Proportion Bugs"</span></span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(issue_bugs_filt<span class="op">,</span> {</span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"bugs"</span><span class="op">,</span></span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"bugs"</span><span class="op">,</span></span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(issue_bugs_filt<span class="op">,</span></span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"bugs"</span><span class="op">,</span></span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"bugs"</span><span class="op">,</span></span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(issue_bugs_filt<span class="op">,</span> {</span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"bugs"</span><span class="op">,</span></span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span><span class="op">,</span></span>
+<span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="issue-labelling" class="level2">
+<h2 class="anchored" data-anchor-id="issue-labelling">Issue labelling</h2>
+<p>And this shows the proportion of all issues that are labelled. Values are only shown for repositories with poor issue labelling.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="242" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 241;"><span id="cb5-242"><a href="#cb5-242" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-243"><a href="#cb5-243" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> labs_len<span class="op">,</span></span>
+<span id="cb5-244"><a href="#cb5-244" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb5-245"><a href="#cb5-245" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb5-246"><a href="#cb5-246" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb5-247"><a href="#cb5-247" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb5-248"><a href="#cb5-248" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb5-249"><a href="#cb5-249" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb5-250"><a href="#cb5-250" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb5-251"><a href="#cb5-251" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb5-252"><a href="#cb5-252" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Proportion Labelled"</span></span>
+<span id="cb5-253"><a href="#cb5-253" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb5-254"><a href="#cb5-254" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb5-255"><a href="#cb5-255" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb5-256"><a href="#cb5-256" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(issue_labs_filt<span class="op">,</span> {</span>
+<span id="cb5-257"><a href="#cb5-257" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb5-258"><a href="#cb5-258" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"labels"</span><span class="op">,</span></span>
+<span id="cb5-259"><a href="#cb5-259" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span> }<span class="op">,</span></span>
+<span id="cb5-260"><a href="#cb5-260" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"labels"</span><span class="op">,</span></span>
+<span id="cb5-261"><a href="#cb5-261" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb5-262"><a href="#cb5-262" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(issue_labs_filt<span class="op">,</span></span>
+<span id="cb5-263"><a href="#cb5-263" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb5-264"><a href="#cb5-264" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb5-265"><a href="#cb5-265" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb5-266"><a href="#cb5-266" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"labels"</span><span class="op">,</span></span>
+<span id="cb5-267"><a href="#cb5-267" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span> }<span class="op">,</span></span>
+<span id="cb5-268"><a href="#cb5-268" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb5-269"><a href="#cb5-269" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"labels"</span><span class="op">,</span></span>
+<span id="cb5-270"><a href="#cb5-270" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb5-271"><a href="#cb5-271" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb5-272"><a href="#cb5-272" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb5-273"><a href="#cb5-273" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(issue_labs_filt<span class="op">,</span> {</span>
+<span id="cb5-274"><a href="#cb5-274" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"labels"</span><span class="op">,</span></span>
+<span id="cb5-275"><a href="#cb5-275" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb5-276"><a href="#cb5-276" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb5-277"><a href="#cb5-277" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb5-278"><a href="#cb5-278" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb5-279"><a href="#cb5-279" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb5-280"><a href="#cb5-280" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb5-281"><a href="#cb5-281" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb5-282"><a href="#cb5-282" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb5-283"><a href="#cb5-283" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb5-284"><a href="#cb5-284" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span></span>
+<span id="cb5-285"><a href="#cb5-285" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-286"><a href="#cb5-286" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="issue-response-time" class="level2">
+<h2 class="anchored" data-anchor-id="issue-response-time">Issue response time</h2>
+<p>This graph shows average response times to issues reported by people other than main repository maintainers.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="295" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 294;"><span id="cb6-295"><a href="#cb6-295" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb6-296"><a href="#cb6-296" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> issue_resp_len<span class="op">,</span></span>
+<span id="cb6-297"><a href="#cb6-297" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb6-298"><a href="#cb6-298" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb6-299"><a href="#cb6-299" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb6-300"><a href="#cb6-300" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb6-301"><a href="#cb6-301" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb6-302"><a href="#cb6-302" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb6-303"><a href="#cb6-303" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb6-304"><a href="#cb6-304" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb6-305"><a href="#cb6-305" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Issue response time (days)"</span></span>
+<span id="cb6-306"><a href="#cb6-306" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb6-307"><a href="#cb6-307" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb6-308"><a href="#cb6-308" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb6-309"><a href="#cb6-309" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(issue_resp<span class="op">,</span> {</span>
+<span id="cb6-310"><a href="#cb6-310" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb6-311"><a href="#cb6-311" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"response"</span><span class="op">,</span></span>
+<span id="cb6-312"><a href="#cb6-312" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb6-313"><a href="#cb6-313" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"response"</span><span class="op">,</span></span>
+<span id="cb6-314"><a href="#cb6-314" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb6-315"><a href="#cb6-315" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(issue_resp<span class="op">,</span></span>
+<span id="cb6-316"><a href="#cb6-316" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb6-317"><a href="#cb6-317" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb6-318"><a href="#cb6-318" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb6-319"><a href="#cb6-319" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"response"</span><span class="op">,</span></span>
+<span id="cb6-320"><a href="#cb6-320" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb6-321"><a href="#cb6-321" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb6-322"><a href="#cb6-322" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"response"</span><span class="op">,</span></span>
+<span id="cb6-323"><a href="#cb6-323" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb6-324"><a href="#cb6-324" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb6-325"><a href="#cb6-325" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb6-326"><a href="#cb6-326" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(issue_resp<span class="op">,</span> {</span>
+<span id="cb6-327"><a href="#cb6-327" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"response"</span><span class="op">,</span></span>
+<span id="cb6-328"><a href="#cb6-328" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb6-329"><a href="#cb6-329" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb6-330"><a href="#cb6-330" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb6-331"><a href="#cb6-331" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb6-332"><a href="#cb6-332" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb6-333"><a href="#cb6-333" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb6-334"><a href="#cb6-334" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb6-335"><a href="#cb6-335" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb6-336"><a href="#cb6-336" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb6-337"><a href="#cb6-337" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span><span class="op">,</span></span>
+<span id="cb6-338"><a href="#cb6-338" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb6-339"><a href="#cb6-339" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-340"><a href="#cb6-340" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="contributor-absence" class="level2">
+<h2 class="anchored" data-anchor-id="contributor-absence">Contributor Absence</h2>
+<p>The next two graphs show a metric of main contributor absence. Values are only shown for which main contributors have not recently contributed. The metric is the proportion of overall commits made by now absent contributors.</p>
+<section id="absence-for-repositories" class="level3">
+<h3 class="anchored" data-anchor-id="absence-for-repositories">Absence for repositories</h3>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="352" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 351;"><span id="cb7-352"><a href="#cb7-352" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb7-353"><a href="#cb7-353" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> ctb_abs_repo_len<span class="op">,</span></span>
+<span id="cb7-354"><a href="#cb7-354" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb7-355"><a href="#cb7-355" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb7-356"><a href="#cb7-356" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb7-357"><a href="#cb7-357" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb7-358"><a href="#cb7-358" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb7-359"><a href="#cb7-359" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb7-360"><a href="#cb7-360" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb7-361"><a href="#cb7-361" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb7-362"><a href="#cb7-362" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Proportion of overall commits"</span></span>
+<span id="cb7-363"><a href="#cb7-363" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb7-364"><a href="#cb7-364" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb7-365"><a href="#cb7-365" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb7-366"><a href="#cb7-366" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(ctb_abs_repo<span class="op">,</span> {</span>
+<span id="cb7-367"><a href="#cb7-367" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb7-368"><a href="#cb7-368" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb7-369"><a href="#cb7-369" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb7-370"><a href="#cb7-370" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb7-371"><a href="#cb7-371" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb7-372"><a href="#cb7-372" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(ctb_abs_repo<span class="op">,</span></span>
+<span id="cb7-373"><a href="#cb7-373" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb7-374"><a href="#cb7-374" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb7-375"><a href="#cb7-375" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb7-376"><a href="#cb7-376" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb7-377"><a href="#cb7-377" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb7-378"><a href="#cb7-378" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb7-379"><a href="#cb7-379" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb7-380"><a href="#cb7-380" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb7-381"><a href="#cb7-381" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb7-382"><a href="#cb7-382" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb7-383"><a href="#cb7-383" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(ctb_abs_repo<span class="op">,</span> {</span>
+<span id="cb7-384"><a href="#cb7-384" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb7-385"><a href="#cb7-385" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb7-386"><a href="#cb7-386" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"repo"</span><span class="op">,</span></span>
+<span id="cb7-387"><a href="#cb7-387" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb7-388"><a href="#cb7-388" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb7-389"><a href="#cb7-389" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb7-390"><a href="#cb7-390" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb7-391"><a href="#cb7-391" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb7-392"><a href="#cb7-392" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb7-393"><a href="#cb7-393" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb7-394"><a href="#cb7-394" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span><span class="op">,</span></span>
+<span id="cb7-395"><a href="#cb7-395" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb7-396"><a href="#cb7-396" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-397"><a href="#cb7-397" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="absence-for-contributors" class="level3">
+<h3 class="anchored" data-anchor-id="absence-for-contributors">Absence for Contributors</h3>
+<p>Values are shown here for contributors who have been recently absent from repositories. Values are the maximal proportion of historical commits across all repositories from which they have been absent, with bars coloured by numbers of repositories, so darker, more purple colours indicate greater number of absent repositories.</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="410" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 409;"><span id="cb8-410"><a href="#cb8-410" aria-hidden="true" tabindex="-1"></a>fullScaleValues <span class="op">=</span> ctb_abs_ctb<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">n</span>)<span class="op">;</span></span>
+<span id="cb8-411"><a href="#cb8-411" aria-hidden="true" tabindex="-1"></a>minVal <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="op">...</span>fullScaleValues)<span class="op">;</span></span>
+<span id="cb8-412"><a href="#cb8-412" aria-hidden="true" tabindex="-1"></a>maxVal <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>fullScaleValues)<span class="op">;</span></span>
+<span id="cb8-413"><a href="#cb8-413" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb8-414"><a href="#cb8-414" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span> <span class="op">*</span> ctb_abs_ctb_len<span class="op">,</span></span>
+<span id="cb8-415"><a href="#cb8-415" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb8-416"><a href="#cb8-416" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb8-417"><a href="#cb8-417" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb8-418"><a href="#cb8-418" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb8-419"><a href="#cb8-419" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb8-420"><a href="#cb8-420" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb8-421"><a href="#cb8-421" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb8-422"><a href="#cb8-422" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb8-423"><a href="#cb8-423" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Proportion of overall commits"</span></span>
+<span id="cb8-424"><a href="#cb8-424" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-425"><a href="#cb8-425" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb8-426"><a href="#cb8-426" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb8-427"><a href="#cb8-427" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(ctb_abs_ctb<span class="op">,</span> {</span>
+<span id="cb8-428"><a href="#cb8-428" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-429"><a href="#cb8-429" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb8-430"><a href="#cb8-430" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb8-431"><a href="#cb8-431" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"n"</span><span class="op">,</span></span>
+<span id="cb8-432"><a href="#cb8-432" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb8-433"><a href="#cb8-433" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(ctb_abs_ctb<span class="op">,</span></span>
+<span id="cb8-434"><a href="#cb8-434" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb8-435"><a href="#cb8-435" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb8-436"><a href="#cb8-436" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-437"><a href="#cb8-437" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb8-438"><a href="#cb8-438" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb8-439"><a href="#cb8-439" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb8-440"><a href="#cb8-440" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb8-441"><a href="#cb8-441" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb8-442"><a href="#cb8-442" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb8-443"><a href="#cb8-443" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb8-444"><a href="#cb8-444" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(ctb_abs_ctb<span class="op">,</span> {</span>
+<span id="cb8-445"><a href="#cb8-445" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"measure"</span><span class="op">,</span></span>
+<span id="cb8-446"><a href="#cb8-446" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-447"><a href="#cb8-447" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb8-448"><a href="#cb8-448" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb8-449"><a href="#cb8-449" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb8-450"><a href="#cb8-450" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb8-451"><a href="#cb8-451" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb8-452"><a href="#cb8-452" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb8-453"><a href="#cb8-453" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb8-454"><a href="#cb8-454" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb8-455"><a href="#cb8-455" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"linear"</span><span class="op">,</span></span>
+<span id="cb8-456"><a href="#cb8-456" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [minVal<span class="op">,</span> maxVal]<span class="op">,</span></span>
+<span id="cb8-457"><a href="#cb8-457" aria-hidden="true" tabindex="-1"></a>        <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb8-458"><a href="#cb8-458" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-459"><a href="#cb8-459" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-8-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-8-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-8-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-8-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"models = {\n    return transpose(models_in).map(row => ({\n        ...row,\n    }));\n}\nmodels_len = models.length;\n\nctb_change = {\n    return transpose(ctb_change_in).map(row => ({\n        ...row,\n    }));\n}\nctb_change_len = ctb_change.length;\nctb_abs_repo = {\n    return transpose(ctb_abs_repo_in).map(row => ({\n        ...row,\n    }));\n}\nctb_abs_repo_len = ctb_abs_repo.length;\nctb_abs_ctb = {\n    return transpose(ctb_abs_ctb_in).map(row => ({\n        ...row,\n    }));\n}\nctb_abs_ctb_len = ctb_abs_ctb.length;\n\nissue_resp = {\n    return transpose(issue_resp_in).map(row => ({\n        ...row,\n    }));\n}\nissue_resp_len = issue_resp.length;\nissue_bugs = {\n    return transpose(issue_bugs_in).map(row => ({\n        ...row,\n    }));\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"Plot.plot({\n    height: 20 * models_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Maintenance Deficit\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(models, {\n            y: \"package\",\n            x: \"maintenance\",\n            sort: {y: \"-x\" },\n            fill: \"dev_resp\",\n        }),\n        Plot.barX(models,\n            Plot.pointer(\n            {\n                y: \"package\",\n                x: \"maintenance\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"maintenance\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(models, {\n            x: (d) => d.maintenance < 0 ? 0 : d.maintenance,\n            y: \"package\",\n            text: \"package\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\"\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"issue_bugs_filt = issue_bugs.filter(function(i) {\n    return i.bugs >= 0.25\n});\nbugs_len = issue_bugs_filt.length;\nissue_labs_filt = issue_bugs.filter(function(i) {\n    return i.labels <= 0.5\n});\nlabs_len = issue_labs_filt.length;\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"Plot.plot({\n    height: 20 * bugs_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Proportion Bugs\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(issue_bugs_filt, {\n            y: \"repo\",\n            x: \"bugs\",\n            sort: {y: \"-x\" },\n            fill: \"bugs\",\n        }),\n        Plot.barX(issue_bugs_filt,\n            Plot.pointer(\n            {\n                y: \"repo\",\n                x: \"bugs\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"bugs\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(issue_bugs_filt, {\n            x: \"bugs\",\n            y: \"repo\",\n            text: \"repo\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\",\n        reverse: true\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"Plot.plot({\n    height: 20 * labs_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Proportion Labelled\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(issue_labs_filt, {\n            y: \"repo\",\n            x: \"labels\",\n            sort: {y: \"x\" },\n            fill: \"labels\",\n        }),\n        Plot.barX(issue_labs_filt,\n            Plot.pointer(\n            {\n                y: \"repo\",\n                x: \"labels\",\n                sort: {y: \"x\" },\n                stroke: \"gray\",\n                fill: \"labels\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(issue_labs_filt, {\n            x: \"labels\",\n            y: \"repo\",\n            text: \"repo\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\"\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"Plot.plot({\n    height: 20 * issue_resp_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Issue response time (days)\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(issue_resp, {\n            y: \"repo\",\n            x: \"response\",\n            sort: {y: \"-x\" },\n            fill: \"response\",\n        }),\n        Plot.barX(issue_resp,\n            Plot.pointer(\n            {\n                y: \"repo\",\n                x: \"response\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"response\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(issue_resp, {\n            x: \"response\",\n            y: \"repo\",\n            text: \"repo\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\",\n        reverse: true\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-7","inline":false,"source":"Plot.plot({\n    height: 20 * ctb_abs_repo_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Proportion of overall commits\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(ctb_abs_repo, {\n            y: \"repo\",\n            x: \"measure\",\n            sort: {y: \"-x\" },\n            fill: \"measure\",\n        }),\n        Plot.barX(ctb_abs_repo,\n            Plot.pointer(\n            {\n                y: \"repo\",\n                x: \"measure\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"measure\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(ctb_abs_repo, {\n            x: \"measure\",\n            y: \"repo\",\n            text: \"repo\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\",\n        reverse: true\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-8","inline":false,"source":"fullScaleValues = ctb_abs_ctb.map(d => d.n);\nminVal = Math.min(...fullScaleValues);\nmaxVal = Math.max(...fullScaleValues);\nPlot.plot({\n    height: 20 * ctb_abs_ctb_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Proportion of overall commits\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(ctb_abs_ctb, {\n            y: \"name\",\n            x: \"measure\",\n            sort: {y: \"-x\" },\n            fill: \"n\",\n        }),\n        Plot.barX(ctb_abs_ctb,\n            Plot.pointer(\n            {\n                y: \"name\",\n                x: \"measure\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"measure\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(ctb_abs_ctb, {\n            x: \"measure\",\n            y: \"name\",\n            text: \"name\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"linear\",\n        domain: [minVal, maxVal],\n        reverse: true\n    }\n})\n"}]}
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
