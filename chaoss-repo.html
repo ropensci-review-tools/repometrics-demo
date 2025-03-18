@@ -305,13 +305,16 @@ cookieconsent.run({
 <span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> item<span class="op">.</span><span class="at">package</span><span class="op">;</span></span>
 <span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
 <span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>repos <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(reposAll))<span class="op">;</span></span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>viewof repo <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>    repos<span class="op">,</span></span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>    {</span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>        <span class="dt">multiple</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;Repository:&lt;/b&gt;`</span></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>repoSet <span class="op">=</span> localStorage<span class="op">.</span><span class="fu">getItem</span>(<span class="st">"orgmetricsRepo"</span>) <span class="op">||</span> repos [<span class="dv">0</span>]</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>viewof repo <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>    repos<span class="op">,</span></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>        <span class="dt">multiple</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>        <span class="dt">value</span><span class="op">:</span> repoSet<span class="op">,</span></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;Repository:&lt;/b&gt;`</span></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">"orgmetricsRepo"</span><span class="op">,</span> repo<span class="op">.</span><span class="fu">toString</span>())<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-1" data-nodetype="declaration">
@@ -333,15 +336,29 @@ cookieconsent.run({
 </div>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
 </div>
 <div style="margin-top: 20px; margin-bottom: 20px;">
 
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="121" data-source-offset="-33"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 120;"><span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>repoURL <span class="op">=</span> repo_src<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
-<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r<span class="op">.</span><span class="at">package</span> <span class="op">===</span> repo</span>
-<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>})[<span class="dv">0</span>]<span class="op">.</span><span class="at">url</span><span class="op">;</span></span>
-<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div&gt;Click here to see the &lt;a href=</span><span class="sc">${</span>repoURL<span class="sc">}</span><span class="vs"> target="_blank"&gt;</span><span class="sc">${</span>repo<span class="sc">}</span><span class="vs"> repository&lt;/a&gt;.&lt;/div&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="124" data-source-offset="-33"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 123;"><span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>repoURL <span class="op">=</span> repo_src<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r<span class="op">.</span><span class="at">package</span> <span class="op">===</span> repo</span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>})[<span class="dv">0</span>]<span class="op">.</span><span class="at">url</span><span class="op">;</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div&gt;Click here to see the &lt;a href=</span><span class="sc">${</span>repoURL<span class="sc">}</span><span class="vs"> target="_blank"&gt;</span><span class="sc">${</span>repo<span class="sc">}</span><span class="vs"> repository&lt;/a&gt;.&lt;/div&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -361,13 +378,13 @@ cookieconsent.run({
 
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="129" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 128;"><span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a>viewof outliersOnly <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(</span>
-<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"true"</span><span class="op">,</span> <span class="st">"false"</span>]<span class="op">,</span></span>
-<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a>    {</span>
-<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>        <span class="dt">value</span><span class="op">:</span> <span class="st">"true"</span><span class="op">,</span></span>
-<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;Outliers only:&lt;/b&gt;`</span><span class="op">,</span></span>
-<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="132" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 131;"><span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>viewof outliersOnly <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(</span>
+<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"true"</span><span class="op">,</span> <span class="st">"false"</span>]<span class="op">,</span></span>
+<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>        <span class="dt">value</span><span class="op">:</span> <span class="st">"true"</span><span class="op">,</span></span>
+<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;Outliers only:&lt;/b&gt;`</span><span class="op">,</span></span>
+<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="declaration">
 
@@ -375,15 +392,15 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="140" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 139;"><span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>ctb_abs <span class="op">=</span> ctb_absTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
-<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r<span class="op">.</span><span class="at">repo</span> <span class="op">===</span> repo</span>
-<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>issue_resp <span class="op">=</span> issue_respTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="143" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 142;"><span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>ctb_abs <span class="op">=</span> ctb_absTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
 <span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r<span class="op">.</span><span class="at">repo</span> <span class="op">===</span> repo</span>
 <span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>issue_bugs <span class="op">=</span> issue_bugsTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>issue_resp <span class="op">=</span> issue_respTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
 <span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r<span class="op">.</span><span class="at">repo</span> <span class="op">===</span> repo</span>
-<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>issue_bugs <span class="op">=</span> issue_bugsTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(r) {</span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> r<span class="op">.</span><span class="at">repo</span> <span class="op">===</span> repo</span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-6-1" data-nodetype="declaration">
@@ -410,23 +427,23 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="chaoss-models">CHAOSS models</h2>
 <p>This first graph shows scores for the various <a href="https://chaoss.community/kbtopic/all-metrics-models/">CHAOSS (<em>Community Health Analytics in Open Source Software</em>) models</a> for a selected repository. Each of these models is an aggregation of several underlying <a href="https://chaoss.community/kbtopic/all-metrics/">metrics</a>, which can be examined in the following sub-section.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="164" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 163;"><span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a>models_all <span class="op">=</span> {</span>
-<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(models_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a>models_final <span class="op">=</span> models_all<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
-<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">name</span> <span class="op">===</span> <span class="st">"final"</span></span>
-<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>model_repoAll <span class="op">=</span> models_all<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
-<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">package</span> <span class="op">===</span> repo <span class="op">&amp;&amp;</span> mod<span class="op">.</span><span class="at">name</span> <span class="op">!==</span> <span class="st">"final"</span></span>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="167" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 166;"><span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>models_all <span class="op">=</span> {</span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(models_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>models_final <span class="op">=</span> models_all<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
+<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">name</span> <span class="op">===</span> <span class="st">"final"</span></span>
 <span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>model_repo <span class="op">=</span> outliersOnly <span class="op">===</span> <span class="st">"true"</span> <span class="op">?</span></span>
-<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a>    model_repoAll<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(m) {</span>
-<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> m<span class="op">.</span><span class="at">outlier</span> <span class="op">===</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a>    }) <span class="op">:</span> model_repoAll<span class="op">;</span></span>
-<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a>model_repo_len <span class="op">=</span> model_repo<span class="op">.</span><span class="at">length</span></span>
-<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a>model_repo_ht_mult <span class="op">=</span> model_repo_len <span class="op">&lt;</span> <span class="dv">10</span> <span class="op">?</span> <span class="dv">80</span> <span class="op">:</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>model_repoAll <span class="op">=</span> models_all<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
+<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">package</span> <span class="op">===</span> repo <span class="op">&amp;&amp;</span> mod<span class="op">.</span><span class="at">name</span> <span class="op">!==</span> <span class="st">"final"</span></span>
+<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a>model_repo <span class="op">=</span> outliersOnly <span class="op">===</span> <span class="st">"true"</span> <span class="op">?</span></span>
+<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a>    model_repoAll<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(m) {</span>
+<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> m<span class="op">.</span><span class="at">outlier</span> <span class="op">===</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb7-181"><a href="#cb7-181" aria-hidden="true" tabindex="-1"></a>    }) <span class="op">:</span> model_repoAll<span class="op">;</span></span>
+<span id="cb7-182"><a href="#cb7-182" aria-hidden="true" tabindex="-1"></a>model_repo_len <span class="op">=</span> model_repo<span class="op">.</span><span class="at">length</span></span>
+<span id="cb7-183"><a href="#cb7-183" aria-hidden="true" tabindex="-1"></a>model_repo_ht_mult <span class="op">=</span> model_repo_len <span class="op">&lt;</span> <span class="dv">10</span> <span class="op">?</span> <span class="dv">80</span> <span class="op">:</span> <span class="dv">40</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-7-1" data-nodetype="declaration">
@@ -471,9 +488,9 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="186" data-source-offset="-99"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 185;"><span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a>fullScaleValues <span class="op">=</span> model_repoAll<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
-<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a>minVal <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="op">...</span>fullScaleValues)<span class="op">;</span></span>
-<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a>maxVal <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>fullScaleValues)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="189" data-source-offset="-99"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 188;"><span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a>fullScaleValues <span class="op">=</span> model_repoAll<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a>minVal <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="op">...</span>fullScaleValues)<span class="op">;</span></span>
+<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a>maxVal <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>fullScaleValues)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-8-1" data-nodetype="declaration">
@@ -497,52 +514,52 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="192" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 191;"><span id="cb9-192"><a href="#cb9-192" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb9-193"><a href="#cb9-193" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> model_repo_ht_mult <span class="op">*</span> model_repo_len<span class="op">,</span></span>
-<span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
-<span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
-<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
-<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
-<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
-<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Model Scores"</span></span>
-<span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb9-204"><a href="#cb9-204" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb9-205"><a href="#cb9-205" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb9-206"><a href="#cb9-206" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(model_repo<span class="op">,</span> {</span>
-<span id="cb9-207"><a href="#cb9-207" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb9-208"><a href="#cb9-208" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb9-209"><a href="#cb9-209" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
-<span id="cb9-210"><a href="#cb9-210" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb9-211"><a href="#cb9-211" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb9-212"><a href="#cb9-212" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(model_repo<span class="op">,</span></span>
-<span id="cb9-213"><a href="#cb9-213" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
-<span id="cb9-214"><a href="#cb9-214" aria-hidden="true" tabindex="-1"></a>            {</span>
-<span id="cb9-215"><a href="#cb9-215" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb9-216"><a href="#cb9-216" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb9-217"><a href="#cb9-217" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
-<span id="cb9-218"><a href="#cb9-218" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
-<span id="cb9-219"><a href="#cb9-219" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb9-220"><a href="#cb9-220" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb9-221"><a href="#cb9-221" aria-hidden="true" tabindex="-1"></a>            })</span>
-<span id="cb9-222"><a href="#cb9-222" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
-<span id="cb9-223"><a href="#cb9-223" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(model_repo<span class="op">,</span> {</span>
-<span id="cb9-224"><a href="#cb9-224" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
-<span id="cb9-225"><a href="#cb9-225" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb9-226"><a href="#cb9-226" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb9-227"><a href="#cb9-227" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
-<span id="cb9-228"><a href="#cb9-228" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
-<span id="cb9-229"><a href="#cb9-229" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
-<span id="cb9-230"><a href="#cb9-230" aria-hidden="true" tabindex="-1"></a>        })</span>
-<span id="cb9-231"><a href="#cb9-231" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
-<span id="cb9-232"><a href="#cb9-232" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb9-233"><a href="#cb9-233" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
-<span id="cb9-234"><a href="#cb9-234" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"linear"</span><span class="op">,</span></span>
-<span id="cb9-235"><a href="#cb9-235" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [minVal<span class="op">,</span> maxVal]</span>
-<span id="cb9-236"><a href="#cb9-236" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb9-237"><a href="#cb9-237" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="195" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 194;"><span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> model_repo_ht_mult <span class="op">*</span> model_repo_len<span class="op">,</span></span>
+<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb9-204"><a href="#cb9-204" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb9-205"><a href="#cb9-205" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Model Scores"</span></span>
+<span id="cb9-206"><a href="#cb9-206" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb9-207"><a href="#cb9-207" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb9-208"><a href="#cb9-208" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb9-209"><a href="#cb9-209" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(model_repo<span class="op">,</span> {</span>
+<span id="cb9-210"><a href="#cb9-210" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb9-211"><a href="#cb9-211" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb9-212"><a href="#cb9-212" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb9-213"><a href="#cb9-213" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb9-214"><a href="#cb9-214" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb9-215"><a href="#cb9-215" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(model_repo<span class="op">,</span></span>
+<span id="cb9-216"><a href="#cb9-216" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb9-217"><a href="#cb9-217" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb9-218"><a href="#cb9-218" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb9-219"><a href="#cb9-219" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb9-220"><a href="#cb9-220" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb9-221"><a href="#cb9-221" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb9-222"><a href="#cb9-222" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb9-223"><a href="#cb9-223" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb9-224"><a href="#cb9-224" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb9-225"><a href="#cb9-225" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb9-226"><a href="#cb9-226" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(model_repo<span class="op">,</span> {</span>
+<span id="cb9-227"><a href="#cb9-227" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
+<span id="cb9-228"><a href="#cb9-228" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb9-229"><a href="#cb9-229" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb9-230"><a href="#cb9-230" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb9-231"><a href="#cb9-231" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb9-232"><a href="#cb9-232" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb9-233"><a href="#cb9-233" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb9-234"><a href="#cb9-234" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb9-235"><a href="#cb9-235" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb9-236"><a href="#cb9-236" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb9-237"><a href="#cb9-237" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"linear"</span><span class="op">,</span></span>
+<span id="cb9-238"><a href="#cb9-238" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [minVal<span class="op">,</span> maxVal]</span>
+<span id="cb9-239"><a href="#cb9-239" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-240"><a href="#cb9-240" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="expression">
 
@@ -554,15 +571,15 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="chaoss-metrics">CHAOSS metrics</h2>
 <p>This graph provides more detailed insight into the state of the selected repository, through showing values for individual <a href="https://chaoss.community/kbtopic/all-metrics/">CHAOSS metrics</a> used to inform the aggregate models.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="249" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 248;"><span id="cb10-249"><a href="#cb10-249" aria-hidden="true" tabindex="-1"></a>metrics <span class="op">=</span> outliersOnly <span class="op">===</span> <span class="st">"true"</span> <span class="op">?</span></span>
-<span id="cb10-250"><a href="#cb10-250" aria-hidden="true" tabindex="-1"></a>    metricsTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(m) {</span>
-<span id="cb10-251"><a href="#cb10-251" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> m<span class="op">.</span><span class="at">outlier</span> <span class="op">===</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a>    }) <span class="op">:</span> metricsTranspose<span class="op">;</span></span>
-<span id="cb10-253"><a href="#cb10-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-254"><a href="#cb10-254" aria-hidden="true" tabindex="-1"></a>metrics_repo <span class="op">=</span> metrics<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
-<span id="cb10-255"><a href="#cb10-255" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">package</span> <span class="op">===</span> repo</span>
-<span id="cb10-256"><a href="#cb10-256" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb10-257"><a href="#cb10-257" aria-hidden="true" tabindex="-1"></a>metrics_repo_len <span class="op">=</span> metrics_repo<span class="op">.</span><span class="at">length</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="252" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 251;"><span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a>metrics <span class="op">=</span> outliersOnly <span class="op">===</span> <span class="st">"true"</span> <span class="op">?</span></span>
+<span id="cb10-253"><a href="#cb10-253" aria-hidden="true" tabindex="-1"></a>    metricsTranspose<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(m) {</span>
+<span id="cb10-254"><a href="#cb10-254" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> m<span class="op">.</span><span class="at">outlier</span> <span class="op">===</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb10-255"><a href="#cb10-255" aria-hidden="true" tabindex="-1"></a>    }) <span class="op">:</span> metricsTranspose<span class="op">;</span></span>
+<span id="cb10-256"><a href="#cb10-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-257"><a href="#cb10-257" aria-hidden="true" tabindex="-1"></a>metrics_repo <span class="op">=</span> metrics<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(mod) {</span>
+<span id="cb10-258"><a href="#cb10-258" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mod<span class="op">.</span><span class="at">package</span> <span class="op">===</span> repo</span>
+<span id="cb10-259"><a href="#cb10-259" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb10-260"><a href="#cb10-260" aria-hidden="true" tabindex="-1"></a>metrics_repo_len <span class="op">=</span> metrics_repo<span class="op">.</span><span class="at">length</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-10-1" data-nodetype="declaration">
@@ -586,51 +603,51 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="261" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 260;"><span id="cb11-261"><a href="#cb11-261" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb11-262"><a href="#cb11-262" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">40</span> <span class="op">*</span> metrics_repo_len<span class="op">,</span></span>
-<span id="cb11-263"><a href="#cb11-263" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
-<span id="cb11-264"><a href="#cb11-264" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
-<span id="cb11-265"><a href="#cb11-265" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
-<span id="cb11-266"><a href="#cb11-266" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
-<span id="cb11-267"><a href="#cb11-267" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb11-268"><a href="#cb11-268" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb11-269"><a href="#cb11-269" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
-<span id="cb11-270"><a href="#cb11-270" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb11-271"><a href="#cb11-271" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Metric Scores"</span></span>
-<span id="cb11-272"><a href="#cb11-272" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb11-273"><a href="#cb11-273" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb11-274"><a href="#cb11-274" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb11-275"><a href="#cb11-275" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(metrics_repo<span class="op">,</span> {</span>
-<span id="cb11-276"><a href="#cb11-276" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb11-277"><a href="#cb11-277" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb11-278"><a href="#cb11-278" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
-<span id="cb11-279"><a href="#cb11-279" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb11-280"><a href="#cb11-280" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb11-281"><a href="#cb11-281" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(metrics_repo<span class="op">,</span></span>
-<span id="cb11-282"><a href="#cb11-282" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
-<span id="cb11-283"><a href="#cb11-283" aria-hidden="true" tabindex="-1"></a>            {</span>
-<span id="cb11-284"><a href="#cb11-284" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb11-285"><a href="#cb11-285" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb11-286"><a href="#cb11-286" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
-<span id="cb11-287"><a href="#cb11-287" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
-<span id="cb11-288"><a href="#cb11-288" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb11-289"><a href="#cb11-289" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb11-290"><a href="#cb11-290" aria-hidden="true" tabindex="-1"></a>            })</span>
-<span id="cb11-291"><a href="#cb11-291" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
-<span id="cb11-292"><a href="#cb11-292" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(metrics_repo<span class="op">,</span> {</span>
-<span id="cb11-293"><a href="#cb11-293" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
-<span id="cb11-294"><a href="#cb11-294" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb11-295"><a href="#cb11-295" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb11-296"><a href="#cb11-296" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
-<span id="cb11-297"><a href="#cb11-297" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
-<span id="cb11-298"><a href="#cb11-298" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
-<span id="cb11-299"><a href="#cb11-299" aria-hidden="true" tabindex="-1"></a>        })</span>
-<span id="cb11-300"><a href="#cb11-300" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
-<span id="cb11-301"><a href="#cb11-301" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb11-302"><a href="#cb11-302" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
-<span id="cb11-303"><a href="#cb11-303" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span></span>
-<span id="cb11-304"><a href="#cb11-304" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb11-305"><a href="#cb11-305" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="264" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 263;"><span id="cb11-264"><a href="#cb11-264" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb11-265"><a href="#cb11-265" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">40</span> <span class="op">*</span> metrics_repo_len<span class="op">,</span></span>
+<span id="cb11-266"><a href="#cb11-266" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb11-267"><a href="#cb11-267" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">160</span><span class="op">,</span></span>
+<span id="cb11-268"><a href="#cb11-268" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb11-269"><a href="#cb11-269" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb11-270"><a href="#cb11-270" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb11-271"><a href="#cb11-271" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb11-272"><a href="#cb11-272" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb11-273"><a href="#cb11-273" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb11-274"><a href="#cb11-274" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Metric Scores"</span></span>
+<span id="cb11-275"><a href="#cb11-275" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb11-276"><a href="#cb11-276" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb11-277"><a href="#cb11-277" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb11-278"><a href="#cb11-278" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(metrics_repo<span class="op">,</span> {</span>
+<span id="cb11-279"><a href="#cb11-279" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-280"><a href="#cb11-280" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-281"><a href="#cb11-281" aria-hidden="true" tabindex="-1"></a>            <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb11-282"><a href="#cb11-282" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-283"><a href="#cb11-283" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb11-284"><a href="#cb11-284" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(metrics_repo<span class="op">,</span></span>
+<span id="cb11-285"><a href="#cb11-285" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">pointer</span>(</span>
+<span id="cb11-286"><a href="#cb11-286" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb11-287"><a href="#cb11-287" aria-hidden="true" tabindex="-1"></a>                <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-288"><a href="#cb11-288" aria-hidden="true" tabindex="-1"></a>                <span class="dt">x</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-289"><a href="#cb11-289" aria-hidden="true" tabindex="-1"></a>                <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"-x"</span> }<span class="op">,</span></span>
+<span id="cb11-290"><a href="#cb11-290" aria-hidden="true" tabindex="-1"></a>                <span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span></span>
+<span id="cb11-291"><a href="#cb11-291" aria-hidden="true" tabindex="-1"></a>                <span class="dt">fill</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-292"><a href="#cb11-292" aria-hidden="true" tabindex="-1"></a>                <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb11-293"><a href="#cb11-293" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb11-294"><a href="#cb11-294" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb11-295"><a href="#cb11-295" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(metrics_repo<span class="op">,</span> {</span>
+<span id="cb11-296"><a href="#cb11-296" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span> <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
+<span id="cb11-297"><a href="#cb11-297" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-298"><a href="#cb11-298" aria-hidden="true" tabindex="-1"></a>            <span class="dt">text</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-299"><a href="#cb11-299" aria-hidden="true" tabindex="-1"></a>            <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb11-300"><a href="#cb11-300" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">16</span><span class="op">,</span></span>
+<span id="cb11-301"><a href="#cb11-301" aria-hidden="true" tabindex="-1"></a>            <span class="dt">dx</span><span class="op">:</span> <span class="dv">5</span></span>
+<span id="cb11-302"><a href="#cb11-302" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb11-303"><a href="#cb11-303" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb11-304"><a href="#cb11-304" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb11-305"><a href="#cb11-305" aria-hidden="true" tabindex="-1"></a>        <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Cool"</span><span class="op">,</span></span>
+<span id="cb11-306"><a href="#cb11-306" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span></span>
+<span id="cb11-307"><a href="#cb11-307" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-308"><a href="#cb11-308" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-11" data-nodetype="expression">
 
@@ -643,7 +660,7 @@ cookieconsent.run({
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"Plot = import(\"https://esm.sh/@observablehq/plot\")\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"metricsTranspose = {\n    return transpose(metrics_in).map(row => ({\n        ...row,\n    }));\n}\nrepo_src = {\n    return transpose(repo_src_in).map(row => ({\n        ...row,\n    }));\n}\nctb_absTranspose = {\n    return transpose(ctb_abs_in).map(row => ({\n        ...row,\n    }));\n}\nissue_respTranspose = {\n    return transpose(issue_resp_in).map(row => ({\n        ...row,\n    }));\n}\nissue_bugsTranspose = {\n    return transpose(issue_bugs_in).map(row => ({\n        ...row,\n    }));\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"// Get array of unique repo names for input selector:\nreposAll = metricsTranspose.map(function(item) {\n    return item.package;\n});\nrepos = Array.from(new Set(reposAll));\nviewof repo = Inputs.select(\n    repos,\n    {\n        multiple: false,\n        label: htl.html`<b>Repository:</b>`\n    }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"// and get URL for selected repo\nrepoURL = repo_src.filter(function(r) {\n    return r.package === repo\n})[0].url;\nhtl.html`<div>Click here to see the <a href=${repoURL} target=\"_blank\">${repo} repository</a>.</div>`\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"viewof outliersOnly = Inputs.radio(\n    [\"true\", \"false\"],\n    {\n        value: \"true\",\n        label: htl.html`<b>Outliers only:</b>`,\n    }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"ctb_abs = ctb_absTranspose.filter(function(r) {\n    return r.repo === repo\n})\nissue_resp = issue_respTranspose.filter(function(r) {\n    return r.repo === repo\n})\nissue_bugs = issue_bugsTranspose.filter(function(r) {\n    return r.repo === repo\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-7","inline":false,"source":"models_all = {\n    return transpose(models_in).map(row => ({\n        ...row,\n    }));\n}\nmodels_final = models_all.filter(function(mod) {\n    return mod.name === \"final\"\n})\nmodel_repoAll = models_all.filter(function(mod) {\n    return mod.package === repo && mod.name !== \"final\"\n})\nmodel_repo = outliersOnly === \"true\" ?\n    model_repoAll.filter(function(m) {\n        return m.outlier === true;\n    }) : model_repoAll;\nmodel_repo_len = model_repo.length\nmodel_repo_ht_mult = model_repo_len < 10 ? 80 : 40\n"},{"methodName":"interpret","cellName":"ojs-cell-8","inline":false,"source":"// Bar colours should be scaled to full data range, not just restricted range\n// of filtered data.\nfullScaleValues = model_repoAll.map(d => d.value);\nminVal = Math.min(...fullScaleValues);\nmaxVal = Math.max(...fullScaleValues);\n"},{"methodName":"interpret","cellName":"ojs-cell-9","inline":false,"source":"Plot.plot({\n    height: model_repo_ht_mult * model_repo_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Model Scores\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(model_repo, {\n            y: \"name\",\n            x: \"value\",\n            sort: {y: \"-x\" },\n            fill: \"value\",\n        }),\n        Plot.barX(model_repo,\n            Plot.pointer(\n            {\n                y: \"name\",\n                x: \"value\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"value\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(model_repo, {\n            x: (d) => d.value < 0 ? 0 : d.value,\n            y: \"name\",\n            text: \"name\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"linear\",\n        domain: [minVal, maxVal]\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-10","inline":false,"source":"metrics = outliersOnly === \"true\" ?\n    metricsTranspose.filter(function(m) {\n        return m.outlier === true;\n    }) : metricsTranspose;\n\nmetrics_repo = metrics.filter(function(mod) {\n    return mod.package === repo\n})\nmetrics_repo_len = metrics_repo.length\n"},{"methodName":"interpret","cellName":"ojs-cell-11","inline":false,"source":"Plot.plot({\n    height: 40 * metrics_repo_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Metric Scores\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(metrics_repo, {\n            y: \"name\",\n            x: \"value\",\n            sort: {y: \"-x\" },\n            fill: \"value\",\n        }),\n        Plot.barX(metrics_repo,\n            Plot.pointer(\n            {\n                y: \"name\",\n                x: \"value\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"value\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(metrics_repo, {\n            x: (d) => d.value < 0 ? 0 : d.value,\n            y: \"name\",\n            text: \"name\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\"\n    }\n})\n"},{"methodName":"interpretQuiet","source":"shinyInput('repo')"},{"methodName":"interpretQuiet","source":"shinyInput('outliersOnly')"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"Plot = import(\"https://esm.sh/@observablehq/plot\")\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"metricsTranspose = {\n    return transpose(metrics_in).map(row => ({\n        ...row,\n    }));\n}\nrepo_src = {\n    return transpose(repo_src_in).map(row => ({\n        ...row,\n    }));\n}\nctb_absTranspose = {\n    return transpose(ctb_abs_in).map(row => ({\n        ...row,\n    }));\n}\nissue_respTranspose = {\n    return transpose(issue_resp_in).map(row => ({\n        ...row,\n    }));\n}\nissue_bugsTranspose = {\n    return transpose(issue_bugs_in).map(row => ({\n        ...row,\n    }));\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"// Get array of unique repo names for input selector:\nreposAll = metricsTranspose.map(function(item) {\n    return item.package;\n});\nrepos = Array.from(new Set(reposAll));\nrepoSet = localStorage.getItem(\"orgmetricsRepo\") || repos [0]\nviewof repo = Inputs.select(\n    repos,\n    {\n        multiple: false,\n        value: repoSet,\n        label: htl.html`<b>Repository:</b>`\n    }\n)\nlocalStorage.setItem(\"orgmetricsRepo\", repo.toString());\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"// and get URL for selected repo\nrepoURL = repo_src.filter(function(r) {\n    return r.package === repo\n})[0].url;\nhtl.html`<div>Click here to see the <a href=${repoURL} target=\"_blank\">${repo} repository</a>.</div>`\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"viewof outliersOnly = Inputs.radio(\n    [\"true\", \"false\"],\n    {\n        value: \"true\",\n        label: htl.html`<b>Outliers only:</b>`,\n    }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"ctb_abs = ctb_absTranspose.filter(function(r) {\n    return r.repo === repo\n})\nissue_resp = issue_respTranspose.filter(function(r) {\n    return r.repo === repo\n})\nissue_bugs = issue_bugsTranspose.filter(function(r) {\n    return r.repo === repo\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-7","inline":false,"source":"models_all = {\n    return transpose(models_in).map(row => ({\n        ...row,\n    }));\n}\nmodels_final = models_all.filter(function(mod) {\n    return mod.name === \"final\"\n})\nmodel_repoAll = models_all.filter(function(mod) {\n    return mod.package === repo && mod.name !== \"final\"\n})\nmodel_repo = outliersOnly === \"true\" ?\n    model_repoAll.filter(function(m) {\n        return m.outlier === true;\n    }) : model_repoAll;\nmodel_repo_len = model_repo.length\nmodel_repo_ht_mult = model_repo_len < 10 ? 80 : 40\n"},{"methodName":"interpret","cellName":"ojs-cell-8","inline":false,"source":"// Bar colours should be scaled to full data range, not just restricted range\n// of filtered data.\nfullScaleValues = model_repoAll.map(d => d.value);\nminVal = Math.min(...fullScaleValues);\nmaxVal = Math.max(...fullScaleValues);\n"},{"methodName":"interpret","cellName":"ojs-cell-9","inline":false,"source":"Plot.plot({\n    height: model_repo_ht_mult * model_repo_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Model Scores\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(model_repo, {\n            y: \"name\",\n            x: \"value\",\n            sort: {y: \"-x\" },\n            fill: \"value\",\n        }),\n        Plot.barX(model_repo,\n            Plot.pointer(\n            {\n                y: \"name\",\n                x: \"value\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"value\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(model_repo, {\n            x: (d) => d.value < 0 ? 0 : d.value,\n            y: \"name\",\n            text: \"name\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"linear\",\n        domain: [minVal, maxVal]\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-10","inline":false,"source":"metrics = outliersOnly === \"true\" ?\n    metricsTranspose.filter(function(m) {\n        return m.outlier === true;\n    }) : metricsTranspose;\n\nmetrics_repo = metrics.filter(function(mod) {\n    return mod.package === repo\n})\nmetrics_repo_len = metrics_repo.length\n"},{"methodName":"interpret","cellName":"ojs-cell-11","inline":false,"source":"Plot.plot({\n    height: 40 * metrics_repo_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Metric Scores\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(metrics_repo, {\n            y: \"name\",\n            x: \"value\",\n            sort: {y: \"-x\" },\n            fill: \"value\",\n        }),\n        Plot.barX(metrics_repo,\n            Plot.pointer(\n            {\n                y: \"name\",\n                x: \"value\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"value\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(metrics_repo, {\n            x: (d) => d.value < 0 ? 0 : d.value,\n            y: \"name\",\n            text: \"name\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\"\n    }\n})\n"},{"methodName":"interpretQuiet","source":"shinyInput('repo')"},{"methodName":"interpretQuiet","source":"shinyInput('outliersOnly')"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
