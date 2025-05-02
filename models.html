@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.7.29">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Organization - Community Health</title>
+<title>Community Health – EpiVerse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -66,22 +67,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0ed9b2218bc3c0ca11aa8b5eaa996b07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,6 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -107,6 +116,8 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"en"
   });
 });
 </script> 
@@ -114,73 +125,74 @@ cookieconsent.run({
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script type="ojs-define">
-{"contents":[{"name":"models_in","value":{"package":["epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker"],"name":["final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming"],"value":[13.4691,0.3245,1.3859,0.2113,1.1827,1.157,1.8903,1.9057,0.8658,0.3494,0.4383,1.2416,1.1952,1.3214,11.4955,0.1444,1.9493,1.6561,2.2044,0.4076,2.31,2.1892,0.4108,-1.1265,1.1807,0.6336,-0.6327,0.1685,10.841,1.3321,1.5414,1.9563,1.8951,0.1107,1.9204,1.5442,1.0177,-1.1176,0.7304,0.5842,-0.7433,0.0696,10.3756,-1.5736,2.0277,0.9184,2.3656,0.3123,2.094,2.1622,0.0689,-0.2395,1.1312,0.1634,0.2502,0.6948,9.99,1.766,1.2526,-0.6025,1.04,-0.9356,0.5634,0.9027,0.4104,0.5968,0.6568,1.1098,2.1485,1.081,9.0743,0.3245,1.1182,0.7587,1.1827,-0.2214,1.0219,0.722,1.0829,0.8442,0.674,0.0857,1.1952,0.2857,9.0638,0.3245,0.6023,-1.228,0.7261,0.3743,0.1744,0.413,1.6453,0.102,0.286,2.0829,1.1952,2.3659,8.371,-2.2889,2.1565,1.1848,2.2106,0.1792,2.1549,2.2388,0.3635,-0.3197,0.9666,-0.0523,-0.7602,0.3373,7.691,-1.7481,1.1399,0.6744,0.6813,0.6062,1.9276,1.6437,0.1479,0.5968,1.0802,-0.346,1.1952,0.0919,7.0057,0.3245,1.7027,-1.228,1.0364,-0.7905,1.1775,1.676,-1.5556,0.3494,0.7748,1.2591,1.1952,1.0844,6.8718,-2.2889,2.1583,0.6199,2.1557,-0.4401,2.4149,2.4116,-0.0154,-1.4174,0.9959,0.1687,-0.7938,0.9024,6.3591,-2.3909,1.5102,1.0964,1.5047,0.48,1.8486,1.8532,0.63,-0.753,0.7401,-0.4211,-0.3216,0.5825,5.8328,0.3245,1.0478,-0.6025,0.3674,2.3218,0.0122,0.722,0.0926,0.102,0.4391,-0.1222,1.1952,-0.067,5.7675,-0.7972,1.4932,0.5879,1.7167,0.6544,1.441,1.8532,0.3244,-1.2671,0.6879,-0.0143,-1.1039,0.1913,5.7328,0.5783,1.1117,0.74,0.7113,0.763,1.1956,1.5442,0.3545,-1.7925,0.4629,0.3673,-0.8682,0.5649,5.112,0.3245,0.2686,0.8864,1.0476,0.4428,0.4916,-0.1003,0.9464,0.3494,0.3212,0.0193,0.2419,-0.1274,4.7525,-2.8309,1.6662,0.5879,1.3111,2.3218,1.0033,1.2117,-0.3521,0.102,0.6068,-0.9886,0.5725,-0.4592,4.4538,-1.5962,1.3762,1.4214,1.4767,0.48,1.0937,1.4159,-0.2039,-1.1264,0.6833,-0.4638,-0.7031,0.6,3.7945,0.3245,-0.4748,-0.0739,-0.0809,2.3218,-0.2332,-0.6135,0.948,0.102,0.306,0.7345,0.2419,0.2922,3.5915,0.3245,0.7552,0.9645,0.6181,0.7064,0.7047,0.9262,-0.9338,-2.0536,0.1716,0.1368,-1.1196,0.5946,3.5915,0.3245,0.7552,0.9645,0.6181,0.7064,0.7047,0.9262,-0.9338,-2.0536,0.1716,0.1368,-1.1196,0.5946,3.5741,0.3245,0.4799,1.5586,1.04,0.763,0.0517,-0.1003,-0.4953,0.3494,0.4087,-0.4575,0.2419,-0.5905,3.4818,-0.1094,0.8842,-1.228,0.8341,-0.0763,0.4198,0.722,-0.9238,0.3494,0.1716,0.2941,1.1952,0.9491,3.2958,0.3245,0.2978,0.023,0.0435,-0.4401,0.1744,0.413,0.6355,0.5968,0.6312,-0.4225,1.1952,-0.1765,1.9003,0.3245,-0.7089,0.6981,-0.566,-0.2214,-0.5182,-0.6135,1.6931,0.3494,-0.3896,0.7345,0.2419,0.8764,1.2724,-2.1956,0.8001,1.1528,0.8341,0.763,1.1124,0.9262,-0.2344,-1.3825,0.2895,-0.8331,-0.7115,0.7514,1.2638,0.3245,-0.7089,0.8501,-0.6739,-0.4401,-0.6409,-0.6135,1.8398,0.3494,-0.3666,0.7345,0.2419,0.3676,1.0912,-2.2175,1.2283,0.6981,0.9604,1.8712,0.7047,0.9262,-0.1488,-1.7556,0.734,-0.5445,-1.7719,0.4066,0.8629,0.3245,-0.7089,0.3996,-0.5028,-0.3399,-0.4464,-0.6135,1.405,0.5968,-0.5201,0.7345,0.2419,0.2922,0.6825,0.3245,-0.7089,0.6485,-0.6739,-0.5269,-0.6409,-0.6135,1.6453,0.3494,-0.3896,0.7345,0.2419,0.2922,0.5727,0.3245,-0.7089,0.6199,-0.6739,-0.6035,-0.6409,-0.6135,1.6177,0.3494,-0.3666,0.7345,0.2419,0.2922,0.5459,0.3245,-0.7089,0.023,-0.566,0.3743,-0.5182,-0.6135,1.0415,0.3494,-0.4289,0.7345,0.2419,0.2922,0.0873,0.3245,-0.7089,0.3215,-0.6739,-0.4401,-0.6409,-0.6135,1.3296,0.3494,-0.4289,0.7345,0.2419,0.2922,-0.1083,0.3245,0.105,1.7697,-0.1441,-1.3605,-0.1667,-0.7746,1.2049,0.5968,-0.2591,-0.3557,0.2419,-1.2903,-0.2375,0.3245,-0.7089,0.947,-0.6739,0.5613,-0.2332,-0.1003,0.9558,0.5968,-0.3377,-1.0563,0.2419,-0.7545,-0.6746,0.3245,-0.7089,-0.4142,-0.6739,0.3743,-0.6409,-0.6135,0.6195,0.3494,-0.5594,0.7345,0.2419,0.2922,-1.4908,0.3245,-0.7089,-0.6025,-1.0326,0.8249,-1.0485,-0.6135,0.4378,0.3494,-0.6899,0.7345,0.2419,0.2922,-1.7834,0.3245,-0.7089,-0.6025,-0.566,-0.8426,-0.5182,-0.6135,0.4378,0.5968,-0.5594,0.7345,0.2419,0.2922,-2.0166,0.3245,-0.7089,0.5098,-0.6739,2.3218,-0.6409,-0.6135,-0.1254,0.3494,-0.4971,-1.0933,0.2419,-1.4109,-2.0867,0.3245,-0.4748,-0.6025,0.1514,-0.0763,-0.6409,-0.6135,-0.8579,0.3494,-0.0501,-0.0383,0.2419,0.2004,-2.4132,0.3245,-0.4748,1.9205,-0.566,-1.0541,-0.1105,-0.6135,0.8684,0.5968,-0.2361,-1.5105,0.2419,-1.7996,-2.5375,0.3245,-0.7089,-1.228,-0.6739,0.1107,-0.6409,-0.6135,-0.166,0.3494,-0.5594,0.7345,0.2419,0.2922,-2.668,0.3245,-0.7089,-1.228,-0.6739,0.1107,-0.6409,-0.6135,-0.166,0.3494,-0.6899,0.7345,0.2419,0.2922,-2.8062,-1.5815,1.512,0.9283,1.0848,-0.0118,1.0036,1.3025,-1.4638,-2.2744,0.5758,-0.4508,-2.5929,-0.8382,-2.9277,0.3245,-0.7089,-1.228,-0.6739,-0.5269,-0.6409,-0.6135,-0.166,0.5968,-0.5594,0.7345,0.2419,0.2922,-2.9514,-3.2709,1.328,1.2031,1.3639,0.0901,0.8728,1.1378,-0.6626,-1.9033,0.75,-1.4922,-2.2421,-0.1261,-3.2761,0.3245,-0.1703,-0.6025,-0.3152,0.8249,-0.6409,-0.6135,-1.0292,0.5968,-0.4289,-0.2295,0.2419,-1.2342,-3.3742,0.3245,-0.2408,0.947,-0.6739,-1.4075,-1.0485,-0.6135,0.4068,0.8442,-0.3666,-0.3972,0.2419,-1.3905,-3.4908,0.3245,-0.7089,-1.228,-1.0326,-0.0763,-1.0485,-0.6135,-0.166,0.3494,-0.5594,0.7345,0.2419,0.2922,-3.5037,0.3245,-0.7089,0.7762,-0.566,0.3743,-0.5182,-0.6135,-0.2334,0.5968,-0.3896,-1.5653,0.2419,-1.2225,-4.0842,0.3245,-0.2408,-0.6025,-0.3152,-0.2291,-0.4738,-0.4032,-0.7897,0.3494,-0.5594,-0.2902,0.2419,-1.0961,-4.1434,-1.117,0.3109,1.5096,0.3018,2.3218,0.1557,-0.6135,-0.3674,-1.217,-0.229,-0.4923,-2.6971,-2.01,-4.5981,0.3245,-0.7089,0.2113,-0.6739,-0.0763,-0.6409,-0.6135,-0.4944,0.3494,-0.4289,-1.1837,0.2419,-0.9046,-4.8261,0.3245,-0.7089,-1.228,-0.566,-1.3049,-0.8132,-0.985,-0.603,0.3494,-0.5594,0.7345,0.2419,0.2922,-5.0884,-0.6831,0.3695,0.9965,0.2778,0.1792,0.2971,-0.1003,-0.2772,-1.8172,-0.3503,-0.1581,-2.75,-1.0724,-5.1132,0.3245,-0.7089,-0.6025,-1.0326,2.3218,-1.0485,-0.6135,-1.0916,0.102,-0.5594,-1.0633,0.2419,-1.383,-5.5344,0.3245,-0.7089,1.8229,-0.458,0.8249,0.0122,-0.1003,-0.1042,-2.08,-0.2835,-1.5091,-2.0984,-1.1764,-5.5879,0.3245,-0.2408,0.4602,-0.1441,-1.1558,-0.7913,-1.0477,-1.0861,0.3494,-0.4289,-0.8681,0.2419,-1.201,-5.6812,0.3245,-0.7089,0.5879,-0.566,-0.8426,-0.5182,-0.6135,-0.5047,0.5968,-0.3503,-1.6011,0.2419,-1.727,-5.69,0.3245,-0.7089,0.6485,-0.6739,-0.7905,-0.6409,-0.6135,-0.2891,0.5968,-0.5201,-1.487,0.2419,-1.7777,-5.7586,0.3245,-0.1703,-1.228,-0.2073,-0.9356,-0.5182,-0.6135,-1.4256,0.3494,-0.5594,0.002,0.2419,-1.0185,-5.8225,0.3245,-0.7089,0.4602,-0.6739,0.1107,-0.6409,-0.6135,-0.6278,0.3494,-0.5594,-1.6009,0.2419,-1.8839,-5.91,0.3245,-0.7089,0.9184,-0.566,-1.4609,-0.7007,-0.8433,-0.3521,0.3494,-0.3666,-1.5142,0.2419,-1.2314,-6.5505,0.3245,-0.7089,-0.6025,-0.6739,-0.2214,-0.6409,-0.6135,-1.209,0.3494,-0.5594,-1.1045,0.2419,-1.1323,-6.6027,0.3245,-0.7089,0.3215,-0.6739,-0.9356,-0.6409,-0.6135,-0.703,0.5968,-0.3666,-1.5803,0.2419,-1.8647,-6.629,0.3245,-0.7089,-0.6025,-0.6739,-0.7905,-0.6409,-0.6135,-1.2807,0.5968,-0.4289,-1.1846,0.2419,-0.8677,-7.0266,0.3245,-0.7089,-1.228,-0.6739,0.3743,-0.6409,-0.6135,-1.63,0.3494,-0.6899,-0.9004,0.2419,-1.2312,-7.551,0.3245,-0.7089,0.6199,-1.0326,-1.2135,-1.0485,-0.6135,-0.4136,0.102,-0.3666,-1.5788,0.2419,-1.8632,-7.9175,0.3245,-0.7089,-0.6025,-0.6739,-0.2214,-0.6409,-0.6135,-1.5918,0.3494,-0.4289,-1.5319,0.2419,-1.8196,-8.1032,0.3245,-0.7089,-0.2259,-0.6739,-1.2436,-0.7965,-0.8095,-1.3916,0.3494,-0.5594,-1.4568,0.2419,-1.1528,-8.4948,0.3245,-0.7089,-1.228,-1.0326,0.3743,-1.0485,-0.6135,-1.8936,0.3494,-0.5594,-1.1948,0.2419,-1.5055,-8.5206,0.3245,-0.7089,1.3049,-0.566,0.763,-0.1105,-0.1003,-0.89,-2.8516,-0.311,-1.3618,-2.8417,-1.1711,-10.4683,0.3245,-0.7089,1.4597,-0.5028,-0.9109,-0.4282,-0.5907,-1.2476,-2.4765,-0.293,-1.475,-2.4804,-1.1384,-10.4799,0.3245,-0.2408,1.1117,-0.2073,-0.7746,-0.4522,-0.5304,-1.7162,-2.9443,-0.3377,-0.7095,-2.931,-1.0721,-12.5948,0.3245,-0.7089,1.1693,-0.6739,-0.7492,-0.7523,-0.7538,-1.9027,-2.7798,-0.3503,-1.4914,-2.7725,-1.1536,-12.8369,0.3245,-0.7089,1.3369,-0.566,-1.4994,-0.6717,-0.8068,-1.7162,-2.7699,-0.3186,-1.4303,-2.763,-1.2475,-14.7169,0.3245,-0.7089,0.8082,-0.6739,-1.4044,-0.9035,-0.9441,-2.5118,-2.883,-0.3896,-1.4434,-2.8719,-1.1151]}}]}
+{"contents":[{"name":"models_in","value":{"package":["linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","linelist","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameter","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","epiparameterDB","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","cleanepi","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","sandpaper","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","serofoi","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","etstats","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","simulist","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","episoap","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","ColOpenData","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","cfr","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","hex-stickers","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","safeframe","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","superspreading","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","epichains","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","howto","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","sivirep","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","research-compendium","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epiCo","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","epicontacts","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","iraca","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","epiparameterDashboard","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","numberize","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","epi-training-kit","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","vaccineff","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","rfextras","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","finalsize","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","dibbler","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","packagetemplate","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","outbreaker2","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","recon.ui","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","simulacr","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","epimaps","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","branchr","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","readepi","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","reconhub","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","llm-guidance","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","epiverse","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","learn","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","varnish","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epicookbook","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epinetwork","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epiversedashboard","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epishiny","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epiversetheme","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epirisk","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","epidemics","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","nomad","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","contactsim","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","epicontacts.ui","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","tracetheme","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","ggpyramid","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","incidence","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","quickfit","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","distcrete","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","tracer","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","personas","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","vimes","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","datacomparator","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","earlyR","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","climateR0","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","shinyHelpers","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","recontools","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","scenarios","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","etdev","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","projections","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","gisfirstaid","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","Severity_methods_assessment","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","incidence.ui","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","occupancy","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","rmdscaffold","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epitrix","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","epiflows","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","aweek","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","trendbreaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker","matchmaker"],"name":["final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming","final","dev_responsiveness","proj_engagement","proj_awareness","community_activity","oss_compliance","viability_community","viability_starter","viability_gov","viability_strategy","collab_devel_index","comm_serv_support","starter_health","comm_welcoming"],"value":[13.0694,0.7138,0.5107,0.6886,0.4858,0.5772,0.5062,0.5706,0.3626,0.2351,0.4606,0.4717,0.3566,0.5952,13.0694,0.7138,0.5107,0.6886,0.4858,0.5772,0.5062,0.5706,0.3626,0.2351,0.4606,0.4717,0.3566,0.5952,9.5763,0.6781,0.9271,0.9057,0.9526,0.4991,0.9697,0.9357,0.6716,0.4798,1,0.6066,0.4525,0.4978,9.5397,0.7138,0.7306,0.452,0.6519,0.6952,0.8485,0.8537,0.7762,0.8694,0.6031,0.7716,0.8123,0.7613,9.2787,0.337,0.9545,0.6741,1,0.4741,0.9074,0.9279,0.593,0.7139,0.9736,0.479,0.6263,0.6181,9.1397,0.9138,0.7849,1,0.8615,0.4214,0.8572,0.7492,0.8111,0.4822,0.7593,0.5932,0.4307,0.4752,8.8439,0.195,0.9994,0.7577,0.9544,0.4393,0.9249,0.95,0.6607,0.6928,0.8855,0.4204,0.4274,0.5364,8.4356,1,0.6841,0.1964,0.6099,0.1475,0.4654,0.5638,0.6715,0.9347,0.7199,0.7359,1,0.7064,8.4353,0.195,1,0.5803,0.9382,0.2772,1,1,0.5737,0.403,0.9012,0.4804,0.4207,0.6656,8.4207,0.7138,0.6373,0.6239,0.6519,0.3344,0.5978,0.5116,0.8261,1,0.7291,0.4579,0.8123,0.5246,8.3628,0.3023,0.6448,0.5975,0.5044,0.551,0.8593,0.778,0.6112,0.9347,0.9463,0.3407,0.8123,0.4803,8.1097,0.1747,0.774,0.73,0.7467,0.518,0.8365,0.8386,0.722,0.5784,0.7645,0.3203,0.5137,0.5925,8.0477,0.7138,0.4573,0,0.5176,0.4903,0.3531,0.4222,0.9553,0.8041,0.5217,1,0.8123,1,7.9473,0.7138,0.8411,0,0.6089,0.1855,0.6427,0.7873,0.2197,0.8694,0.783,0.7764,0.8123,0.7071,7.884,0.4911,0.7681,0.5703,0.8091,0.5636,0.7188,0.8386,0.6518,0.4427,0.7366,0.4307,0.3597,0.503,7.6274,0.7642,0.635,0.618,0.5132,0.592,0.6479,0.7492,0.6587,0.304,0.6163,0.5343,0.4061,0.5884,7.6252,0.0874,0.8284,0.5703,0.6897,1,0.5924,0.6531,0.4963,0.8041,0.6932,0.1663,0.6897,0.3544,7.5669,0.3325,0.7273,0.832,0.7384,0.518,0.6185,0.7122,0.5304,0.4798,0.7341,0.3087,0.4386,0.5964,7.4166,0.7138,0.6127,0.1964,0.412,1,0.3063,0.5116,0.5985,0.8041,0.6035,0.4014,0.8123,0.444,7.257,0.7138,0.3409,0.664,0.6122,0.5083,0.4447,0.2739,0.7947,0.8694,0.5405,0.4399,0.6246,0.4302,6.9766,0.7138,0.4146,0.8751,0.6099,0.592,0.3177,0.2739,0.4634,0.8694,0.5873,0.3104,0.6246,0.3244,6.7424,0.7138,0.3511,0.3929,0.3167,0.2772,0.3531,0.4222,0.7232,0.9347,0.7062,0.3199,0.8123,0.419,6.7384,0.6277,0.5556,0,0.5493,0.3724,0.424,0.5116,0.3649,0.8694,0.4606,0.5144,0.8123,0.6762,6.7203,0.2091,0.6757,0.6049,0.5865,0.8821,0.5062,0.5706,0.543,0.3137,0.7612,0.2868,0.2282,0.5523,6.7151,0.7138,0.0816,0.3625,0.2801,1,0.2354,0.1255,0.7951,0.8041,0.5324,0.634,0.6246,0.5261,6.559,0.2135,0.5263,0.7477,0.5493,0.592,0.6239,0.5706,0.5233,0.4123,0.5236,0.2085,0.437,0.631,5.9835,0.7138,0,0.6049,0.1373,0.3344,0.1531,0.1255,0.9663,0.8694,0.1605,0.634,0.6246,0.6596,5.8468,0,0.7104,0.7635,0.7052,0.416,0.5547,0.6318,0.4249,0.2748,0.7698,0.0296,0.1356,0.4305,5.8365,0.7138,0,0.6526,0.1056,0.2772,0.1177,0.1255,1,0.8694,0.1728,0.634,0.6246,0.5433,5.8124,0.3354,0.7746,0.6772,0.6231,0.3893,0.5925,0.6794,0.2408,0.1768,0.6766,0.3123,0.0666,0.2678,5.7167,0.7138,0.2839,0.9414,0.2615,0.0363,0.2546,0.079,0.8541,0.9347,0.2303,0.3381,0.6246,0.1645,5.6939,0.7138,0,0.5111,0.1559,0.3034,0.1739,0.1255,0.9001,0.9347,0.0908,0.634,0.6246,0.5261,5.6763,0.7138,0,0.5893,0.1056,0.2545,0.1177,0.1255,0.9553,0.8694,0.1605,0.634,0.6246,0.5261,5.6532,0.7138,0,0.5803,0.1056,0.2344,0.1177,0.1255,0.9489,0.8694,0.1728,0.634,0.6246,0.5261,5.6232,0.7138,0,0.3929,0.1373,0.4903,0.1531,0.1255,0.8166,0.8694,0.1395,0.634,0.6246,0.5261,5.5302,0.7138,0,0.683,0.1056,0.5393,0.2354,0.2739,0.7969,0.9347,0.1883,0.1479,0.6246,0.2869,5.5028,0.7138,0,0.4866,0.1056,0.2772,0.1177,0.1255,0.8827,0.8694,0.1395,0.634,0.6246,0.5261,5.2519,0.7138,0,0.2556,0.1056,0.4903,0.1177,0.1255,0.7196,0.8694,0.0698,0.634,0.6246,0.5261,5.1014,0.7138,0.0816,0.1964,0.3484,0.3724,0.1177,0.1255,0.38,0.8694,0.342,0.4242,0.6246,0.5051,5.0857,0.7138,0.0816,0.9888,0.1373,0.1165,0.2708,0.1255,0.7768,0.9347,0.2426,0.0246,0.6246,0.0481,5.0511,0.4276,0.3557,0.8597,0.3927,1,0.3477,0.1255,0.4928,0.4559,0.2464,0.301,0.0461,0,5.0285,0.7138,0,0.5457,0.1056,1,0.1177,0.1255,0.5484,0.8694,0.103,0.1378,0.6246,0.1369,4.976,0.7138,0,0.1964,0,0.6083,0,0.1255,0.6778,0.8694,0,0.634,0.6246,0.5261,4.9651,0.7138,0,0.1964,0.1373,0.1719,0.1531,0.1255,0.6778,0.9347,0.0698,0.634,0.6246,0.5261,4.7517,0.7138,0.1633,0.683,0.1056,0.024,0,0.1255,0.6707,1,0.1728,0.3268,0.6246,0.1416,4.7498,0.7138,0.1878,0.1964,0.2111,0.6083,0.1177,0.1255,0.3407,0.9347,0.1395,0.3723,0.6246,0.1773,4.7469,0.7138,0,0,0.1056,0.4214,0.1177,0.1255,0.5391,0.8694,0.0698,0.634,0.6246,0.5261,4.7099,0.5138,0.3761,0.6986,0.3856,0.4393,0.3885,0.2739,0.5135,0.2975,0.1815,0.3917,0.0356,0.2143,4.6826,0.7138,0,0.6294,0.1373,0.4903,0.1531,0.1255,0.5236,0.9347,0.1605,0.0097,0.6246,0.18,4.6771,0.7138,0,0,0.1056,0.4214,0.1177,0.1255,0.5391,0.8694,0,0.634,0.6246,0.5261,4.6453,0.7138,0,0,0.1056,0.2545,0.1177,0.1255,0.5391,0.9347,0.0698,0.634,0.6246,0.5261,4.4935,0.7138,0.1633,0.1964,0.2111,0.3324,0.1659,0.1863,0.3957,0.8694,0.0698,0.3558,0.6246,0.2089,4.4747,0.7138,0,0,0,0.3724,0,0.1255,0.5391,0.8694,0.0698,0.634,0.6246,0.5261,4.4074,0.7138,0,0.9581,0.1691,0.6083,0.3063,0.2739,0.5533,0.2281,0.2172,0.025,0.1639,0.1905,4.35,0.7138,0,0.452,0.1056,0.3724,0.1177,0.1255,0.4636,0.8694,0.1395,0.1133,0.6246,0.2526,4.1779,0.7138,0.1633,0.5302,0.2615,0.0899,0.0743,0,0.3276,0.8694,0.1395,0.199,0.6246,0.1849,4.1506,0.7138,0,0,0.1373,0.0509,0.0679,0.0181,0.4386,0.8694,0.0698,0.634,0.6246,0.5261,4.1499,0.7138,0,0.1964,0,1,0,0.1255,0.3263,0.8041,0.0698,0.146,0.6246,0.1433,4.1387,0.7138,0,0.5703,0.1373,0.1719,0.1531,0.1255,0.4612,0.9347,0.1815,0,0.6246,0.0647,4.0823,0.7138,0,0.5893,0.1056,0.1855,0.1177,0.1255,0.5108,0.9347,0.0908,0.031,0.6246,0.0531,4.0594,0.7138,0,0.6741,0.1373,0.0101,0.1004,0.0591,0.4963,0.8694,0.1728,0.0236,0.6246,0.1779,4.0459,0.7138,0.1878,0,0.2429,0.1475,0.1531,0.1255,0.2496,0.8694,0.0698,0.4352,0.6246,0.2266,4.0397,0.7138,0,0.5302,0.1056,0.4214,0.1177,0.1255,0.4329,0.8694,0.0698,0.0001,0.6246,0.0288,3.8834,0.7138,0,0.4866,0.1056,0.1475,0.1177,0.1255,0.4157,0.9347,0.1728,0.0057,0.6246,0.0332,3.8004,0.7138,0,0.1964,0.1056,0.1855,0.1177,0.1255,0.2829,0.9347,0.1395,0.1131,0.6246,0.261,3.792,0.7138,0,0.1964,0.1056,0.3344,0.1177,0.1255,0.2994,0.8694,0.0698,0.1348,0.6246,0.2006,3.6572,0.7138,0,0.7954,0.1373,0.592,0.2708,0.2739,0.3727,0.0245,0.2025,0.065,0.0176,0.1917,3.6178,0.7138,0,0.5803,0,0.0748,0,0.1255,0.4822,0.8041,0.1728,0.0061,0.6246,0.0335,3.6178,0.7138,0,0,0.1056,0.4903,0.1177,0.1255,0.2026,0.8694,0,0.1902,0.6246,0.178,3.5007,0.7138,0,0.1964,0.1056,0.3344,0.1177,0.1255,0.2114,0.8694,0.1395,0.0188,0.6246,0.0435,3.3989,0.7138,0,0.3147,0.1056,0.0669,0.0728,0.0689,0.2574,0.8694,0.0698,0.0392,0.6246,0.1959,3.2611,0.7138,0,0,0,0.4903,0,0.1255,0.142,0.8694,0.0698,0.1103,0.6246,0.1153,3.1936,0.7138,0.1633,0.7348,0.2429,0.1897,0.1722,0.1495,0.1828,0,0.1883,0.242,0,0.2143,3.1272,0.7138,0,0.844,0.1559,0.154,0.1791,0.1321,0.2905,0.1235,0.2122,0.0342,0.0887,0.1992,2.5606,0.7138,0,0.7529,0.1056,0.1963,0.0855,0.085,0.14,0.0434,0.1815,0.0298,0.0312,0.1957,2.5161,0.7138,0,0.8055,0.1373,0,0.1088,0.0697,0.1828,0.046,0.1985,0.0464,0.0331,0.1743,1.9912,0.7138,0,0.6395,0.1056,0.0248,0.0419,0.03,0,0.0162,0.1605,0.0428,0.0116,0.2045]}}]}
 </script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Organization</span>
+    <span class="navbar-title">EpiVerse</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./chaoss-org.html" rel="" target="">
- <span class="menu-text">Maintenance: Org</span></a>
+    <a class="nav-link" href="./chaoss-org.html"> 
+<span class="menu-text">Maintenance: Org</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./chaoss-repo.html" rel="" target="">
- <span class="menu-text">Maintenance: Repo</span></a>
+    <a class="nav-link" href="./chaoss-repo.html"> 
+<span class="menu-text">Maintenance: Repo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./models.html" rel="" target="" aria-current="page">
- <span class="menu-text">Community Health</span></a>
+    <a class="nav-link active" href="./models.html" aria-current="page"> 
+<span class="menu-text">Community Health</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./network.html" rel="" target="">
- <span class="menu-text">Network</span></a>
+    <a class="nav-link" href="./network.html"> 
+<span class="menu-text">Network</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
         <li>
-    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/orgmetrics" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/orgmetrics">
  <span class="dropdown-text">Source Code</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/orgmetrics/issues/new" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/ropensci-review-tools/orgmetrics/issues/new">
  <span class="dropdown-text">Request a Feature</span></a>
   </li>  
     </ul>
   </li>
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -195,7 +207,7 @@ cookieconsent.run({
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -204,7 +216,7 @@ cookieconsent.run({
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -212,7 +224,9 @@ cookieconsent.run({
   </div>
   
 
+
 </header>
+
 
 <p>The <a href="./chaoss-org.html"><em>Organizational Maintenance</em></a> and <a href="./chaoss-repo.html"><em>Repository Maintenance</em></a> pages provide various insights into maintenance deficits and needs across the whole organization and within individual repositories. This page provides more detail on the various <a href="https://chaoss.community/kb-metrics-and-metrics-models/">CHAOSS (<em>Community Health Analytics in Open Source Software</em>) models</a> used to generate values shown on those two pages. Each of these conceptual models aggregates various individual metrics, and aims to synthesise prominent aspects of community health. This page provides insights into a range of those models, assessed for each repository in the <code>epiverse-trace</code> and <code>reconhub</code> GitHub organizations. Details of individual metrics can be seen on the <a href="./chaoss-repo.html"><em>Repository Maintenance</em> page</a>.</p>
 <section id="aggregate-community-health" class="level2">
@@ -544,7 +558,7 @@ cookieconsent.run({
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"Plot = import(\"https://esm.sh/@observablehq/plot\")\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"models_all = {\n    return transpose(models_in).map(row => ({\n        ...row,\n    }));\n}\nmodels_final = models_all.filter(function(mod) {\n    return mod.name === \"final\"\n})\nmodels_len = models_final.length\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"Plot.plot({\n    height: 20 * models_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Community Health\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(models_final, {\n            y: \"package\",\n            x: \"value\",\n            sort: {y: \"-x\" },\n            fill: \"value\",\n        }),\n        Plot.barX(models_final,\n            Plot.pointer(\n            {\n                y: \"package\",\n                x: \"value\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"value\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(models_final, {\n            x: (d) => d.value < 0 ? 0 : d.value,\n            y: \"package\",\n            text: \"package\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\"\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"commHealthVars = [\n    \"collab_devel_index\",\n    \"comm_serv_support\",\n    \"comm_welcoming\",\n    \"community_activity\",\n    \"dev_responsiveness\",\n    \"oss_compliance\",\n    \"proj_awareness\",\n    \"proj_engagement\",\n    \"starter_health\",\n    \"viability_community\",\n    \"viability_gov\",\n    \"viability_starter\",\n    \"viability_strategy\"\n]\nviewof commHealthVar = Inputs.select(\n    commHealthVars,\n    { multiple: \"false\", label: \"Community Health Variable\" }\n);\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"models_filtered = models_all.filter(function(mod) {\n    return mod.name === commHealthVar\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"Plot.plot({\n    height: 20 * models_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Community Health\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(models_filtered, {\n            y: \"package\",\n            x: \"value\",\n            sort: {y: \"-x\" },\n            fill: \"value\",\n        }),\n        Plot.barX(models_filtered,\n            Plot.pointer(\n            {\n                y: \"package\",\n                x: \"value\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"value\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(models_filtered, {\n            x: (d) => d.value < 0 ? 0 : d.value,\n            y: \"package\",\n            text: \"package\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\"\n    }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-7","inline":false,"source":"// Get array of unique repo names for input selector:\nreposAll = models_all.map(function(item) {\n    return item.package;\n});\nrepos = Array.from(new Set(reposAll));\nrepoSet = localStorage.getItem(\"orgmetricsRepo\") || repos [0]\nviewof repo = Inputs.select(\n    repos,\n    {\n        multiple: false,\n        value: repoSet,\n        label: htl.html`<b>Repository:</b>`\n    }\n)\nlocalStorage.setItem(\"orgmetricsRepo\", repo.toString());\n"},{"methodName":"interpret","cellName":"ojs-cell-8","inline":false,"source":"model_repo = models_all.filter(function(mod) {\n    return mod.package === repo && mod.name !== \"final\"\n})\nmodel_repo_len = model_repo.length\n"},{"methodName":"interpret","cellName":"ojs-cell-9","inline":false,"source":"Plot.plot({\n    height: 40 * model_repo_len,\n    marginLeft: 60,\n    marginRight: 160,\n    marginTop: 50,\n    marginBottom: 50,\n    axis: null,\n    x: {\n        axis: \"top\",\n        grid: true,\n        label: \"Community Health\"\n    },\n    y: { grid: true },\n    marks: [\n        Plot.barX(model_repo, {\n            y: \"name\",\n            x: \"value\",\n            sort: {y: \"-x\" },\n            fill: \"value\",\n        }),\n        Plot.barX(model_repo,\n            Plot.pointer(\n            {\n                y: \"name\",\n                x: \"value\",\n                sort: {y: \"-x\" },\n                stroke: \"gray\",\n                fill: \"value\",\n                strokeWidth: 2,\n            })\n        ),\n        Plot.text(model_repo, {\n            x: (d) => d.value < 0 ? 0 : d.value,\n            y: \"name\",\n            text: \"name\",\n            textAnchor: \"start\",\n            fontSize: 16,\n            dx: 5\n        })\n    ],\n    color: {\n        scheme: \"Cool\",\n        type: \"ordinal\"\n    }\n})\n"},{"methodName":"interpretQuiet","source":"shinyInput('commHealthVar')"},{"methodName":"interpretQuiet","source":"shinyInput('repo')"}]}
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QgPSBpbXBvcnQoXCJodHRwczovL2VzbS5zaC9Ab2JzZXJ2YWJsZWhxL3Bsb3RcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1vZGVsc19hbGwgPSB7XG4gICAgcmV0dXJuIHRyYW5zcG9zZShtb2RlbHNfaW4pLm1hcChyb3cgPT4gKHtcbiAgICAgICAgLi4ucm93LFxuICAgIH0pKTtcbn1cbm1vZGVsc19maW5hbCA9IG1vZGVsc19hbGwuZmlsdGVyKGZ1bmN0aW9uKG1vZCkge1xuICAgIHJldHVybiBtb2QubmFtZSA9PT0gXCJmaW5hbFwiXG59KVxubW9kZWxzX2xlbiA9IG1vZGVsc19maW5hbC5sZW5ndGhcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gICAgaGVpZ2h0OiAyMCAqIG1vZGVsc19sZW4sXG4gICAgbWFyZ2luTGVmdDogNjAsXG4gICAgbWFyZ2luUmlnaHQ6IDE2MCxcbiAgICBtYXJnaW5Ub3A6IDUwLFxuICAgIG1hcmdpbkJvdHRvbTogNTAsXG4gICAgYXhpczogbnVsbCxcbiAgICB4OiB7XG4gICAgICAgIGF4aXM6IFwidG9wXCIsXG4gICAgICAgIGdyaWQ6IHRydWUsXG4gICAgICAgIGxhYmVsOiBcIkNvbW11bml0eSBIZWFsdGhcIlxuICAgIH0sXG4gICAgeTogeyBncmlkOiB0cnVlIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsc19maW5hbCwge1xuICAgICAgICAgICAgeTogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB4OiBcInZhbHVlXCIsXG4gICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgIH0pLFxuICAgICAgICBQbG90LmJhclgobW9kZWxzX2ZpbmFsLFxuICAgICAgICAgICAgUGxvdC5wb2ludGVyKFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgICAgIHg6IFwidmFsdWVcIixcbiAgICAgICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICAgICAgc3Ryb2tlOiBcImdyYXlcIixcbiAgICAgICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgICAgICAgICAgc3Ryb2tlV2lkdGg6IDIsXG4gICAgICAgICAgICB9KVxuICAgICAgICApLFxuICAgICAgICBQbG90LnRleHQobW9kZWxzX2ZpbmFsLCB7XG4gICAgICAgICAgICB4OiAoZCkgPT4gZC52YWx1ZSA8IDAgPyAwIDogZC52YWx1ZSxcbiAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgdGV4dDogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsXG4gICAgICAgICAgICBmb250U2l6ZTogMTYsXG4gICAgICAgICAgICBkeDogNVxuICAgICAgICB9KVxuICAgIF0sXG4gICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIkNvb2xcIixcbiAgICAgICAgdHlwZTogXCJvcmRpbmFsXCJcbiAgICB9XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiY29tbUhlYWx0aFZhcnMgPSBbXG4gICAgXCJjb2xsYWJfZGV2ZWxfaW5kZXhcIixcbiAgICBcImNvbW1fc2Vydl9zdXBwb3J0XCIsXG4gICAgXCJjb21tX3dlbGNvbWluZ1wiLFxuICAgIFwiY29tbXVuaXR5X2FjdGl2aXR5XCIsXG4gICAgXCJkZXZfcmVzcG9uc2l2ZW5lc3NcIixcbiAgICBcIm9zc19jb21wbGlhbmNlXCIsXG4gICAgXCJwcm9qX2F3YXJlbmVzc1wiLFxuICAgIFwicHJval9lbmdhZ2VtZW50XCIsXG4gICAgXCJzdGFydGVyX2hlYWx0aFwiLFxuICAgIFwidmlhYmlsaXR5X2NvbW11bml0eVwiLFxuICAgIFwidmlhYmlsaXR5X2dvdlwiLFxuICAgIFwidmlhYmlsaXR5X3N0YXJ0ZXJcIixcbiAgICBcInZpYWJpbGl0eV9zdHJhdGVneVwiXG5dXG52aWV3b2YgY29tbUhlYWx0aFZhciA9IElucHV0cy5zZWxlY3QoXG4gICAgY29tbUhlYWx0aFZhcnMsXG4gICAgeyBtdWx0aXBsZTogXCJmYWxzZVwiLCBsYWJlbDogXCJDb21tdW5pdHkgSGVhbHRoIFZhcmlhYmxlXCIgfVxuKTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1vZGVsc19maWx0ZXJlZCA9IG1vZGVsc19hbGwuZmlsdGVyKGZ1bmN0aW9uKG1vZCkge1xuICAgIHJldHVybiBtb2QubmFtZSA9PT0gY29tbUhlYWx0aFZhclxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gICAgaGVpZ2h0OiAyMCAqIG1vZGVsc19sZW4sXG4gICAgbWFyZ2luTGVmdDogNjAsXG4gICAgbWFyZ2luUmlnaHQ6IDE2MCxcbiAgICBtYXJnaW5Ub3A6IDUwLFxuICAgIG1hcmdpbkJvdHRvbTogNTAsXG4gICAgYXhpczogbnVsbCxcbiAgICB4OiB7XG4gICAgICAgIGF4aXM6IFwidG9wXCIsXG4gICAgICAgIGdyaWQ6IHRydWUsXG4gICAgICAgIGxhYmVsOiBcIkNvbW11bml0eSBIZWFsdGhcIlxuICAgIH0sXG4gICAgeTogeyBncmlkOiB0cnVlIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsc19maWx0ZXJlZCwge1xuICAgICAgICAgICAgeTogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB4OiBcInZhbHVlXCIsXG4gICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgIH0pLFxuICAgICAgICBQbG90LmJhclgobW9kZWxzX2ZpbHRlcmVkLFxuICAgICAgICAgICAgUGxvdC5wb2ludGVyKFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgICAgIHg6IFwidmFsdWVcIixcbiAgICAgICAgICAgICAgICBzb3J0OiB7eTogXCIteFwiIH0sXG4gICAgICAgICAgICAgICAgc3Ryb2tlOiBcImdyYXlcIixcbiAgICAgICAgICAgICAgICBmaWxsOiBcInZhbHVlXCIsXG4gICAgICAgICAgICAgICAgc3Ryb2tlV2lkdGg6IDIsXG4gICAgICAgICAgICB9KVxuICAgICAgICApLFxuICAgICAgICBQbG90LnRleHQobW9kZWxzX2ZpbHRlcmVkLCB7XG4gICAgICAgICAgICB4OiAoZCkgPT4gZC52YWx1ZSA8IDAgPyAwIDogZC52YWx1ZSxcbiAgICAgICAgICAgIHk6IFwicGFja2FnZVwiLFxuICAgICAgICAgICAgdGV4dDogXCJwYWNrYWdlXCIsXG4gICAgICAgICAgICB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsXG4gICAgICAgICAgICBmb250U2l6ZTogMTYsXG4gICAgICAgICAgICBkeDogNVxuICAgICAgICB9KVxuICAgIF0sXG4gICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIkNvb2xcIixcbiAgICAgICAgdHlwZTogXCJvcmRpbmFsXCJcbiAgICB9XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy8gR2V0IGFycmF5IG9mIHVuaXF1ZSByZXBvIG5hbWVzIGZvciBpbnB1dCBzZWxlY3RvcjpcbnJlcG9zQWxsID0gbW9kZWxzX2FsbC5tYXAoZnVuY3Rpb24oaXRlbSkge1xuICAgIHJldHVybiBpdGVtLnBhY2thZ2U7XG59KTtcbnJlcG9zID0gQXJyYXkuZnJvbShuZXcgU2V0KHJlcG9zQWxsKSk7XG5yZXBvU2V0ID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oXCJvcmdtZXRyaWNzUmVwb1wiKSB8fCByZXBvcyBbMF1cbnZpZXdvZiByZXBvID0gSW5wdXRzLnNlbGVjdChcbiAgICByZXBvcyxcbiAgICB7XG4gICAgICAgIG11bHRpcGxlOiBmYWxzZSxcbiAgICAgICAgdmFsdWU6IHJlcG9TZXQsXG4gICAgICAgIGxhYmVsOiBodGwuaHRtbGA8Yj5SZXBvc2l0b3J5OjwvYj5gXG4gICAgfVxuKVxubG9jYWxTdG9yYWdlLnNldEl0ZW0oXCJvcmdtZXRyaWNzUmVwb1wiLCByZXBvLnRvU3RyaW5nKCkpO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoibW9kZWxfcmVwbyA9IG1vZGVsc19hbGwuZmlsdGVyKGZ1bmN0aW9uKG1vZCkge1xuICAgIHJldHVybiBtb2QucGFja2FnZSA9PT0gcmVwbyAmJiBtb2QubmFtZSAhPT0gXCJmaW5hbFwiXG59KVxubW9kZWxfcmVwb19sZW4gPSBtb2RlbF9yZXBvLmxlbmd0aFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgICBoZWlnaHQ6IDQwICogbW9kZWxfcmVwb19sZW4sXG4gICAgbWFyZ2luTGVmdDogNjAsXG4gICAgbWFyZ2luUmlnaHQ6IDE2MCxcbiAgICBtYXJnaW5Ub3A6IDUwLFxuICAgIG1hcmdpbkJvdHRvbTogNTAsXG4gICAgYXhpczogbnVsbCxcbiAgICB4OiB7XG4gICAgICAgIGF4aXM6IFwidG9wXCIsXG4gICAgICAgIGdyaWQ6IHRydWUsXG4gICAgICAgIGxhYmVsOiBcIkNvbW11bml0eSBIZWFsdGhcIlxuICAgIH0sXG4gICAgeTogeyBncmlkOiB0cnVlIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsX3JlcG8sIHtcbiAgICAgICAgICAgIHk6IFwibmFtZVwiLFxuICAgICAgICAgICAgeDogXCJ2YWx1ZVwiLFxuICAgICAgICAgICAgc29ydDoge3k6IFwiLXhcIiB9LFxuICAgICAgICAgICAgZmlsbDogXCJ2YWx1ZVwiLFxuICAgICAgICB9KSxcbiAgICAgICAgUGxvdC5iYXJYKG1vZGVsX3JlcG8sXG4gICAgICAgICAgICBQbG90LnBvaW50ZXIoXG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgeTogXCJuYW1lXCIsXG4gICAgICAgICAgICAgICAgeDogXCJ2YWx1ZVwiLFxuICAgICAgICAgICAgICAgIHNvcnQ6IHt5OiBcIi14XCIgfSxcbiAgICAgICAgICAgICAgICBzdHJva2U6IFwiZ3JheVwiLFxuICAgICAgICAgICAgICAgIGZpbGw6IFwidmFsdWVcIixcbiAgICAgICAgICAgICAgICBzdHJva2VXaWR0aDogMixcbiAgICAgICAgICAgIH0pXG4gICAgICAgICksXG4gICAgICAgIFBsb3QudGV4dChtb2RlbF9yZXBvLCB7XG4gICAgICAgICAgICB4OiAoZCkgPT4gZC52YWx1ZSA8IDAgPyAwIDogZC52YWx1ZSxcbiAgICAgICAgICAgIHk6IFwibmFtZVwiLFxuICAgICAgICAgICAgdGV4dDogXCJuYW1lXCIsXG4gICAgICAgICAgICB0ZXh0QW5jaG9yOiBcInN0YXJ0XCIsXG4gICAgICAgICAgICBmb250U2l6ZTogMTYsXG4gICAgICAgICAgICBkeDogNVxuICAgICAgICB9KVxuICAgIF0sXG4gICAgY29sb3I6IHtcbiAgICAgICAgc2NoZW1lOiBcIkNvb2xcIixcbiAgICAgICAgdHlwZTogXCJvcmRpbmFsXCJcbiAgICB9XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjb21tSGVhbHRoVmFyJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3JlcG8nKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -555,250 +569,419 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
       }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
+      return false;
     }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ropensci-review-tools\.github\.io\/repometrics-demo\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
       });
     }
-  }
-});
-</script>
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+
 
 
 
