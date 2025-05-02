@@ -4,9 +4,8 @@ execute:
   echo: false
 format: 
   html:
-    fig-width: 8
-    fig-height: 4
-    code-fold: false
+    theme:
+      - yeti
 ---
 
 This page details maintenance needs for each repository within the `reconhub`
@@ -66,7 +65,6 @@ Maintenance priorities should likely be focussed on repositories with high
 values of maintenance deficit yet lower levels of developer responsiveness.
 These repositories will be higher up in the graph (more positive values), yet
 with more dark purple colours.
-
 
 
 ```{r load-pkg, echo = FALSE, message = FALSE}
