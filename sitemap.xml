@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ropensci-review-tools.github.io/repometrics-demo/chaoss-org.html</loc>
-    <lastmod>2025-05-09T15:42:49.342Z</lastmod>
+    <loc>https://ropensci-review-tools.github.io/repometrics-demo/org.html</loc>
+    <lastmod>2025-05-22T15:32:46.869Z</lastmod>
   </url>
   <url>
-    <loc>https://ropensci-review-tools.github.io/repometrics-demo/chaoss-repo.html</loc>
-    <lastmod>2025-05-09T15:42:49.342Z</lastmod>
+    <loc>https://ropensci-review-tools.github.io/repometrics-demo/repo.html</loc>
+    <lastmod>2025-05-22T15:32:46.869Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/index.html</loc>
-    <lastmod>2025-05-09T15:43:01.102Z</lastmod>
+    <lastmod>2025-05-22T15:32:46.868Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/models.html</loc>
-    <lastmod>2025-05-09T15:42:49.342Z</lastmod>
+    <lastmod>2025-05-22T15:32:46.868Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/network.html</loc>
-    <lastmod>2025-05-09T15:42:49.342Z</lastmod>
+    <lastmod>2025-05-22T15:32:46.869Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/maintenance-repo.html</loc>
-    <lastmod>2025-03-17T21:00:54.000Z</lastmod>
+    <lastmod>2025-05-22T15:32:07.243Z</lastmod>
   </url>
 </urlset>
