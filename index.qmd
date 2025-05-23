@@ -34,7 +34,9 @@ repo_orgs <- gsub ("\\/.*$", "", repo_data$orgrepo) |>
 # through the mid-point of the entire plane, and lying below the 90% CI.
 ci_level <- 0.9
 m <- readRDS ("results-maintenance-org.Rds") |>
-    dplyr::rename (x = comm_engage, y = dev_resp)
+    dplyr::rename (x = comm_engage, y = dev_resp) |>
+    dplyr::filter (date == max (date)) |>
+    dplyr::select (-date)
 x_mid <- min (m$x) + diff (range (m$x)) / 2
 y_mid <- min (m$y) + diff (range (m$y)) / 2
 
@@ -249,14 +251,17 @@ bslib::page_fillable (
 threshold <- 0.8
 threshold <- 0.5 + threshold / 2
 num_sds <- qnorm (threshold, 0, 1)
-limits <- readRDS ("results-metrics.Rds") |>
+data_metrics <- readRDS ("results-metrics.Rds")
+# which.max does not work for dates, but max does
+index1 <- which (names (data_metrics) == max (names (data_metrics)))
+limits <- data_metrics [[index1]] |>
     dplyr::group_by (name) |>
     dplyr::filter (!is.na (value)) |>
     dplyr::summarise (
         lower = mean (value) - num_sds * sd (value),
         upper = mean (value) + num_sds * sd (value)
     )
-m <- readRDS ("results-metrics.Rds") |>
+m <- data_metrics [[index1]] |>
     dplyr::left_join (limits, by = "name") |>
     dplyr::group_by (name) |>
     dplyr::filter (!is.na (value)) |>
@@ -346,9 +351,9 @@ clicking on the symbol on the top right.
 
 The dashboard currently has three main pages:
 
-1. An [organization maintenance](./chaoss-org.html) page identifying
+1. An [organization maintenance](./org.html) page identifying
    maintenance priorities across all repositories.
-2. A [repository maintenance](./chaoss-repo.html) page providing additional
+2. A [repository maintenance](./repo.html) page providing additional
    detail on maintenance needs of a selected repository.
 3. A [*Community Health*](./models.html) summarising scores for the various
    [CHAOSS (*Community Health Analytics in Open Source Software*)
