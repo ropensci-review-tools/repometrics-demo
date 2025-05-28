@@ -11,6 +11,26 @@ format:
 This page provides an organization-level overview of all repositories in both
 the [`reconhub`](https://github.com/reconhub) and
 [`epiverse-trace`](https://github.com/epiverse-trace) GitHub organizations.
+Statistics here are assessed for each repository, and aggregated across the
+organizations into four distinct categories:
+
+1. _Development_: Metrics of both code development and maintainer continuity
+   and diversity. High scores reflect repositories with high levels of code
+   development from a diverse community of maintainers.
+2. _GitHub_: Metrics derived from GitHub issues and pull requests. High scores
+   reflect repositories with active use of issues, pull requests, code reviews,
+   and rapid responses from core maintainers to issues or pull requests opened
+   by wider community members.
+3. _Popularity_: Metrics of repository popularity, derived from CRAN download
+   numbers (where applicable), GitHub stars and forks, and issue comments from
+   user communities beyond core maintainers.
+4. _Dependencies and Releases_: High scores reflect repositories with fewer
+   dependencies and frequent releases.
+
+The _Overall_ column is an average of all metrics across all of these four
+categorical groupings, and provides an overall metric of repository health.
+
+---
 
 <!---
 ******** START UTILITY FUNCTIONS ********
@@ -71,25 +91,6 @@ function pkgfmt(pkg) {
 
 ## Aggregate metrics
 
-Statistics here are assessed for each repository, and aggregated into four
-categories. Scores are on relative scales only (0 to 1), with higher scores
-better than lower scores. The categories are:
-
-1. _Development_: Metrics of both code development and maintainer continuity
-   and diversity. High scores reflect repositories with high levels of code
-   development from a diverse community of maintainers.
-2. _GitHub_: Metrics derived from GitHub issues and pull requests. High scores
-   reflect repositories with active use of issues, pull requests, code reviews,
-   and rapid responses from core maintainers to issues or pull requests opened
-   by wider community members.
-3. _Popularity_: Metrics of repository popularity, derived from CRAN download
-   numbers (where applicable), GitHub stars and forks, and issue comments from
-   user communities beyond core maintainers.
-4. _Dependencies and Releases_: High scores reflect repositories with fewer
-   dependencies and frequent releases.
-
-The _Overall_ column is an average of all metrics across all of these four
-categorical groupings, and provides an overall metric of repository health.
 This chart shows the recent development of metrics aggregated into each of the
 four groups, plus the "Overall" metric averaged across all four groups.
 
@@ -199,27 +200,13 @@ Plot.plot({
 ******** START REPO-LEVEL METRICS TABLE ********
 --->
 
-The following table details aggregate scores in the four groups for each
-repository or "package". Scores are shown for the latest time period only.
-Clicking on the "package" values will lead to the repository maintenance page
-with further details of the selected package or repository.
+And table shows metrics for each package, for the latest time period only
+aggregated into each of the four groups. Clicking on the "package" values will
+lead to the repository maintenance page with further details of the selected
+package or repository.
 
 ```{r}
 data_metrics <- readRDS ("results-metrics.Rds")
-# These currently have too many datees, and will be fixed with next update
-# (already fixed via #27). These lines can then be deleted.
-# ----- START DATE FIX -----
-dates <- as.Date (names (data_metrics))
-latest <- as.Date (max (names (data_metrics)))
-date_seq <- repometrics:::get_end_date_seq (end_date = latest, num_years = 3)
-index <- vapply (
-    date_seq,
-    function (i) which.min (abs (difftime (dates, i))),
-    integer (1L)
-)
-# cli::cli_inform ("reducing metrics from {length(data_metrics)} to {length(index)}")
-data_metrics <- data_metrics [index]
-# ----- END DATE FIX -----
 
 # Main table of most recent metrics:
 # which.max does not work for dates, but max does
@@ -300,21 +287,6 @@ maintenance_ts <- maintenance_ts |> tidyr::pivot_longer (-date)
 maintenance_ts$name [maintenance_ts$name == "comm_engage"] <- "Comm. Engage."
 maintenance_ts$name [maintenance_ts$name == "dev_resp"] <- "Dev. Resp."
 maintenance_ts$name [maintenance_ts$name == "maintenance"] <- "Deficit"
-
-# ----- START DATE FIX -----
-# Date fixes as for metrics data above:
-dates <- unique (maintenance_ts$date)
-latest <- as.Date (max (dates))
-date_seq <- repometrics:::get_end_date_seq (end_date = latest, num_years = 3)
-index <- vapply (
-    date_seq,
-    function (i) which.min (abs (difftime (dates, i))),
-    integer (1L)
-)
-# cli::cli_inform ("reducing metrics from {length(dates)} to {length(index)}")
-maintenance_ts <- maintenance_ts |>
-    dplyr::filter (date %in% dates [index])
-# ----- END DATE FIX -----
 
 ojs_define (maintenance_ts_in = maintenance_ts)
 ```
