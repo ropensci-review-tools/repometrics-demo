@@ -36,19 +36,6 @@ function sparkbar(max) {
 ******** END UTILITY FUNCTIONS ********
 --->
 
-This page identifies maintenance priorities for a selected repository, in
-terms of both [CHAOSS
-models](https://chaoss.community/kbtopic/all-metrics-models/), and the
-individual [CHAOSS metrics](https://chaoss.community/kbtopic/all-metrics/)
-which comprise those models. In its present state, this is mostly a
-proof-of-concept, and is not as well developed as the accompanying
-[*Organizational Maintenance* page](./org.html).
-
-The "Outliers only" selector immediate below determines whether values shown
-for both models and metrics are outliers only (default of "true"), or whether
-all values are shown ("false").
-
-
 ```{r load-pkg, echo = FALSE, message = FALSE}
 library (orgmetrics)
 ```
@@ -65,6 +52,7 @@ data_repo_src <- readRDS ("results-data-repo-src.Rds")
 data_ctb_abs <- readRDS ("results-data-ctb-absence.Rds")
 data_issue_resp <- readRDS ("results-data-issue-resp.Rds")
 data_issue_bugs <- readRDS ("results-data-issue-bugs.Rds")
+data_ctbs <- readRDS ("results-maintenance-contribs.Rds")
 ```
 
 ```{r data outliers}
@@ -130,7 +118,46 @@ pkgcheck_stats <- lapply (data_pkgcheck, function (d) {
         ))
 })
 
+all_pkgs <- names (data_pkgcheck)
+deps <- lapply (data_pkgcheck, function (d) {
+    deps <- d$pkg$dependencies |> dplyr::filter (package != "NA")
+    imp <- length (which (deps$type == "imports"))
+    sug <- length (which (deps$type == "suggests"))
+    deps_in_org <- deps$package [which (deps$package %in% all_pkgs)]
+    if (length (deps_in_org) == 0L) {
+        deps_in_org <- NA
+    }
+    data.frame (imports = imp, suggests = sug, deps_in_org = I (list (deps_in_org)))
+})
+deps <- do.call (rbind, deps) |>
+    dplyr::mutate (package = all_pkgs, .before = "imports")
+
+revdeps <- lapply (deps$package, function (p) {
+    index <- which (vapply (
+        deps$deps_in_org,
+        function (o) p %in% o,
+        logical (1L)
+    ))
+    res <- deps$package [index]
+    if (length (res) == 0L) {
+        res <- NA
+    }
+    return (res)
+})
+deps$revdeps <- I (revdeps)
+rownames (deps) <- NULL
+
 repo_metrics_data <- readRDS ("results-repo-metrics.Rds")
+
+fn_calls <- readRDS ("fn-calls.Rds")$fn_calls |>
+    dplyr::group_by (name, package) |>
+    dplyr::summarise (n = sum (n), .groups = "keep") |>
+    dplyr::ungroup () |>
+    dplyr::mutate (name = gsub ("^.*\\:\\:", "", name)) |>
+    dplyr::group_by (package) |>
+    dplyr::arrange (dplyr::desc (n), .by_group = TRUE) |>
+    dplyr::ungroup () |>
+    dplyr::rename (fn_name = name)
 ```
 
 ```{r ojs-in-metrics}
@@ -143,6 +170,9 @@ ojs_define (issue_bugs_in = data_issue_bugs)
 ojs_define (pkgcheck_in = pkgcheck_summaries)
 ojs_define (pkgcheck_stats_in = pkgcheck_stats)
 ojs_define (repo_metrics_in = repo_metrics_data)
+ojs_define (deps_in = deps)
+ojs_define (fn_calls_in = fn_calls)
+ojs_define (ctbs_in = data_ctbs)
 ```
 
 ```{ojs plot-latest}
@@ -172,6 +202,16 @@ issue_respTranspose = {
 }
 issue_bugsTranspose = {
     return transpose(issue_bugs_in).map(row => ({
+        ...row,
+    }));
+}
+depsTranspose = {
+    return transpose(deps_in).map(row => ({
+        ...row,
+    }));
+}
+fnCallsTranspose = {
+    return transpose(fn_calls_in).map(row => ({
         ...row,
     }));
 }
@@ -217,6 +257,12 @@ issue_resp = issue_respTranspose.filter(function(r) {
 issue_bugs = issue_bugsTranspose.filter(function(r) {
     return r.repo === repo
 })
+deps = depsTranspose.filter(function(r) {
+    return r.package === repo
+})
+fn_calls = fnCallsTranspose.filter(function(r) {
+    return r.package === repo
+})
 ```
 
 ```{ojs}
@@ -225,6 +271,12 @@ repoMetrics = {
         ...row,
     }))
 }
+ctbs = {
+    return transpose(ctbs_in[repo]).map(row => ({
+        ...row,
+    }))
+}
+ctbs_gh = ctbs.map((ctb) => ctb['gh_handle']);
 
 function pluraliseObjects(x, what) {
     if (x === 0) {
@@ -241,6 +293,12 @@ maintainer_count = repoMetrics.filter(function(m) {
 })[0].value;
 maintainer_count_txt = pluraliseObjects(maintainer_count, "primary maintainer");
 
+maintainer_gh = [].concat(ctbs_gh.slice(0, maintainer_count) || []);
+maintainer_gh_list = maintainer_gh.length == 0 ? undefined:
+    (maintainer_gh.length == 1 ? htl.html`<li><a href='https://github.com/${maintainer_gh}'>${maintainer_gh}</a></li>` :
+    maintainer_gh.map(m => htl.html`<li><a href='https://github.com/${m}'>${m}</a></li>`));
+maintainer_gh_list_txt = maintainer_gh.length > 0 ? htl.html`<ul>${maintainer_gh_list}</ul>` : undefined;
+
 ctb_count = repoMetrics.filter(function(m) {
     return m.name == "ctb_count"
 })[0].value;
@@ -252,7 +310,7 @@ num_commits = repoMetrics.filter(function(m) {
 test_coverage = repoMetrics.filter(function(m) {
     return m.name == "test_coverage"
 })[0].value;
-test_coverage_txt = test_coverage ? (test_coverage * 100) + "%" : "none"
+test_coverage_txt = "Test coverage: " + (test_coverage ? (test_coverage * 100) + "%" : "none");
 
 num_stars = repoMetrics.filter(function(m) {
     return m.name == "num_stars"
@@ -274,10 +332,33 @@ change_req_n_opened = repoMetrics.filter(function(m) {
 })[0].value;
 issue_count = pluraliseObjects(issues_active + change_req_n_opened, "Github Issue")
 
-issue_cmt_count = repoMetrics.filter(function(m) {
+// 'issue_cmt_count' from repometrics is *mean* value; convert back to
+// full count here:
+issue_cmt_count = Math.ceil(repoMetrics.filter(function(m) {
     return m.name == "issue_cmt_count"
-})[0].value;
+})[0].value * issues_active);
 issue_cmt_txt = pluraliseObjects(issue_cmt_count, "Issue comment")
+
+imp_txt = 'Imports: ' + deps[0]['imports'];
+sug_txt = 'Suggests: ' + deps[0]['suggests'];
+
+deps_in_org = [].concat(deps[0]['deps_in_org'] || []);
+deps_in_org_txt = deps_in_org.length == 0 ?
+    'Depends on no other pkgs in org' :
+    'Depends on org pkgs:';
+deps_in_org_list = deps_in_org.length == 0 ? undefined :
+    (deps_in_org.length == 1 ? htl.html`<li>${deps_in_org}</li>` :
+    deps_in_org.map(d => htl.html`<li>${d}</li>`));
+n_deps_in_org_txt = deps_in_org.length > 0 ? htl.html`<ul>${deps_in_org_list}</ul>` : undefined;
+
+revdeps = [].concat(deps[0]['revdeps'] || []);
+revdeps_list = revdeps.length == 0 ? undefined :
+    (revdeps.length == 1 ? htl.html`<li>${revdeps}</li>` :
+    revdeps.map(d => htl.html`<li>${d}</li>`));
+revdeps_in_org = revdeps.length > 0 ?
+    'Dependend on by org pkgs:' :
+    'Not depended on by any other pkgs in org';
+revdeps_list_txt = revdeps.length > 0 ? htl.html`<ul>${revdeps_list}</ul>` : undefined;
 ```
 
 
@@ -287,12 +368,13 @@ issue_cmt_txt = pluraliseObjects(issue_cmt_count, "Issue comment")
 
 <div class="card" style="background: linear-gradient(to bottom, #33ccff 0%, #ffcc99 100%); text-align:center;">
 <img src="bs-icons/tools.svg" alt="Bootstrap" width="48" height="48" style="margin-left:auto; margin-top:5px; margin-right:5px;">
-<h2 style="margin-top:-20px;">Maintainers:</h2>
+<h2 style="margin-top:-20px;">Maintainance:</h2>
 <div style="text-align:left;">
 ```{ojs}
 htl.html`<ul>
-    <li>${maintainer_count_txt}</li>
+    <li>${maintainer_count_txt}${maintainer_gh_list_txt}</li>
     <li>${ctb_count_txt}</li>
+    <li>${test_coverage_txt}</li>
 </ul>`
 ```
 </div>
@@ -322,7 +404,21 @@ htl.html`<ul>
 
 <div class="card" style="background: linear-gradient(to bottom, #33ccff 0%, #ffcc99 100%); text-align:center;">
 <img src="bs-icons/pencil-square.svg" alt="Bootstrap" class="text-pencil-square" width="48" height="48" style="margin-left:auto; margin-top:5px; margin-right:5px;">
-<h2 style="margin-top:-20px;">Test Coverage: `{ojs} test_coverage_txt`</h2>
+<h2 style="margin-top:-20px;">Dependencies</h2>
+<div style="text-align:left;">
+```{ojs}
+htl.html`<ul>
+    <li>${imp_txt}</li>
+    <li>${sug_txt}</li>
+    <li>${deps_in_org_txt}
+        ${n_deps_in_org_txt}
+    </li>
+    <li>${revdeps_in_org}
+        ${revdeps_list_txt}
+    </li>
+</ul>`
+```
+</div>
 </div>
 
 
@@ -347,6 +443,8 @@ htl.html`<ul>
 
 :::
 
+
+<div style="margin-top: 20px; margin-bottom: 20px;"></div>
 
 ## pkgcheck Summary
 
@@ -409,6 +507,45 @@ Inputs.table(pkgStatsData, {
     }
 })
 ```
+
+<div style="margin-top: 20px; margin-bottom: 20px;"></div>
+
+```{ojs}
+h1 = fn_calls.length > 0 ? htl.html`<div><h3>Function usage in other packages</h3>
+The following table shows the number of times different functions are used in
+other packages. Numbers may be less than total numbers of packages listed above
+in <q><i>Dependencies: Used by org pkgs</i></q> because some of those usages may be only
+in tests, whereas the following usage counts are within actual R code only.
+</div>` : null;
+```
+
+<div style="margin-top: 20px; margin-bottom: 20px;"></div>
+
+```{ojs}
+h2 = fn_calls.length > 0 ? Inputs.table(fn_calls, {
+    columns: ["fn_name", "n"],
+    header: {
+        fn_name: "Function name",
+        n: "Usage"
+    }
+}) : undefined;
+```
+
+-----
+
+
+This page identifies maintenance priorities for a selected repository, in
+terms of both [CHAOSS
+models](https://chaoss.community/kbtopic/all-metrics-models/), and the
+individual [CHAOSS metrics](https://chaoss.community/kbtopic/all-metrics/)
+which comprise those models. In its present state, this is mostly a
+proof-of-concept, and is not as well developed as the accompanying
+[*Organizational Maintenance* page](./org.html).
+
+The "Outliers only" selector immediate below determines whether values shown
+for both models and metrics are outliers only (default of "true"), or whether
+all values are shown ("false").
+
 
 
 ## CHAOSS models
