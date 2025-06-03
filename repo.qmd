@@ -110,7 +110,7 @@ pkgcheck_stats <- lapply (data_pkgcheck, function (d) {
             measure == "num_params_per_fn" ~ "Nr. params per fn",
             measure == "loc_per_fn_r" ~ "LOC per fn: R",
             measure == "loc_per_fn_r_exp" ~ "LOC per exported fn: R",
-            measure == "loc_per_fn_r_non_exp" ~ "LOC per non-exported fn: R",
+            measure == "loc_per_fn_r_not_exp" ~ "LOC per non-exported fn: R",
             measure == "doclines_per_fn_exp" ~ "Doc. lines per exported fn.",
             measure == "doclines_per_fn_not_exp" ~ "Doc. lines per non-exported fn.",
             measure == "fn_call_network_size" ~ "Nr. nodes in fn. call network",
@@ -158,6 +158,10 @@ fn_calls <- readRDS ("fn-calls.Rds")$fn_calls |>
     dplyr::arrange (dplyr::desc (n), .by_group = TRUE) |>
     dplyr::ungroup () |>
     dplyr::rename (fn_name = name)
+
+cran_data <- readRDS ("results-cran-checks.Rds")
+not_cran <- gsub ("^.*\\/", "", attr (cran_data, "not_cran"))
+attr (cran_data, "not_cran") <- NULL
 ```
 
 ```{r ojs-in-metrics}
@@ -173,6 +177,8 @@ ojs_define (repo_metrics_in = repo_metrics_data)
 ojs_define (deps_in = deps)
 ojs_define (fn_calls_in = fn_calls)
 ojs_define (ctbs_in = data_ctbs)
+ojs_define (cran_data_in = cran_data)
+ojs_define (not_cran_in = not_cran)
 ```
 
 ```{ojs plot-latest}
@@ -212,6 +218,11 @@ depsTranspose = {
 }
 fnCallsTranspose = {
     return transpose(fn_calls_in).map(row => ({
+        ...row,
+    }));
+}
+cranDataTranspose = {
+    return transpose(cran_data_in).map(row => ({
         ...row,
     }));
 }
@@ -263,6 +274,12 @@ deps = depsTranspose.filter(function(r) {
 fn_calls = fnCallsTranspose.filter(function(r) {
     return r.package === repo
 })
+has_fn_calls = fn_calls.length > 0;
+cran_data = cranDataTranspose.filter(function(r) {
+    return r.package === repo
+})
+has_cran_data = cran_data.length > 0;
+not_on_cran = not_cran_in.includes(repo);
 ```
 
 ```{ojs}
@@ -468,12 +485,39 @@ htl.html`
   </ul>`)}</div>`
 ```
 
+## CRAN Summary
 
-### Statistical properties
+```{ojs}
+not_on_cran ? htl.html`<div>This package is not on CRAN</div>` :
+    (has_cran_data ?
+    htl.html`<div><a href="https://cran.r-project.org//web/checks/check_results_${repo}.html">CRAN checks</a> on this package currently list these issues:</div>` :
+    htl.html`<div><a href="https://cran.r-project.org//web/checks/check_results_${repo}.html">CRAN checks</a> on this package are all good</div>`);
+
+htl.html`<div style="margin-top: 20px; margin-bottom: 20px;"></div>`
+
+has_cran_data ?
+    Inputs.table(cran_data, {
+        columns: ["package", "version", "result", "check", "message"],
+        format: {
+            check: d => htl.html`<span style="white-space:normal">${d}`,
+            message: d => htl.html`<span style="white-space:normal">${d}`,
+        }
+    }) :
+    Inputs.table(cran_data, {
+        colunmns: [],
+    });
+```
+
+## Statistical properties
 
 The "Limits" slider below can be used to reduce statistical properties to only
-those lying in the lower or upper percentiles of the specified value. Note in
-the measures that "LOC" = "Lines-of-Code".
+those lying in the lower or upper percentiles of the specified value. The table
+uses the following abbreviations:
+
+- "LOC" for _Lines-of-Code_
+- "Nr." for _Number_
+- "fn" for _function_
+- "Doc" for _Documentation_
 
 ```{ojs}
 viewof statsLimit = Inputs.range(
@@ -510,25 +554,30 @@ Inputs.table(pkgStatsData, {
 
 <div style="margin-top: 20px; margin-bottom: 20px;"></div>
 
+## Function usage in other packages
+
 ```{ojs}
-h1 = fn_calls.length > 0 ? htl.html`<div><h3>Function usage in other packages</h3>
+has_fn_calls ? htl.html`<div>
 The following table shows the number of times different functions are used in
 other packages. Numbers may be less than total numbers of packages listed above
 in <q><i>Dependencies: Used by org pkgs</i></q> because some of those usages may be only
 in tests, whereas the following usage counts are within actual R code only.
-</div>` : null;
+</div>` :
+htl.html`<div>This package uses no other packages from the organizations</div>`;
 ```
 
 <div style="margin-top: 20px; margin-bottom: 20px;"></div>
 
 ```{ojs}
-h2 = fn_calls.length > 0 ? Inputs.table(fn_calls, {
+has_fn_calls ? Inputs.table(fn_calls, {
     columns: ["fn_name", "n"],
     header: {
         fn_name: "Function name",
         n: "Usage"
     }
-}) : undefined;
+}) : Inputs.table(fn_calls, {
+    columns: []
+});
 ```
 
 -----
