@@ -159,11 +159,9 @@ fn_calls <- readRDS ("fn-calls.Rds")$fn_calls |>
     dplyr::ungroup () |>
     dplyr::rename (fn_name = name)
 
-cran_data <- readRDS ("results-cran-checks.Rds")
-not_cran <- gsub ("^.*\\/", "", attr (cran_data, "not_cran"))
-attr (cran_data, "not_cran") <- NULL
-
-gitlog_data <- readRDS ("results-gitlog.Rds")
+# cran_data <- readRDS ("results-cran-checks.Rds")
+# not_cran <- gsub ("^.*\\/", "", attr (cran_data, "not_cran"))
+# attr (cran_data, "not_cran") <- NULL
 ```
 
 ```{r ojs-in-metrics}
@@ -179,9 +177,8 @@ ojs_define (repo_metrics_in = repo_metrics_data)
 ojs_define (deps_in = deps)
 ojs_define (fn_calls_in = fn_calls)
 ojs_define (ctbs_in = data_ctbs)
-ojs_define (cran_data_in = cran_data)
-ojs_define (not_cran_in = not_cran)
-ojs_define (gitlog_data_in = gitlog_data)
+# ojs_define (cran_data_in = cran_data)
+# ojs_define (not_cran_in = not_cran)
 ```
 
 ```{ojs plot-latest}
@@ -224,17 +221,17 @@ fnCallsTranspose = {
         ...row,
     }));
 }
-cranDataTranspose = {
-    return transpose(cran_data_in).map(row => ({
-        ...row,
-    }));
-}
-gitlogDataTranspose = {
-    return transpose(gitlog_data_in).map(row => ({
-        ...row,
-        first_commit: new Date(row.first_commit)
-    }));
-}
+gitlog_data_in = FileAttachment("results-gitlog.json").json();
+gitlogDataTranspose = gitlog_data_in.map(row => ({
+    ...row,
+    first_commit: new Date(row.first_commit)
+}));
+
+cranDataAll = FileAttachment("results-data-cran.json").json();
+not_cran_in = FileAttachment("results-not-cran.json").json();
+repos_on_r_univ = FileAttachment("data_is_on_r_univ.json").json();
+data_r_univ_jobs = FileAttachment("data_r_univ_jobs.json").json();
+data_r_univ_builds = FileAttachment("data_r_univ_builds.json").json();
 ```
 
 ```{ojs get-all-repos}
@@ -284,7 +281,7 @@ fn_calls = fnCallsTranspose.filter(function(r) {
     return r.package === repo
 })
 has_fn_calls = fn_calls.length > 0;
-cran_data = cranDataTranspose.filter(function(r) {
+cran_data = cranDataAll.filter(function(r) {
     return r.package === repo
 })
 has_cran_data = cran_data.length > 0;
@@ -297,6 +294,13 @@ gitlog_first_commit = gitlog[0]['first_commit'].toLocaleDateString("en-GB", {
     month: 'short',
     year: 'numeric'
 });
+
+r_univ_jobs = data_r_univ_jobs[repo];
+r_univ_builds = data_r_univ_builds[repo];
+
+r_univ_page = repos_on_r_univ.filter(function(r) {
+    return r.package === repo
+})
 ```
 
 ```{ojs}
@@ -400,8 +404,8 @@ revdeps_list_txt = revdeps.length > 0 ? htl.html`<ul>${revdeps_list}</ul>` : und
 
 :::{.grid}
 
-:::{.g-col-12 .g-col-md-6}
-
+<!--- CARD ONE: TOP LEFT --->
+::::{.g-col-12 .g-col-md-6}
 <div class="card" style="background: linear-gradient(to bottom, #33ccff 0%, #ffcc99 100%); text-align:center;">
 <img src="bs-icons/tools.svg" alt="Bootstrap" width="48" height="48" style="margin-left:auto; margin-top:5px; margin-right:5px;">
 <h2 style="margin-top:-20px;">Maintainance:</h2>
@@ -416,29 +420,10 @@ htl.html`<ul>
 ```
 </div>
 </div>
+::::
 
-
-:::
-
-:::{.g-col-12 .g-col-md-6}
-
-<div class="card" style="background: linear-gradient(to bottom, #00cc66 0%, #33ccff 100%); text-align:center;">
-<img src="bs-icons/chat-square-heart.svg" alt="Bootstrap" width="48" height="48" style="margin-left:auto; margin-top:5px; margin-right:5px;">
-<h2 style="margin-top:-20px;">Popularity</h2>
-<div style="text-align:left;">
-```{ojs}
-htl.html`<ul>
-    <li>${stars_forks} GitHub stars and forks</li>
-    <li>${num_dl} CRAN downloads</li>
-</ul>`
-```
-</div>
-</div>
-
-:::
-
-:::{.g-col-12 .g-col-md-6}
-
+<!--- CARD TWO: TOP RIGHT --->
+::::{.g-col-12 .g-col-md-6}
 <div class="card" style="background: linear-gradient(to bottom, #33ccff 0%, #ffcc99 100%); text-align:center;">
 <img src="bs-icons/pencil-square.svg" alt="Bootstrap" class="text-pencil-square" width="48" height="48" style="margin-left:auto; margin-top:5px; margin-right:5px;">
 <h2 style="margin-top:-20px;">Dependencies</h2>
@@ -457,12 +442,26 @@ htl.html`<ul>
 ```
 </div>
 </div>
+::::
 
+<!--- CARD THREE: BOTTOM LEFT --->
+::::{.g-col-12 .g-col-md-6}
+<div class="card" style="background: linear-gradient(to bottom, #00cc66 0%, #33ccff 100%); text-align:center;">
+<img src="bs-icons/chat-square-heart.svg" alt="Bootstrap" width="48" height="48" style="margin-left:auto; margin-top:5px; margin-right:5px;">
+<h2 style="margin-top:-20px;">Popularity</h2>
+<div style="text-align:left;">
+```{ojs}
+htl.html`<ul>
+    <li>${stars_forks} GitHub stars and forks</li>
+    <li>${num_dl} CRAN downloads</li>
+</ul>`
+```
+</div>
+</div>
+::::
 
-:::
-
-:::{.g-col-12 .g-col-md-6}
-
+<!--- CARD FOUR: BOTTOM RIGHT --->
+::::{.g-col-12 .g-col-md-6}
 <div class="card" style="background: linear-gradient(to bottom, #00cc66 0%, #33ccff 100%); text-align:center;">
 <img src="bs-icons/github.svg" alt="Bootstrap" width="48" height="48" style="margin-left:auto; margin-top:5px; margin-right:5px;">
 <h2 style="margin-top:-20px;">GitHub Activity</h2>
@@ -475,8 +474,7 @@ htl.html`<ul>
 ```
 </div>
 </div>
-
-:::
+::::
 
 :::
 
@@ -505,13 +503,64 @@ htl.html`
   </ul>`)}</div>`
 ```
 
+## R-universe summary
+
+```{ojs}
+is_on_r_univ = r_univ_page.length > 0;
+r_univ_universe = is_on_r_univ ? r_univ_page[0]['universe'] : undefined;
+r_univ_package = is_on_r_univ ? r_univ_page[0]['package'] : undefined;
+build_url = is_on_r_univ ? r_univ_builds[0]['buildurl'] : undefined;
+
+build_checks = is_on_r_univ ? r_univ_builds.filter(d => (d['status'] !== "success")) : [];
+build_checks_okay = build_checks.length == 0;
+
+is_on_r_univ ?
+htl.html`<div>Links to
+<a href="https://${r_univ_universe}.r-universe.dev/${r_univ_package}" target="_blank" rel="noopener noreferrer"><i>${r_univ_package}</i> on R-universe</a>
+and to
+<a href="${build_url}" target="_blank" rel="noopener noreferrer">recent R-universe builds</a>.
+</div>` :
+htl.html`<div>This package is not on R-universe</div>`;
+
+htl.html`<div style="margin-top: 10px; margin-bottom: 10px;"></div>`
+
+is_on_r_univ ?
+    (build_checks_okay ?
+        htl.html`<div>&#9989; All recent R-universe builds were successful</div>` :
+        htl.html`<div>&#10060; Some recent R-universe builds were unsuccessful</div>`) :
+    htl.html`<div></div>`;
+
+r_univ_jobs_table = is_on_r_univ ?
+    Inputs.table(r_univ_jobs, {
+        columns: ["job", "config", "r", "check"],
+        format: {
+            job: d => htl.html`<a href="${build_url}/job/${d}" target="_blank" rel="noopener noreferrer">${d.toFixed(0)}</a>`,
+        },
+    }) : htl.html`<div></div>`;
+
+is_on_r_univ ?
+htl.html`<div style="margin-top: 10px;"><details><summary>Recent R-Universe Jobs</summary>${r_univ_jobs_table}</details></div>` : htl.html`<div></div>`;
+
+is_on_r_univ && !build_checks_okay ? htl.html`<h3>Recent Builds</h3>` : htl.html`<div></div>`;
+
+is_on_r_univ && !build_checks_okay ?
+    htl.html`<div><a href=${build_url}>The following recent builds were unsuccessful</a></div>` :
+    htl.html`<div></div>`;
+
+is_on_r_univ && !build_checks_okay?
+    Inputs.table(build_checks, {
+        columns: ["r", "os", "status", "check"],
+    }) : htl.html`<div></div>`;
+```
+
 ## CRAN Summary
 
 ```{ojs}
-not_on_cran ? htl.html`<div>This package is not on CRAN</div>` :
-    (has_cran_data ?
-    htl.html`<div><a href="https://cran.r-project.org//web/checks/check_results_${repo}.html">CRAN checks</a> on this package currently list these issues:</div>` :
-    htl.html`<div><a href="https://cran.r-project.org//web/checks/check_results_${repo}.html">CRAN checks</a> on this package are all good</div>`);
+cran_txt = has_cran_data ? "currently list these issues:" : "are all good";
+cran_url = "https://cran.r-project.org/web/checks/check_results_" + repo + ".html";
+not_on_cran ?
+    htl.html`<div>This package is not on CRAN</div>` :
+    htl.html`<div><a href="${cran_url}" target="_blank" rel="noopener noreferrer">CRAN checks</a> on this package ${cran_txt}</div>`;
 
 htl.html`<div style="margin-top: 20px; margin-bottom: 20px;"></div>`
 
@@ -522,10 +571,7 @@ has_cran_data ?
             check: d => htl.html`<span style="white-space:normal">${d}`,
             message: d => htl.html`<span style="white-space:normal">${d}`,
         }
-    }) :
-    Inputs.table(cran_data, {
-        colunmns: [],
-    });
+    }) : htl.html`<div></div>`;
 ```
 
 ## Statistical properties
@@ -583,7 +629,8 @@ other packages. Numbers may be less than total numbers of packages listed above
 in <q><i>Dependencies: Used by org pkgs</i></q> because some of those usages may be only
 in tests, whereas the following usage counts are within actual R code only.
 </div>` :
-htl.html`<div>This package uses no other packages from the organizations</div>`;
+htl.html`<div>This package uses no other packages from the organizations,
+and so its functions are not used anywhere else.</div>`;
 ```
 
 <div style="margin-top: 20px; margin-bottom: 20px;"></div>
@@ -595,9 +642,7 @@ has_fn_calls ? Inputs.table(fn_calls, {
         fn_name: "Function name",
         n: "Usage"
     }
-}) : Inputs.table(fn_calls, {
-    columns: []
-});
+}) : htl.html`<div></div>`;
 ```
 
 -----
