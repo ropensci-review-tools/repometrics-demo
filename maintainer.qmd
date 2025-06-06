@@ -46,7 +46,7 @@ these_pkgs_list = these_pkgs.map(i => {
     return htl.html`
 <li>
 <div onclick=${() => localStorage.setItem('orgmetricsRepo', i)}>
-<a href="/repo.html">${i}</a>
+<a href="/repometrics-demo/repo.html">${i}</a>
 </div>
 </li>`
 });

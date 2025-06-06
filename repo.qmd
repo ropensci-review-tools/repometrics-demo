@@ -422,11 +422,11 @@ maintainer_gh = [].concat(ctbs_gh.slice(0, maintainer_count) || []);
 maintainer_gh_list = maintainer_gh.length == 0 ? undefined:
     (maintainer_gh.length == 1 ? htl.html`
 <div onclick=${() => localStorage.setItem('orgmetricsMaintainer', maintainer_gh)}>
-<li><a href='/maintainer.html'>${maintainer_gh}</a></li>
+<li><a href='/repometrics-demo/maintainer.html'>${maintainer_gh}</a></li>
 </div>
 ` : maintainer_gh.map(m => htl.html`
 <div onclick=${() => localStorage.setItem('orgmetricsMaintainer', m)}>
-<li><a href='/maintainer.html'>${m}</a></li>
+<li><a href='/repometrics-demo/maintainer.html'>${m}</a></li>
 </div>
 `));
 maintainer_gh_list_txt = maintainer_gh.length > 0 ? htl.html`<ul>${maintainer_gh_list}</ul>` : undefined;
