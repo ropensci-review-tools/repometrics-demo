@@ -71,8 +71,8 @@ fn_call_links$type <- "depends"
 ```
 
 ```{r emb-matrix-pre-process}
-emb <- readRDS (fs::path ("data", "emb-matrix.Rds"))
-colnames (emb) <- rownames (emb)
+emb <- readRDS (fs::path ("data", "similarities.Rds"))$code
+rownames (emb) <- colnames (emb)
 emb_nodes <- rowSums (emb, na.rm = TRUE)
 emb_nodes <- data.frame (
     id = names (emb_nodes),
