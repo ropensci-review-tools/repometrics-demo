@@ -10,6 +10,65 @@ format:
 ---
 
 
+
+<!---
+******** START UTILITY FUNCTIONS ********
+--->
+
+
+```{ojs}
+function sparkbar(max) {
+  const colourScale = d3.scaleSequential(d3.interpolateCool)
+    .domain([0, max]);
+
+  return (x) => htl.html`<div style="
+    background: ${colourScale(x)};
+    color: black;
+    width: ${100 * x / max}%;
+    float: right;
+    padding-right: 3px;
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    justify-content: end;">${x.toFixed(2).toLocaleString("en-US")}`
+}
+
+function tooltip(title, expl) {
+    const th = document.createElement("th");
+    th.title = expl
+    th.style.background = "#f0f8ff";
+    th.textContent = title;
+
+    th.addEventListener("mouseover", () => th.style.background = "#d0e8ff");
+    th.addEventListener("mouseout", () => th.style.background = "#f0f8ff");
+
+    return th;
+}
+
+function pkgfmt(pkg) {
+    const th = document.createElement("th");
+    th.title = "hover"
+    th.style.background = "#f0f8ff";
+    th.textContent = pkg;
+
+    th.addEventListener("mouseover", () => th.style.background = "#d0e8ff");
+    th.addEventListener("mouseout", () => th.style.background = "#f0f8ff");
+
+    th.addEventListener("click", () => {
+        localStorage.setItem("orgmetricsRepo", pkg);
+        th.style.background="#a0f8ff";
+        window.location.href="/repo.html";
+    });
+
+    return th;
+}
+```
+
+<!---
+******** END UTILITY FUNCTIONS ********
+--->
+
+
 ```{r load-data}
 data_repo_src <- readRDS (fs::path ("data", "results-data-repo-src.Rds"))
 ojs_define (repo_src_in = data_repo_src)
@@ -31,7 +90,7 @@ maintainers = Object.keys(maintainer_pkgs);
 <!---- break --->
 
 ```{ojs maintainer-select}
-maintainerSet = localStorage.getItem("orgmetricsMaintainer") || maintainers[0];
+maintainerSet = localStorage.getItem("orgmetricsMaintainer") || maintainers [0]
 viewof maintainer = Inputs.select(
     maintainers,
     {
@@ -48,24 +107,11 @@ s = localStorage.setItem("orgmetricsMaintainer", maintainer.toString());
 ```{ojs extract-maintainer-data}
 these_pkgs = maintainer_pkgs[maintainer] || null;
 
-these_pkgs_list = these_pkgs ?
-these_pkgs.map(i => {
-    const url = (repo_src.filter(function(r) {
-        return r.package === i
-    }, i)[0] || {}).url || null;
-    return htl.html`
-<li>
-<div onclick=${() => localStorage.setItem('orgmetricsRepo', i)}>
-<a href="/repometrics-demo/repo.html">${i}</a>
-</div>
-</li>`
-}) : htl.html`<li>No packages listed</li>`;
-
 these_cos = comaintainers[maintainer] || null
 these_cos_list = these_cos ?
 these_cos.map(i => htl.html`
 <div onclick=${() => localStorage.setItem('orgmetricsMaintainer', i)}>
-<li><a href="/repometrics-demo/maintainer.html">${i}</a></li>
+<li><a href="/maintainer.html">${i}</a></li>
 </div>`) : htl.html`<li>No co-maintainers</li>`;
 ```
 
@@ -75,11 +121,73 @@ these_cos.map(i => htl.html`
 htl.html`<div><a href="https://github.com/${maintainer}" target="_blank">github.com/${maintainer}</a></div>`
 ```
 
+<div style="margin-top: 10px; margin-bottom: 10px;"></div>
+
 ## Packages
 
-```{ojs packages-list}
-htl.html`<ul>${these_pkgs_list}</ul>`
+This is a sub-set of the main table on [the _Organization_ page](/org.html),
+showing only packages maintained by _`{ojs} maintainer`_. Values are scaled
+between 0 and 1 based on the distribution of values across the entire
+organization, with higher values always better than lower values.
+
+<!---
+******** START REPO-LEVEL METRICS TABLE ********
+--->
+
+```{r}
+data_metrics <- readRDS (fs::path ("data", "results-metrics.Rds"))
+
+# Main table of most recent metrics:
+# which.max does not work for dates, but max does
+index1 <- which (names (data_metrics) == max (names (data_metrics)))
+m <- data_metrics [[index1]] |>
+    tidyr::pivot_wider (names_from = name, values_from = value) |>
+    orgmetrics:::data_metrics_group () |>
+    dplyr::relocate (total, .after = package) |>
+    dplyr::arrange (by = desc (total))
+ojs_define (metrics_table_in = m)
 ```
+
+```{ojs}
+metricsGroupedTable = {
+    return transpose(metrics_table_in).map(row => ({
+        ...row,
+    }));
+}
+metricsTable = metricsGroupedTable.filter(i => these_pkgs.includes(i.package));
+```
+
+```{ojs}
+Inputs.table(metricsTable, {
+    width: {
+        package: 100,
+        total: 200,
+        development: 200,
+        issues: 200,
+        popularity: 200,
+        meta: 200,
+    },
+    format: {
+        package: d => pkgfmt(d),
+        development: sparkbar(d3.max(metricsGroupedTable, d => d.development)),
+        issues: sparkbar(d3.max(metricsGroupedTable, d => d.issues)),
+        popularity: sparkbar(d3.max(metricsGroupedTable, d => d.popularity)),
+        meta: sparkbar(d3.max(metricsGroupedTable, d => d.meta)),
+        total: sparkbar(d3.max(metricsGroupedTable, d => d.total)),
+    },
+    header: {
+        development: tooltip("Development", "Code development and maintenance metrics"),
+        issues: tooltip("Issues", "GitHub issues and pull request activity"),
+        popularity: tooltip("Popularity", "Project popularity on CRAN (where applicable) and GitHub"),
+        meta: tooltip("Dependencies and releases", ""),
+        total: tooltip("Overall", "Average across all four categories of metrics."),
+    },
+})
+```
+
+<!---
+******** END REPO-LEVEL METRICS TABLE ********
+--->
 
 
 ## Co-Maintainers
@@ -92,10 +200,16 @@ htl.html`<ul>${these_cos_list}</ul>`
 
 ```{ojs network-in}
 // Connect co-maintainers to all of their packages:
-pkgs_expanded_full = these_cos.map(i => maintainer_pkgs[i]).flat();
+co_pkgs = these_cos ? these_cos.map(i => maintainer_pkgs[i]).flat() : [];
+pkgs_expanded_full = [
+    ...these_pkgs,
+    ...co_pkgs
+];
 // Reduce to unique pkgs:
 pkgs_expanded = [...new Set(pkgs_expanded_full)];
 
+co_nodes = these_cos ?
+    these_cos.map(item => ({ id: item, group: "Co-maintainer", size: 6 })) : [];
 nodes = [
     { id: maintainer, group: "Maintainer", size: 10 },
     ...pkgs_expanded.map(item => ({
@@ -103,19 +217,19 @@ nodes = [
         group: these_pkgs.includes(item) ? "packages" : "otherPackages",
         size: these_pkgs.includes(item) ? 8 : 4,
     })),
-    ...these_cos.map(item => ({ id: item, group: "Co-maintainer", size: 6 }))
+    ...co_nodes
 ];
 
 // edges are mappings from co-maintainers to all packages. First collect list
 // of all packages from co-maintainers:
-these_co_pkgs = these_cos.reduce((acc, key) => {
+these_co_pkgs = these_cos ? these_cos.reduce((acc, key) => {
     if (maintainer_pkgs.hasOwnProperty(key)) {
         if (!these_pkgs.includes(key)) {
             acc[key] = maintainer_pkgs[key];
         }
     }
     return acc;
-}, {});
+}, {}) : [];
 // Then flatten that to (source, target) pairs of (maintainer, package):
 these_co_pkgs_flat = Object.entries(these_co_pkgs).flatMap(([source, targets]) =>
     targets.map(target => ({ source, target }))
@@ -130,7 +244,7 @@ links = [
 ];
 ```
 
-<div style="margin-top: 20px; margin-bottom: 20px;"></div>
+<div style="margin-top: 20px; margin-bottom: 0px;"></div>
 
 
 ```{ojs swatches}
@@ -140,8 +254,6 @@ Swatches(chart.scales.color)
 
 ```{ojs ForceGraph-plot}
 strength = -400;
-// console.log ("-----nodes: " + JSON.stringify(nodes));
-// console.log ("-----links: " + JSON.stringify(links));
 
 chart = {
 
@@ -191,6 +303,13 @@ chart = {
         .attr("x", 8)
         .attr("y", "0.31em")
         .text(d => d.id)
+        .html(d => d.group === "Co-maintainer" ?
+            `<a href="/maintainer.html"
+                onclick="localStorage.setItem('orgmetricsMaintainer', '${d.id}')">${d.id}</a>` :
+            ((d.group === "packages" || d.group === "otherPackages") ?
+                `<a href="/repo.html"
+                    onclick="localStorage.setItem('orgmetricsRepo', '${d.id}')">${d.id}</a>` :
+            d.id))
         .clone(true).lower()
             .attr("fill", "none")
             .attr("stroke", "white")
