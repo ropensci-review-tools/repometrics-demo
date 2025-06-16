@@ -2,26 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/org.html</loc>
-    <lastmod>2025-06-16T13:20:20.551Z</lastmod>
+    <lastmod>2025-06-16T16:44:34.894Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/repo.html</loc>
-    <lastmod>2025-06-16T13:20:30.197Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ropensci-review-tools.github.io/repometrics-demo/index.html</loc>
-    <lastmod>2025-06-16T13:20:02.104Z</lastmod>
+    <lastmod>2025-06-16T16:44:34.874Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/models.html</loc>
-    <lastmod>2025-06-16T13:20:02.104Z</lastmod>
+    <lastmod>2025-06-16T16:44:34.874Z</lastmod>
   </url>
   <url>
-    <loc>https://ropensci-review-tools.github.io/repometrics-demo/network.html</loc>
-    <lastmod>2025-06-16T13:20:02.104Z</lastmod>
+    <loc>https://ropensci-review-tools.github.io/repometrics-demo/index.html</loc>
+    <lastmod>2025-06-16T16:44:34.874Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/maintainer.html</loc>
-    <lastmod>2025-06-16T13:21:35.487Z</lastmod>
+    <lastmod>2025-06-16T16:44:34.874Z</lastmod>
   </url>
 </urlset>
