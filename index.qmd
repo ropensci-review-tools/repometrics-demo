@@ -310,6 +310,8 @@ metrics_data <- lapply (metrics, function (i) {
 
 
 ```{r}
+# NOTE that the href values here are filled with the sub-domain when deployed,
+# so DO NOT need to be modified!
 bslib::page_fillable (
     bslib::card (
         full_screen = FALSE,
@@ -322,7 +324,7 @@ bslib::page_fillable (
                         tags$p (
                             bsicons::bs_icon ("caret-right"),
                             tags$a (
-                                href = "/repometrics-demo/repo.html",
+                                href = "/repo.html",
                                 onclick = sprintf ("localStorage.setItem('orgmetricsRepo', '%s')", i$text),
                                 i$text
                             )
@@ -332,7 +334,7 @@ bslib::page_fillable (
                             tags$p (
                                 bsicons::bs_icon ("caret-right"),
                                 tags$a (
-                                    href = "/repometrics-demo/repo.html",
+                                    href = "/repo.html",
                                     onclick = sprintf ("localStorage.setItem('orgmetricsRepo', '%s')", i$text [j]),
                                     i$text [j]
                                 )
