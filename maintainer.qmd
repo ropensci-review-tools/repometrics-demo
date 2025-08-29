@@ -57,7 +57,7 @@ function pkgfmt(pkg) {
     th.addEventListener("click", () => {
         localStorage.setItem("orgmetricsRepo", pkg);
         th.style.background="#a0f8ff";
-        window.location.href="/repometrics-demo/repo.html";
+        window.location.href="/repo.html";
     });
 
     return th;
@@ -111,7 +111,7 @@ these_cos = comaintainers[maintainer] || null
 these_cos_list = these_cos ?
 these_cos.map(i => htl.html`
 <div onclick=${() => localStorage.setItem('orgmetricsMaintainer', i)}>
-<li><a href="/repometrics-demo/maintainer.html">${i}</a></li>
+<li><a href="/maintainer.html">${i}</a></li>
 </div>`) : htl.html`<li>No co-maintainers</li>`;
 ```
 
@@ -123,10 +123,11 @@ htl.html`<div><a href="https://github.com/${maintainer}" target="_blank">github.
 
 <div style="margin-top: 10px; margin-bottom: 10px;"></div>
 
-## Packages
+## Repositories
 
 This is a sub-set of the main table on [the _Organization_ page](/org.html),
-showing only packages maintained by _`{ojs} maintainer`_. Values are scaled
+showing repository metrics aggregated across the four categories described there.
+Values are shown only for repositories maintained by _`{ojs} maintainer`_, and are scaled
 between 0 and 1 based on the distribution of values across the entire
 organization, with higher values always better than lower values.
 
@@ -143,6 +144,7 @@ index1 <- which (names (data_metrics) == max (names (data_metrics)))
 m <- data_metrics [[index1]] |>
     tidyr::pivot_wider (names_from = name, values_from = value) |>
     orgmetrics:::data_metrics_group () |>
+    dplyr::select (-none) |>
     dplyr::relocate (total, .after = package) |>
     dplyr::arrange (by = desc (total))
 ojs_define (metrics_table_in = m)
@@ -297,10 +299,10 @@ chart = {
         .attr("y", "0.31em")
         .text(d => d.id)
         .html(d => d.group === "Co-maintainer" ?
-            `<a href="/repometrics-demo/maintainer.html"
+            `<a href="/maintainer.html"
                 onclick="localStorage.setItem('orgmetricsMaintainer', '${d.id}')">${d.id}</a>` :
             ((d.group === "packages" || d.group === "otherPackages") ?
-                `<a href="/repometrics-demo/repo.html"
+                `<a href="/repo.html"
                     onclick="localStorage.setItem('orgmetricsRepo', '${d.id}')">${d.id}</a>` :
             d.id))
         .clone(true).lower()
