@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ropensci-review-tools.github.io/repometrics-demo/org.html</loc>
-    <lastmod>2025-08-29T16:02:00.689Z</lastmod>
-  </url>
-  <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/repo.html</loc>
-    <lastmod>2025-08-29T16:02:00.689Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ropensci-review-tools.github.io/repometrics-demo/models.html</loc>
-    <lastmod>2025-08-29T16:02:00.689Z</lastmod>
+    <lastmod>2025-08-31T10:42:03.158Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/index.html</loc>
-    <lastmod>2025-08-29T16:02:00.689Z</lastmod>
+    <lastmod>2025-08-29T16:02:00.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ropensci-review-tools.github.io/repometrics-demo/models.html</loc>
+    <lastmod>2025-08-29T16:02:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://ropensci-review-tools.github.io/repometrics-demo/maintainer.html</loc>
-    <lastmod>2025-08-29T16:02:00.689Z</lastmod>
+    <lastmod>2025-08-31T10:39:10.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ropensci-review-tools.github.io/repometrics-demo/org.html</loc>
+    <lastmod>2025-08-31T10:40:40.550Z</lastmod>
   </url>
 </urlset>
