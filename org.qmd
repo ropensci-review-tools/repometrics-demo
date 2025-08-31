@@ -78,7 +78,7 @@ function pkgfmt(pkg) {
     th.addEventListener("click", () => {
         localStorage.setItem("orgmetricsRepo", pkg);
         th.style.background="#a0f8ff";
-        window.location.href="/repo.html";
+        window.location.href="/repometrics-demo/repo.html";
     });
 
     return th;
@@ -97,7 +97,7 @@ function ctbfmt(ctb) {
     th.addEventListener("click", () => {
         localStorage.setItem('orgmetricsMaintainer', ctb);
         th.style.background="#a0f8ff";
-        window.location.href="/maintainer.html";
+        window.location.href="/repometrics-demo/maintainer.html";
     });
 
     return th;
@@ -214,7 +214,7 @@ chart = {
         .attr("y", "0.31em")
         .text(d => d.id)
         .html(d =>
-            `<a href="/repo.html"
+            `<a href="/repometrics-demo/repo.html"
                 onclick="localStorage.setItem('orgmetricsRepo', '${d.id}')">${d.id}</a>`)
         .clone(true).lower()
             .attr("fill", "none")
