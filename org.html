@@ -150,6 +150,35 @@ cookieconsent.run({
 {"contents":[{"name":"ctb_abs_ctb_in","value":{"name":["Thibaut Jombart","Tim Taylor","Zhian N. Kamvar","Dirk Schumacher","Pratik Gupte","Julian Otero","Paul Campbell","Rich FitzJohn","CarmenTamayo","Dean Attali","Hugo Gruson","Joshua Lambert","Simon Frost","lgs85"],"login":["thibautjombart","TimTaylor","zkamvar","dirkschumacher","pratikunterwegs","jd-otero","PaulC91","richfitz","CarmenTamayo","daattali","Bisaloo","joshwlambert","sdwfrost","lgs85"],"measure":[13.8639,5.3311,5.1548,3.159,2.7124,1.7907,1.6131,1.375,1.348,1.2857,1,1,1,1]}}]}
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -803,9 +832,9 @@ cookieconsent.run({
 <hr>
 <section id="contributor-absence" class="level3">
 <h3 class="anchored" data-anchor-id="contributor-absence">Contributor Absence</h3>
-<p>Finally, this table shows a metric of main contributor absence. Values are only and whose absence is equivalent to comp. A contributor who has been entirely absent during the most recent period, and was responsible for 100% of the commits within a single repository, would have a contributor absence score of one. A contributor absence of one could also reflect somebody contributing exactly 50% of the code to two repositories, and being entirely absent during the recent period. Any contributions by that contributor during the recent period would reduce the absence factor. In general, high absence factors describe recently absent contributors who have previously been major contributors to numerous repositories.</p>
+<p>Finally, this table shows a metric of main contributor absence. Values are only shown for main contributors who have been recently absent from repositories. A contributor who has been entirely absent during the most recent period, and was responsible for 100% of the commits from some number, <em>n</em>, repositories, would have a contributor absence score of <em>n</em>. The same contributor absence of <em>n</em> could also reflect somebody contributing exactly 50% of the code to 2<span class="math inline">\(\times\)</span><em>n</em> repositories, and being entirely absent during the recent period. Any contributions by that contributor during the recent period would reduce the absence factor. In general, high absence factors describe recently absent contributors who have previously been major contributors to numerous repositories.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb16" data-startfrom="696" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 695;"><span id="cb16-696"><a href="#cb16-696" aria-hidden="true" tabindex="-1"></a>Plot <span class="op">=</span> <span class="im">import</span>(<span class="st">"https://esm.sh/@observablehq/plot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb16" data-startfrom="698" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 697;"><span id="cb16-698"><a href="#cb16-698" aria-hidden="true" tabindex="-1"></a>Plot <span class="op">=</span> <span class="im">import</span>(<span class="st">"https://esm.sh/@observablehq/plot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-16" data-nodetype="declaration">
 
@@ -813,12 +842,12 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb17" data-startfrom="701" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 700;"><span id="cb17-701"><a href="#cb17-701" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb <span class="op">=</span> {</span>
-<span id="cb17-702"><a href="#cb17-702" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_abs_ctb_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb17-703"><a href="#cb17-703" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb17-704"><a href="#cb17-704" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb17-705"><a href="#cb17-705" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb17-706"><a href="#cb17-706" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb_len <span class="op">=</span> ctb_abs_ctb<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb17" data-startfrom="703" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 702;"><span id="cb17-703"><a href="#cb17-703" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb <span class="op">=</span> {</span>
+<span id="cb17-704"><a href="#cb17-704" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_abs_ctb_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb17-705"><a href="#cb17-705" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb17-706"><a href="#cb17-706" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb17-707"><a href="#cb17-707" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-708"><a href="#cb17-708" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb_len <span class="op">=</span> ctb_abs_ctb<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-17-1" data-nodetype="declaration">
@@ -835,18 +864,18 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb18" data-startfrom="710" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 709;"><span id="cb18-710"><a href="#cb18-710" aria-hidden="true" tabindex="-1"></a><span class="co">// The 'ctbfmt' function set the localStorage 'orgmetricsMaintainer' value, but</span></span>
-<span id="cb18-711"><a href="#cb18-711" aria-hidden="true" tabindex="-1"></a><span class="co">// the inputs here are full names, no GitHub handles, so unless the are</span></span>
-<span id="cb18-712"><a href="#cb18-712" aria-hidden="true" tabindex="-1"></a><span class="co">// identical, this currently fails and needs to be fixed.</span></span>
-<span id="cb18-713"><a href="#cb18-713" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ctb_abs_ctb<span class="op">,</span> {</span>
-<span id="cb18-714"><a href="#cb18-714" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb18-715"><a href="#cb18-715" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">ctbfmt</span>(d)<span class="op">,</span></span>
-<span id="cb18-716"><a href="#cb18-716" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(ctb_abs_ctb<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">measure</span>))<span class="op">,</span></span>
-<span id="cb18-717"><a href="#cb18-717" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb18-718"><a href="#cb18-718" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb18-719"><a href="#cb18-719" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
-<span id="cb18-720"><a href="#cb18-720" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb18-721"><a href="#cb18-721" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb18" data-startfrom="712" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 711;"><span id="cb18-712"><a href="#cb18-712" aria-hidden="true" tabindex="-1"></a><span class="co">// The 'ctbfmt' function set the localStorage 'orgmetricsMaintainer' value, but</span></span>
+<span id="cb18-713"><a href="#cb18-713" aria-hidden="true" tabindex="-1"></a><span class="co">// the inputs here are full names, no GitHub handles, so unless the are</span></span>
+<span id="cb18-714"><a href="#cb18-714" aria-hidden="true" tabindex="-1"></a><span class="co">// identical, this currently fails and needs to be fixed.</span></span>
+<span id="cb18-715"><a href="#cb18-715" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ctb_abs_ctb<span class="op">,</span> {</span>
+<span id="cb18-716"><a href="#cb18-716" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb18-717"><a href="#cb18-717" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">ctbfmt</span>(d)<span class="op">,</span></span>
+<span id="cb18-718"><a href="#cb18-718" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(ctb_abs_ctb<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">measure</span>))<span class="op">,</span></span>
+<span id="cb18-719"><a href="#cb18-719" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-720"><a href="#cb18-720" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb18-721"><a href="#cb18-721" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
+<span id="cb18-722"><a href="#cb18-722" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-723"><a href="#cb18-723" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-18" data-nodetype="expression">
 
