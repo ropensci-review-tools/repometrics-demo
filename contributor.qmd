@@ -1,0 +1,370 @@
+---
+title: "Contributors and Maintainers"
+execute:
+  echo: false
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: false
+---
+
+
+
+<!---
+******** START UTILITY FUNCTIONS ********
+--->
+
+
+```{ojs}
+function sparkbar(max) {
+  const colourScale = d3.scaleSequential(d3.interpolateCool)
+    .domain([0, max]);
+
+  return (x) => htl.html`<div style="
+    background: ${colourScale(x)};
+    color: black;
+    width: ${100 * x / max}%;
+    float: right;
+    padding-right: 3px;
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    justify-content: end;">${x.toFixed(2).toLocaleString("en-US")}`
+}
+
+function tooltip(title, expl) {
+    const th = document.createElement("th");
+    th.title = expl
+    th.style.background = "#f0f8ff";
+    th.textContent = title;
+
+    th.addEventListener("mouseover", () => th.style.background = "#d0e8ff");
+    th.addEventListener("mouseout", () => th.style.background = "#f0f8ff");
+
+    return th;
+}
+
+function pkgfmt(pkg) {
+    const th = document.createElement("th");
+    th.title = "hover"
+    th.style.background = "#f0f8ff";
+    th.textContent = pkg;
+
+    th.addEventListener("mouseover", () => th.style.background = "#d0e8ff");
+    th.addEventListener("mouseout", () => th.style.background = "#f0f8ff");
+
+    th.addEventListener("click", () => {
+        localStorage.setItem("orgmetricsRepo", pkg);
+        th.style.background="#a0f8ff";
+        window.location.href="/repometrics-demo/repo.html";
+    });
+
+    return th;
+}
+```
+
+<!---
+******** END UTILITY FUNCTIONS ********
+--->
+
+
+```{r load-data}
+data_repo_src <- readRDS (fs::path ("data", "results-data-repo-src.Rds"))
+ojs_define (repo_src_in = data_repo_src)
+```
+
+```{ojs load-json-data}
+// -------- READ JS DATA
+repo_src = {
+    return transpose(repo_src_in).map(row => ({
+        ...row,
+    }));
+}
+json_data = FileAttachment("results-json-data.json").json();
+maintainer_pkgs = json_data['maintainer_pkgs'];
+comaintainers = json_data['comaintainers'];
+maintainers = Object.keys(maintainer_pkgs);
+```
+
+<!---- break --->
+
+```{ojs maintainer-select}
+maintainerSet = localStorage.getItem("orgmetricsMaintainer") || maintainers [0]
+viewof maintainer = Inputs.select(
+    maintainers,
+    {
+        multiple: false,
+        value: maintainerSet,
+        label: htl.html`<b>Maintainer:</b>`
+    }
+)
+s = localStorage.setItem("orgmetricsMaintainer", maintainer.toString());
+maintainer_gh_url =
+    htl.html`<a href="https://github.com/${maintainer}" target="_blank"><i>${maintainer}</i></a>`
+```
+
+<!---- break --->
+
+```{ojs extract-maintainer-data}
+these_pkgs = maintainer_pkgs[maintainer] || null;
+
+these_cos = comaintainers[maintainer] || null
+these_cos_list = these_cos ?
+these_cos.map(i => htl.html`
+<div onclick=${() => localStorage.setItem('orgmetricsMaintainer', i)}>
+<li><a href="/repometrics-demo/contributor.html">${i}</a></li>
+</div>`) : htl.html`<li>No co-maintainers</li>`;
+```
+
+<div style="margin-top: 10px; margin-bottom: 10px;"></div>
+
+```{ojs maintainer-link}
+htl.html`<div><a href="https://github.com/${maintainer}" target="_blank">github.com/${maintainer}</a></div>`
+```
+
+<div style="margin-top: 10px; margin-bottom: 10px;"></div>
+
+## Repositories
+
+This is a sub-set of the main table on [the _Organization_ page](/org.html),
+showing repository metrics aggregated across the four categories described there.
+Values are shown only for any repositories to which
+`{ojs} maintainer_gh_url` has
+contributed, and are scaled between 0 and 1 based on the distribution of values
+across the entire organization, with higher values always better than lower
+values.
+
+<!---
+******** START REPO-LEVEL METRICS TABLE ********
+--->
+
+```{r}
+data_metrics <- readRDS (fs::path ("data", "results-metrics.Rds"))
+
+# Main table of most recent metrics:
+# which.max does not work for dates, but max does
+index1 <- which (names (data_metrics) == max (names (data_metrics)))
+m <- data_metrics [[index1]] |>
+    tidyr::pivot_wider (names_from = name, values_from = value) |>
+    orgmetrics:::data_metrics_group () |>
+    dplyr::select (-none) |>
+    dplyr::relocate (total, .after = package) |>
+    dplyr::arrange (by = desc (total))
+ojs_define (metrics_table_in = m)
+```
+
+```{ojs}
+metricsGroupedTable = {
+    return transpose(metrics_table_in).map(row => ({
+        ...row,
+    }));
+}
+metricsTable = metricsGroupedTable.filter(i => these_pkgs.includes(i.package));
+```
+
+```{ojs}
+Inputs.table(metricsTable, {
+    width: {
+        package: 100,
+        total: 200,
+        development: 200,
+        issues: 200,
+        popularity: 200,
+        meta: 200,
+    },
+    format: {
+        package: d => pkgfmt(d),
+        development: sparkbar(d3.max(metricsGroupedTable, d => d.development)),
+        issues: sparkbar(d3.max(metricsGroupedTable, d => d.issues)),
+        popularity: sparkbar(d3.max(metricsGroupedTable, d => d.popularity)),
+        meta: sparkbar(d3.max(metricsGroupedTable, d => d.meta)),
+        total: sparkbar(d3.max(metricsGroupedTable, d => d.total)),
+    },
+    header: {
+        development: tooltip("Development", "Code development and maintenance metrics"),
+        issues: tooltip("Issues", "GitHub issues and pull request activity"),
+        popularity: tooltip("Popularity", "Project popularity on CRAN (where applicable) and GitHub"),
+        meta: tooltip("Dependencies and releases", ""),
+        total: tooltip("Overall", "Average across all four categories of metrics."),
+    },
+})
+```
+
+<!---
+******** END REPO-LEVEL METRICS TABLE ********
+--->
+
+## Network
+
+```{ojs network-in}
+// Connect co-maintainers to all of their packages:
+co_pkgs = these_cos ? these_cos.map(i => maintainer_pkgs[i]).flat() : [];
+pkgs_expanded_full = [
+    ...these_pkgs,
+    ...co_pkgs
+];
+// Reduce to unique pkgs:
+pkgs_expanded = [...new Set(pkgs_expanded_full)];
+
+co_nodes = these_cos ?
+    these_cos.map(item => ({ id: item, group: "Co-maintainer", size: 6 })) : [];
+nodes = [
+    { id: maintainer, group: "Maintainer", size: 10 },
+    ...pkgs_expanded.map(item => ({
+        id: item,
+        group: these_pkgs.includes(item) ? "packages" : "otherPackages",
+        size: these_pkgs.includes(item) ? 8 : 4,
+    })),
+    ...co_nodes
+];
+
+// edges are mappings from co-maintainers to all packages. First collect list
+// of all packages from co-maintainers:
+these_co_pkgs = these_cos ? these_cos.reduce((acc, key) => {
+    if (maintainer_pkgs.hasOwnProperty(key)) {
+        if (!these_pkgs.includes(key)) {
+            acc[key] = maintainer_pkgs[key];
+        }
+    }
+    return acc;
+}, {}) : [];
+// Then flatten that to (source, target) pairs of (maintainer, package):
+these_co_pkgs_flat = Object.entries(these_co_pkgs).flatMap(([source, targets]) =>
+    targets.map(target => ({ source, target }))
+);
+links = [
+    ...these_pkgs.map(item => ({
+        source: maintainer, target: item, value: 4
+    })),
+    ...these_co_pkgs_flat.map(item => ({
+        source: item.source, target: item.target, value: 2
+    }))
+];
+```
+
+<div style="margin-top: 20px; margin-bottom: 0px;"></div>
+
+
+```{ojs swatches}
+import {Swatches} from "@d3/color-legend"
+Swatches(chart.scales.color)
+```
+
+```{ojs ForceGraph-plot}
+strength = -400;
+
+chart = {
+
+    const width = 928;
+    const height = 600;
+
+    const types = Array.from(new Set(nodes.map(d => d.group)));
+
+    const color = d3.scaleOrdinal(types, d3.schemeCategory10);
+
+    const simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id))
+        .force("charge", d3.forceManyBody().strength(strength))
+        .force("x", d3.forceX())
+        .force("y", d3.forceY());
+
+    const svg = d3.create("svg")
+        .attr("viewBox", [-width / 2, -height / 2, width, height])
+        .attr("width", width)
+        .attr("height", height)
+        .attr("style", "max-width: 100%; height: auto; font: 14px sans-serif;");
+
+    const link = svg.append("g")
+        .attr("fill", "none")
+        .attr("stroke-width", 1.5)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+            .attr("stroke", "gray")
+            .attr("stroke-width", d => d.value);
+
+    const node = svg.append("g")
+        .selectAll("g")
+        .data(nodes)
+        .join("g")
+            .call(drag(simulation));
+
+    node.append("circle")
+        .attr("stroke", "white")
+        .attr("stroke-width", 1.5)
+        .data(nodes)
+        .join("circle")
+            .attr("fill", d => color(d.group))
+            .attr("r", d => d.size);
+
+    node.append("text")
+        .attr("x", 8)
+        .attr("y", "0.31em")
+        .text(d => d.id)
+        .html(d => d.group === "Co-maintainer" ?
+            `<a href="/repometrics-demo/contributor.html"
+                onclick="localStorage.setItem('orgmetricsMaintainer', '${d.id}')">${d.id}</a>` :
+            ((d.group === "packages" || d.group === "otherPackages") ?
+                `<a href="/repometrics-demo/repo.html"
+                    onclick="localStorage.setItem('orgmetricsRepo', '${d.id}')">${d.id}</a>` :
+            d.id))
+        .clone(true).lower()
+            .attr("fill", "none")
+            .attr("stroke", "white")
+            .attr("stroke-width", 3);
+
+    simulation.on("tick", () => {
+        link.attr("d", linkArc);
+        node.attr("transform", d => `translate(${d.x},${d.y})`);
+    });
+
+    invalidation.then(() => simulation.stop());
+
+    return Object.assign(svg.node(), {scales: {color}});
+}
+```
+
+```{ojs}
+function linkArc(d) {
+    const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+    return `
+    M${d.source.x},${d.source.y}
+    A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
+    `;
+}
+```
+
+```{ojs}
+drag = simulation => {
+
+    function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+
+    function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+    }
+
+    function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+    }
+
+    return d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+}
+```
+
+
+## Co-Contributors
+
+```{ojs comaintainers-list}
+htl.html`<ul>${these_cos_list}</ul>`
+```
