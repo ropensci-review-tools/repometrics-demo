@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -88,6 +123,8 @@ cookieconsent.run({
 });
 </script> 
   
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script src="site_libs/jquery-3.7.1/jquery.min.js"></script>
 <script src="site_libs/bs3compat-0.9.0/transition.js"></script>
 <script src="site_libs/bs3compat-0.9.0/tabs.js"></script>
@@ -97,7 +134,60 @@ cookieconsent.run({
 <script src="site_libs/bslib-component-js-0.9.0/web-components.min.js" type="module"></script>
 <link href="site_libs/bslib-component-css-0.9.0/components.css" rel="stylesheet">
 <script src="site_libs/bslib-tag-require-0.9.0/tag-require.js"></script>
+<script type="ojs-define">
+{"contents":[{"name":"nodes_in","value":{"id":["distcrete","outbreaks","epiparameterDB","socialmixr","linelist","incidence","epiparameter","fitdistrplus","finalsize","epidemics","EpiEstim","matchmaker","numberize","epicontacts","varnish","cfr","aweek","branchr","epitrix","projections","trending","trendeval","reportfactory","primarycensored","vaccineff","epiCo","superspreading","scenarios","quickfit","cleanepi","epichains","simulist","sandpaper","epiverse","outbreaker2","vimes","dibbler","contactsim","tracer","incidence.ui","epicontacts.ui","recon.ui","reconhub","earlyR","epimaps","epiflows","simulacr","datacomparator","occupancy","trendbreaker","rfextras","i2extras","EpiLPS","epidist","epireview"],"size":[12,19,2,3,4,13,3,5,3,2,5,2,2,11,2,2,2,2,5,4,3,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"edges_in","value":{"source":["cfr","linelist","epiparameter","epiparameter","finalsize","vaccineff","epiCo","superspreading","superspreading","scenarios","scenarios","epidemics","epidemics","epidemics","quickfit","cleanepi","cleanepi","cleanepi","epichains","simulist","simulist","sandpaper","epiverse","outbreaker2","incidence","incidence","vimes","vimes","vimes","dibbler","dibbler","epicontacts","contactsim","contactsim","contactsim","tracer","tracer","tracer","incidence.ui","incidence.ui","epicontacts.ui","epicontacts.ui","recon.ui","reconhub","reconhub","reconhub","projections","projections","projections","projections","epitrix","epitrix","epitrix","earlyR","earlyR","earlyR","earlyR","earlyR","epimaps","epimaps","epiflows","epiflows","linelist","simulacr","simulacr","simulacr","datacomparator","occupancy","occupancy","occupancy","trendbreaker","trendbreaker","trendbreaker","rfextras","outbreaks","trending","i2extras","trendeval","trendeval","EpiEstim","EpiEstim","EpiEstim","EpiEstim","EpiEstim","EpiLPS","epidist","epireview","primarycensored"],"target":["distcrete","outbreaks","distcrete","epiparameterDB","socialmixr","linelist","incidence","epiparameter","fitdistrplus","finalsize","epidemics","EpiEstim","finalsize","socialmixr","fitdistrplus","linelist","matchmaker","numberize","epicontacts","epiparameter","epicontacts","varnish","cfr","epicontacts","aweek","outbreaks","distcrete","branchr","incidence","epicontacts","outbreaks","outbreaks","epicontacts","distcrete","incidence","epicontacts","distcrete","outbreaks","incidence","outbreaks","epicontacts","outbreaks","outbreaks","epicontacts","outbreaks","incidence","incidence","outbreaks","distcrete","EpiEstim","distcrete","outbreaks","incidence","distcrete","EpiEstim","epitrix","incidence","projections","incidence","outbreaks","epicontacts","outbreaks","outbreaks","epicontacts","distcrete","epitrix","linelist","projections","incidence","distcrete","trending","trendeval","outbreaks","reportfactory","incidence","outbreaks","outbreaks","trending","outbreaks","fitdistrplus","incidence","epitrix","distcrete","projections","EpiEstim","primarycensored","epitrix","fitdistrplus"],"value":[1,1,1,1,1,5,3,2,1,1,1,1,1,1,1,2,1,2,1,1,1,1,1,1,7,1,1,1,1,6,1,1,7,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,1,1,3,1,1,3,2,2,1,1,1,1,6,1,1,2,1,2,6,2,3,1,3,2,1,2,1,1,1,22,1,2,3,5,2,1,11,3,2,1]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"metrics_dates_in","value":{"date":["2025-07-01","2025-07-01","2025-07-01","2025-07-01","2025-07-01","2025-04-02","2025-04-02","2025-04-02","2025-04-02","2025-04-02","2025-01-02","2025-01-02","2025-01-02","2025-01-02","2025-01-02","2024-10-04","2024-10-04","2024-10-04","2024-10-04","2024-10-04","2024-07-06","2024-07-06","2024-07-06","2024-07-06","2024-07-06","2024-04-07","2024-04-07","2024-04-07","2024-04-07","2024-04-07","2024-01-08","2024-01-08","2024-01-08","2024-01-08","2024-01-08","2023-10-10","2023-10-10","2023-10-10","2023-10-10","2023-10-10","2023-07-12","2023-07-12","2023-07-12","2023-07-12","2023-07-12","2023-04-13","2023-04-13","2023-04-13","2023-04-13","2023-04-13","2023-01-13","2023-01-13","2023-01-13","2023-01-13","2023-01-13","2022-10-15","2022-10-15","2022-10-15","2022-10-15","2022-10-15"],"name":["Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel.","Overall","Development","GitHub","Popularity","Dep.+Rel."],"value":[0.2796,0.3303,0.3895,0.2868,0.3795,0.3003,0.3782,0.4321,0.2905,0.3887,0.2889,0.379,0.4149,0.2489,0.3898,0.2875,0.3797,0.4103,0.2496,0.3861,0.2925,0.3624,0.4259,0.249,0.4051,0.2932,0.3963,0.4167,0.2455,0.3953,0.2901,0.392,0.4279,0.2215,0.3969,0.2813,0.3878,0.3997,0.2164,0.3908,0.2717,0.3742,0.4041,0.2021,0.3658,0.2713,0.3907,0.3605,0.1952,0.3979,0.2751,0.3785,0.3986,0.1917,0.3948,0.2626,0.3528,0.3802,0.1724,0.3874]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"metrics_table_in","value":{"package":["fitdistrplus","primarycensored","sivirep","linelist","varnish","odin2","EpiEstim","socialmixr","epidemics","incidence","epichains","cleanepi","epiparameter","vaccineff","sandpaper","outbreaker2","epiCo","epicontacts","packagetemplate","epishiny","episoap","trendeval","outbreaks","cfr","epireview","simulist","serofoi","finalsize","nomad","epidist","learn","transtat","etdev","showcasedata","rfextras","numberize","reportfactory","recon.ui","ColOpenData","safeframe","readepi","epiverse","dibbler","superspreading","iraca","vimes","earlyR","projections","branchr","distcrete","climateR0","simulacr","epimaps","epicookbook","epiflows","aweek","recontools","quickfit","epiparameterDB","datacomparator","scenarios","reconhub","contactdata","epiversedashboard","epirisk","epiparameterDashboard","epicontacts.ui","epitrix","shinyHelpers","occupancy","epinetwork","ggpyramid","cogs","incidence.ui","trendbreaker","contactsim","matchmaker","EpiLPS","tracer","Severity_methods_assessment","trending","tracetheme","i2extras"],"total":[0.6841,0.5085,0.4884,0.4666,0.42,0.4136,0.4133,0.4077,0.3935,0.377,0.3504,0.3423,0.3417,0.3414,0.3402,0.3367,0.3201,0.3195,0.3119,0.3115,0.3045,0.3026,0.2991,0.2986,0.2982,0.2976,0.2974,0.297,0.2954,0.2936,0.2921,0.2829,0.2736,0.2728,0.2697,0.2694,0.2662,0.2603,0.2583,0.2549,0.2547,0.2535,0.2516,0.25,0.2473,0.2464,0.2462,0.2453,0.2435,0.2434,0.2432,0.2421,0.2407,0.2386,0.2372,0.2352,0.2348,0.234,0.2339,0.2326,0.2312,0.2306,0.2301,0.2242,0.2205,0.2184,0.2177,0.2174,0.2144,0.2104,0.2084,0.2066,0.2064,0.2062,0.2057,0.2023,0.2016,0.1985,0.1977,0.1925,0.1839,0.1813,0.175],"development":[0.6019,0.6876,0.7554,0.607,0.3341,0.7234,0.4899,0.5623,0.7434,0.6057,0.5625,0.5442,0.3997,0.5473,0.3687,0.4087,0.4393,0.3985,0.4843,0.2296,0.3042,0.4568,0.2511,0.3457,0.5456,0.3381,0.3479,0.3799,0.3182,0.4949,0.2273,0.1614,0.359,0.5063,0.3111,0.2966,0.332,0.1735,0.3141,0.3143,0.2944,0.3032,0.2066,0.3656,0.2924,0.2424,0.3091,0.3245,0.2273,0.3315,0.2693,0.2045,0.2045,0.1136,0.3315,0.2955,0.2045,0.2894,0.2955,0.1136,0.2955,0.2045,0.2843,0.2273,0.2045,0.2727,0.2045,0.3152,0.1136,0.2904,0.0909,0.1818,0.1136,0.2045,0.2939,0.1136,0.2944,0.1136,0.2273,0.1136,0.303,0.2258,0.2374],"issues":[0.5065,0.7499,0.6008,0.6992,0.3623,0.745,0.5438,0.5796,0.5926,0.4201,0.5922,0.5587,0.4412,0.5264,0.431,0.2975,0.3593,0.3891,0.6428,0.4103,0.3957,0.4227,0.301,0.4509,0.4101,0.5741,0.3662,0.3308,0.3485,0.421,0.3035,0.2974,0.4877,0.3587,0.3519,0.3873,0.3257,0.3519,0.3168,0.3912,0.3686,0.4319,0.3519,0.3307,0.3329,0.2963,0.3218,0.3084,0.3519,0.2981,0.3735,0.3519,0.3519,0.3112,0.3002,0.314,0.3324,0.3087,0.3245,0.3485,0.3084,0.3519,0.3374,0.3519,0.3519,0.3201,0.3519,0.3029,0.2963,0.3007,0.3519,0.3519,0.3519,0.2984,0.3396,0.3519,0.3011,0.3236,0.3519,0.316,0.3039,0.3556,0.3033],"popularity":[0.8154,0.5071,0.5742,0.5096,0.6316,0.1575,0.8134,0.643,0.4383,0.5636,0.38,0.3312,0.6524,0.3694,0.5098,0.6422,0.4565,0.4941,0.2366,0.3844,0.2009,0.2391,0.6285,0.4625,0.3391,0.3354,0.4507,0.5729,0.2107,0.3032,0.4365,0.3757,0.0329,0,0.197,0.3746,0.5732,0.2298,0.273,0.1188,0.2493,0.0329,0.2275,0.3419,0.0724,0.1844,0.3338,0.4252,0.1053,0.2744,0.1381,0.1884,0.1873,0.168,0.4437,0.4407,0.1351,0.0724,0.206,0.1884,0.0395,0.1246,0.3192,0.0329,0.0329,0,0,0.396,0.1488,0.1809,0.0329,0,0,0.0395,0.3206,0.0329,0.3223,0.3117,0.1127,0,0.2231,0.0329,0.218],"meta":[0.4968,0.5978,0.5116,0.5175,0.7721,0.4421,0.2195,0.2539,0.1932,0.2954,0.2174,0.2776,0.2152,0.264,0.3914,0.3351,0.3453,0.3157,0.1956,0.5333,0.6218,0.3945,0.3147,0.2339,0.1961,0.2406,0.3221,0.2012,0.5995,0.2489,0.493,0.5798,0.4884,0.4992,0.4884,0.2885,0.1,0.5462,0.3876,0.4501,0.3611,0.4992,0.4721,0.2121,0.5388,0.5088,0.2663,0.1682,0.5328,0.3132,0.4352,0.4656,0.4599,0.6,0.1104,0.1259,0.5018,0.4992,0.3437,0.5127,0.5127,0.4721,0.2093,0.5088,0.5132,0.4992,0.5323,0.0729,0.5132,0.2797,0.5664,0.4992,0.5664,0.4884,0.0743,0.5132,0.09,0.2433,0.2969,0.5328,0.0894,0.2924,0.1163]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"maintenance_ts_in","value":{"date":["2022-10-15","2022-10-15","2022-10-15","2023-01-13","2023-01-13","2023-01-13","2023-04-13","2023-04-13","2023-04-13","2023-07-12","2023-07-12","2023-07-12","2023-10-10","2023-10-10","2023-10-10","2024-01-08","2024-01-08","2024-01-08","2024-04-07","2024-04-07","2024-04-07","2024-07-06","2024-07-06","2024-07-06","2024-10-04","2024-10-04","2024-10-04","2025-01-02","2025-01-02","2025-01-02","2025-04-02","2025-04-02","2025-04-02","2025-07-01","2025-07-01","2025-07-01"],"name":["Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit","Comm. Engage.","Dev. Resp.","Deficit"],"value":[0.1761,0.2784,0.2697,0.2077,0.3006,0.2792,0.2063,0.3011,0.2771,0.2238,0.3123,0.2836,0.2323,0.3377,0.2666,0.2406,0.36,0.2526,0.2652,0.3345,0.3027,0.25,0.3297,0.2923,0.2413,0.3486,0.2647,0.2432,0.3241,0.2912,0.2579,0.3657,0.2642,0.232,0.309,0.295]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"maintenance_repo_in","value":{"package":["varnish","transtat","learn","sandpaper","datacomparator","shinyHelpers","EpiEstim","outbreaker2","recon.ui","epicookbook","incidence","projections","episoap","vimes","epireview","epiparameter","outbreaks","epiCo","Severity_methods_assessment","climateR0","epishiny","linelist","EpiLPS","socialmixr","recontools","serofoi","nomad","superspreading","epidist","contactsim","sivirep","cfr","vaccineff","odin2","incidence.ui","cogs","reportfactory","dibbler","epicontacts","branchr","simulacr","primarycensored","epinetwork","epimaps","epiflows","reconhub","finalsize","epidemics","epiversedashboard","trendbreaker","i2extras","rfextras","epitrix","epiverse","epirisk","safeframe","quickfit","earlyR","ColOpenData","iraca","trending","epicontacts.ui","aweek","fitdistrplus","packagetemplate","simulist","scenarios","distcrete","contactdata","cleanepi","readepi","ggpyramid","tracetheme","matchmaker","etdev","showcasedata","occupancy","epiparameterDashboard","epichains","trendeval","epiparameterDB","numberize","tracer"],"comm_engage":[0.5146,0.2118,0.2497,0.4136,0.1541,0.1419,0.6309,0.3151,0.1973,0.1478,0.445,0.2809,0.2507,0.1721,0.4338,0.3258,0.1941,0.3354,0.0962,0.1943,0.2093,0.5746,0.1071,0.5463,0.1377,0.254,0.1802,0.2626,0.3279,0.1063,0.6096,0.2941,0.4506,0.646,0.1083,0.0962,0.191,0.1661,0.3653,0.1478,0.1541,0.6486,0.087,0.1538,0.1721,0.1345,0.2049,0.5708,0.1255,0.1467,0.0878,0.176,0.1408,0.2255,0.1063,0.2023,0.1184,0.1199,0.1261,0.1184,0.0955,0.0962,0.1198,0.4394,0.4186,0.2958,0.1083,0.0955,0.1084,0.392,0.1187,0.0769,0.0487,0.089,0.25,0.2013,0.0592,0.0769,0.393,0.2088,0.0763,0.1381,0.0417],"dev_resp":[0.337,0.1644,0.2159,0.394,0.1357,0.1246,0.6157,0.3126,0.1956,0.1505,0.4524,0.2891,0.2747,0.1987,0.4605,0.3537,0.2242,0.3684,0.1344,0.2345,0.2502,0.6156,0.1492,0.5915,0.1877,0.3057,0.2335,0.3161,0.3854,0.1667,0.6714,0.358,0.5167,0.7134,0.1765,0.1667,0.262,0.2382,0.4394,0.2246,0.2325,0.7277,0.1667,0.2371,0.2554,0.2246,0.2951,0.6617,0.2167,0.2382,0.1865,0.2786,0.2473,0.3329,0.2167,0.3147,0.2324,0.2345,0.2408,0.2353,0.2152,0.2167,0.2434,0.5638,0.5438,0.421,0.2354,0.2262,0.2396,0.529,0.2567,0.2167,0.1947,0.2363,0.4004,0.3595,0.2179,0.2381,0.5567,0.3728,0.2499,0.3127,0.2167],"maintenance":[0.525,0.3948,0.3813,0.367,0.3659,0.3648,0.3627,0.3499,0.3492,0.3448,0.3401,0.3392,0.3234,0.3209,0.3208,0.3196,0.3173,0.3145,0.3092,0.3073,0.3065,0.3064,0.3054,0.3023,0.2975,0.2957,0.2942,0.294,0.29,0.2871,0.2857,0.2836,0.2814,0.28,0.2793,0.2769,0.2764,0.2754,0.2733,0.2707,0.2691,0.2683,0.2678,0.2641,0.2641,0.2574,0.2572,0.2565,0.2563,0.2559,0.2488,0.2449,0.241,0.24,0.2371,0.235,0.2335,0.2329,0.2327,0.2306,0.2278,0.2269,0.2238,0.223,0.2223,0.2223,0.2203,0.2167,0.2162,0.2104,0.2095,0.2077,0.2014,0.2001,0.197,0.1892,0.1887,0.1863,0.1837,0.1835,0.1738,0.1728,0.1725]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"data_extra_metrics_in","value":{"repo":["ColOpenData","EpiEstim","Severity_methods_assessment","TranStat","aweek","branchr","cfr","climateR0","cogs","contactsim","datacomparator","dibbler","distcrete","earlyR","epicontacts","epicontacts.ui","epicookbook","epidemics","epidist","epiflows","epimaps","epinetwork","epirisk","epishiny","episoap","epitrix","epiversedashboard","ggpyramid","i2extras","incidence","incidence.ui","iraca","learn","linelist","linelist","matchmaker","nomad","occupancy","outbreaker2","outbreaks","quickfit","readepi","recon.ui","reconhub","recontools","reportfactory","rfextras","sandpaper","scenarios","shinyHelpers","simulacr","socialmixr","tracer","tracetheme","trendbreaker","trendeval","trending","varnish","vimes","contactdata","safeframe","serofoi","epireview","epiparameter","packagetemplate","finalsize","projections","numberize","superspreading","cleanepi","odin2","epiCo","epiparameterDB","fitdistrplus","epiverse","primarycensored","sivirep","vaccineff","simulist","epichains","EpiLPS","epiparameterDashboard","etdev","showcasedata"],"ctb_absence":[0.5306,0.4631,1,0.371,1,0.5588,0.8509,0.5909,1,0.8571,0.6667,0.9877,0.575,0.8028,0.461,0.7586,0.5,0.8615,0.2539,0.7035,0.6667,1,1,0.9464,0.348,0.5811,0.8333,0.7143,0.8684,0.416,1,0.506,0.4,0.3621,0.3621,1,0.8,1,0.6674,0.3927,1,0.7333,0.5714,1,0.8289,0.3653,0.8667,0.9205,1,1,0.3871,0.2679,0.96,1,0.5915,0.9048,0.9756,0.8119,0.3401,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"response":[null,70,null,null,null,null,3,24,null,null,null,null,null,null,1,null,null,26,7,null,null,null,null,null,10,null,null,null,null,0,null,null,null,null,null,null,null,null,20,null,null,null,null,null,null,null,null,4,null,null,null,9,null,null,null,44,null,14,null,52,52,39,16,15,13,12,11,9,9,7,7,6,6,4,3,3,3,3,1,0,null,null,null,null],"labels":[0.2222,0,null,null,null,null,0.1724,0.3125,null,null,null,null,0,null,0,null,null,0,0.2057,null,null,null,null,0,0,0,null,null,null,0,null,0,null,0.037,0.037,null,null,null,0,null,null,0,null,null,null,null,null,0.2075,null,null,null,0.3333,null,0,null,0,null,0.3333,null,0.1429,0.1957,0.1143,0,0.5132,0.3571,0,0.9,0,0.6087,0.4769,0,0,0.6,0,0.1818,0.723,0.2,0.0143,0.4819,0.6364,0,0.8,0,0],"bugs":[0.7778,0.3333,null,null,null,null,0.3103,0.4375,null,null,null,null,1,null,0,null,null,0.2857,0.5851,null,null,null,null,0.1,0.4286,1,null,null,null,0.5,null,0,null,0.0741,0.0741,null,null,null,0.375,null,null,0,null,null,null,null,null,0.2642,null,null,null,0.4074,null,0,null,0,null,0.5417,null,0.2857,0.3261,0.1333,0.1429,0.1974,0.4286,0.2222,0.3,0.5,0.2609,0.4154,0.1667,0.5556,0.32,0.5,0.1818,0.338,0.0333,0.2571,0.1928,0.5758,1,0.8,0.3333,0]}}]}
+</script>
+<script type="ojs-define">
+{"contents":[{"name":"ctb_abs_ctb_in","value":{"name":["Thibaut Jombart","Tim Taylor","Zhian N. Kamvar","Dirk Schumacher","Pratik Gupte","Julian Otero","Paul Campbell","Rich FitzJohn","CarmenTamayo","Dean Attali","Hugo Gruson","Joshua Lambert","Simon Frost","lgs85"],"login":["thibautjombart","TimTaylor","zkamvar","dirkschumacher","pratikunterwegs","jd-otero","PaulC91","richfitz","CarmenTamayo","daattali","Bisaloo","joshwlambert","sdwfrost","lgs85"],"measure":[13.8639,5.3311,5.1548,3.159,2.7124,1.7907,1.6131,1.375,1.348,1.2857,1,1,1,1]}}]}
+</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -122,16 +212,12 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./org.html"> 
-<span class="menu-text">Organization</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./repo.html"> 
 <span class="menu-text">Repositories</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maintainer.html"> 
-<span class="menu-text">Maintainers</span></a>
+    <a class="nav-link" href="./contributor.html"> 
+<span class="menu-text">Contributors</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./models.html"> 
@@ -172,7 +258,14 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#maintenance-priorities" id="toc-maintenance-priorities" class="nav-link active" data-scroll-target="#maintenance-priorities">Maintenance Priorities</a></li>
+  <li><a href="#repository-network" id="toc-repository-network" class="nav-link active" data-scroll-target="#repository-network">Repository Network</a></li>
+  <li><a href="#aggregate-metrics" id="toc-aggregate-metrics" class="nav-link" data-scroll-target="#aggregate-metrics">Aggregate metrics</a></li>
+  <li><a href="#maintenance-deficit" id="toc-maintenance-deficit" class="nav-link" data-scroll-target="#maintenance-deficit">Maintenance deficit</a></li>
+  <li><a href="#additional-metrics-and-indicators" id="toc-additional-metrics-and-indicators" class="nav-link" data-scroll-target="#additional-metrics-and-indicators">Additional metrics and indicators</a>
+  <ul class="collapse">
+  <li><a href="#contributor-absence" id="toc-contributor-absence" class="nav-link" data-scroll-target="#contributor-absence">Contributor Absence</a></li>
+  </ul></li>
+  <li><a href="#maintenance-priorities" id="toc-maintenance-priorities" class="nav-link" data-scroll-target="#maintenance-priorities">Maintenance Priorities</a></li>
   </ul>
 </nav>
     </div>
@@ -240,30 +333,30 @@ cookieconsent.run({
 <div class="value-box-grid html-fill-item" style="--bslib-grid-height:auto;--bslib-grid-height-mobile:auto;---bslib-value-box-showcase-w:40%;---bslib-value-box-showcase-w-fs:1fr;---bslib-value-box-showcase-max-h:75px;---bslib-value-box-showcase-max-h-fs:67%;">
 <div class="value-box-showcase html-fill-item html-fill-container"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-tools " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"></path></svg></div>
 <div class="value-box-area html-fill-item html-fill-container">
-<p class="value-box-title">Urgent maintance required on</p>
+<p class="value-box-title">Urgent mainetance required</p>
 <p class="value-box-value">5 packages</p>
 <div>
 <p>with high community engagement, yet low developer responsiveness:</p>
 <br>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'incidence')">incidence</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'incidence')">incidence</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
 </p>
 </div>
 </div>
@@ -329,11 +422,631 @@ between
 <p>This dashboard presents metrics and models for each repository within both the <a href="https://github.com/epiverse-trace"><code>epiverse-trace</code></a>, <a href="https://github.com/reconhub"><code>reconhub</code></a>, and <a href="https://github.com/reconverse"><code>reconverse</code></a> GitHub organizations. It is intended to demonstrate the kinds of analyses and insights that are possible, and is expected to change and develop a lot. Please provide feedback via GitHub by clicking on the symbol on the top right.</p>
 <p>The dashboard currently has four main pages:</p>
 <ol type="1">
-<li>An <a href="./org.html">organization maintenance</a> page identifying maintenance priorities across all repositories within all organizations.</li>
+<li>This main page which provides an organizational overview, and identifies maintenance priorities across all repositories.</li>
 <li>A <a href="./repo.html">repository maintenance</a> page providing additional detail on maintenance needs of any selected repository.</li>
-<li>A <a href="./maintainer.html">maintainer</a> page with details of individual maintainers, their packages and co-maintainers.</li>
+<li>A <a href="./contributor.html">contributor</a> page with details of individual maintainers and contributors, their packages and co-contributors.</li>
 <li>A <a href="./models.html"><em>Community Health</em></a> providing additional detail on scores for the various <a href="https://chaoss.community/kb-metrics-and-metrics-models/">CHAOSS (<em>Community Health Analytics in Open Source Software</em>) models and metrics</a> for each repository.</li>
 </ol>
+<section id="repository-network" class="level2">
+<h2 class="anchored" data-anchor-id="repository-network">Repository Network</h2>
+<p>This graph shows dependencies between all packages which use any other organization package. Nodes show individual packages, with circles for each package scaled by total numbers of dependent packages; that is, numbers of other packages which depend on that package. Edges connect dependent packages, with thicknesses scaled by total numbers of function calls by all dependent packages.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="322" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 321;"><span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>pkg_nodes <span class="op">=</span> {</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(nodes_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>pkg_edges <span class="op">=</span> {</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(edges_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<!--------- break -------->
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="338" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 337;"><span id="cb2-338"><a href="#cb2-338" aria-hidden="true" tabindex="-1"></a>strength <span class="op">=</span> <span class="op">-</span><span class="dv">400</span><span class="op">;</span></span>
+<span id="cb2-339"><a href="#cb2-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-340"><a href="#cb2-340" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> {</span>
+<span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-342"><a href="#cb2-342" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> width <span class="op">=</span> <span class="dv">928</span><span class="op">;</span></span>
+<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> height <span class="op">=</span> <span class="dv">600</span><span class="op">;</span></span>
+<span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> types <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(pkg_nodes<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">group</span>)))<span class="op">;</span></span>
+<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> color <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(types<span class="op">,</span> d3<span class="op">.</span><span class="at">schemeCategory10</span>)<span class="op">;</span></span>
+<span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> simulation <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceSimulation</span>(pkg_nodes)</span>
+<span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"link"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceLink</span>(pkg_edges)<span class="op">.</span><span class="fu">id</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span>))</span>
+<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"charge"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceManyBody</span>()<span class="op">.</span><span class="fu">strength</span>(strength))</span>
+<span id="cb2-352"><a href="#cb2-352" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"x"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceX</span>())</span>
+<span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"y"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceY</span>())<span class="op">;</span></span>
+<span id="cb2-354"><a href="#cb2-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">"svg"</span>)</span>
+<span id="cb2-356"><a href="#cb2-356" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"viewBox"</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
+<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"width"</span><span class="op">,</span> width)</span>
+<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"height"</span><span class="op">,</span> height)</span>
+<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"style"</span><span class="op">,</span> <span class="st">"max-width: 100%; height: auto; font: 14px sans-serif;"</span>)<span class="op">;</span></span>
+<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> link <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"none"</span>)</span>
+<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="fl">1.5</span>)</span>
+<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"path"</span>)</span>
+<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_edges)</span>
+<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"path"</span>)</span>
+<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"gray"</span>)</span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> node <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_nodes)</span>
+<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">call</span>(<span class="fu">drag</span>(simulation))<span class="op">;</span></span>
+<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a>    node<span class="op">.</span><span class="fu">append</span>(<span class="st">"circle"</span>)</span>
+<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"white"</span>)</span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="fl">1.5</span>)</span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_nodes)</span>
+<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"circle"</span>)</span>
+<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">color</span>(d<span class="op">.</span><span class="at">group</span>))</span>
+<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">size</span>)<span class="op">;</span></span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a>    node<span class="op">.</span><span class="fu">append</span>(<span class="st">"text"</span>)</span>
+<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x"</span><span class="op">,</span> <span class="dv">8</span>)</span>
+<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y"</span><span class="op">,</span> <span class="st">"0.31em"</span>)</span>
+<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span>)</span>
+<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">html</span>(d <span class="kw">=&gt;</span></span>
+<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a>            <span class="vs">`&lt;a href="/repometrics-demo/repo.html"</span></span>
+<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a><span class="vs">                onclick="localStorage.setItem('orgmetricsRepo', '</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}</span><span class="vs">')"&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}</span><span class="vs">&lt;/a&gt;`</span>)</span>
+<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">clone</span>(<span class="kw">true</span>)<span class="op">.</span><span class="fu">lower</span>()</span>
+<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"none"</span>)</span>
+<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"white"</span>)</span>
+<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="dv">3</span>)<span class="op">;</span></span>
+<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a>    simulation<span class="op">.</span><span class="fu">on</span>(<span class="st">"tick"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a>        link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"d"</span><span class="op">,</span> linkArc)<span class="op">;</span></span>
+<span id="cb2-398"><a href="#cb2-398" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="vs">`translate(</span><span class="sc">${</span>d<span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">y</span><span class="sc">}</span><span class="vs">)`</span>)<span class="op">;</span></span>
+<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a>    invalidation<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> simulation<span class="op">.</span><span class="fu">stop</span>())<span class="op">;</span></span>
+<span id="cb2-402"><a href="#cb2-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-403"><a href="#cb2-403" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
+<span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="407" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 406;"><span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">linkArc</span>(d) {</span>
+<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> r <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">hypot</span>(d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span> <span class="op">-</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span><span class="op">,</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span> <span class="op">-</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
+<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`</span></span>
+<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a><span class="vs">    M</span><span class="sc">${</span>d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span><span class="sc">}</span></span>
+<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a><span class="vs">    A</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs"> 0 0,1 </span><span class="sc">${</span>d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span><span class="sc">}</span></span>
+<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
+<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="417" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 416;"><span id="cb4-417"><a href="#cb4-417" aria-hidden="true" tabindex="-1"></a>drag <span class="op">=</span> simulation <span class="kw">=&gt;</span> {</span>
+<span id="cb4-418"><a href="#cb4-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-419"><a href="#cb4-419" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragstarted</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb4-420"><a href="#cb4-420" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="fl">0.3</span>)<span class="op">.</span><span class="fu">restart</span>()<span class="op">;</span></span>
+<span id="cb4-421"><a href="#cb4-421" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> d<span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb4-422"><a href="#cb4-422" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> d<span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb4-423"><a href="#cb4-423" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-424"><a href="#cb4-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-425"><a href="#cb4-425" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragged</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb4-426"><a href="#cb4-426" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb4-427"><a href="#cb4-427" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb4-428"><a href="#cb4-428" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-429"><a href="#cb4-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-430"><a href="#cb4-430" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragended</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb4-431"><a href="#cb4-431" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-432"><a href="#cb4-432" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-433"><a href="#cb4-433" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-434"><a href="#cb4-434" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-435"><a href="#cb4-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-436"><a href="#cb4-436" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">drag</span>()</span>
+<span id="cb4-437"><a href="#cb4-437" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"start"</span><span class="op">,</span> dragstarted)</span>
+<span id="cb4-438"><a href="#cb4-438" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"drag"</span><span class="op">,</span> dragged)</span>
+<span id="cb4-439"><a href="#cb4-439" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"end"</span><span class="op">,</span> dragended)<span class="op">;</span></span>
+<span id="cb4-440"><a href="#cb4-440" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<hr>
+<!---
+******** START UTILITY FUNCTIONS ********
+--->
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="453" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 452;"><span id="cb5-453"><a href="#cb5-453" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sparkbar</span>(max) {</span>
+<span id="cb5-454"><a href="#cb5-454" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> colourScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleSequential</span>(d3<span class="op">.</span><span class="at">interpolateCool</span>)</span>
+<span id="cb5-455"><a href="#cb5-455" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> max])<span class="op">;</span></span>
+<span id="cb5-456"><a href="#cb5-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-457"><a href="#cb5-457" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (x) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="</span></span>
+<span id="cb5-458"><a href="#cb5-458" aria-hidden="true" tabindex="-1"></a><span class="vs">    background: </span><span class="sc">${</span><span class="fu">colourScale</span>(x)<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb5-459"><a href="#cb5-459" aria-hidden="true" tabindex="-1"></a><span class="vs">    color: black;</span></span>
+<span id="cb5-460"><a href="#cb5-460" aria-hidden="true" tabindex="-1"></a><span class="vs">    width: </span><span class="sc">${</span><span class="dv">100</span> <span class="op">*</span> x <span class="op">/</span> max<span class="sc">}</span><span class="vs">%;</span></span>
+<span id="cb5-461"><a href="#cb5-461" aria-hidden="true" tabindex="-1"></a><span class="vs">    float: right;</span></span>
+<span id="cb5-462"><a href="#cb5-462" aria-hidden="true" tabindex="-1"></a><span class="vs">    padding-right: 3px;</span></span>
+<span id="cb5-463"><a href="#cb5-463" aria-hidden="true" tabindex="-1"></a><span class="vs">    box-sizing: border-box;</span></span>
+<span id="cb5-464"><a href="#cb5-464" aria-hidden="true" tabindex="-1"></a><span class="vs">    overflow: visible;</span></span>
+<span id="cb5-465"><a href="#cb5-465" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: flex;</span></span>
+<span id="cb5-466"><a href="#cb5-466" aria-hidden="true" tabindex="-1"></a><span class="vs">    justify-content: end;"&gt;</span><span class="sc">${</span>x<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"en-US"</span>)<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb5-467"><a href="#cb5-467" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-468"><a href="#cb5-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-469"><a href="#cb5-469" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">tooltip</span>(title<span class="op">,</span> expl) {</span>
+<span id="cb5-470"><a href="#cb5-470" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
+<span id="cb5-471"><a href="#cb5-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-472"><a href="#cb5-472" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> expl</span>
+<span id="cb5-473"><a href="#cb5-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-474"><a href="#cb5-474" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">"flex"</span><span class="op">;</span></span>
+<span id="cb5-475"><a href="#cb5-475" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">justifyContent</span> <span class="op">=</span> <span class="st">"flex-end"</span><span class="op">;</span></span>
+<span id="cb5-476"><a href="#cb5-476" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">backgroundColor</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-477"><a href="#cb5-477" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">width</span> <span class="op">=</span> <span class="st">"100%"</span><span class="op">;</span></span>
+<span id="cb5-478"><a href="#cb5-478" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">"relative"</span><span class="op">;</span></span>
+<span id="cb5-479"><a href="#cb5-479" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-480"><a href="#cb5-480" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> textSpan <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"span"</span>)<span class="op">;</span></span>
+<span id="cb5-481"><a href="#cb5-481" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-482"><a href="#cb5-482" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> title<span class="op">;</span></span>
+<span id="cb5-483"><a href="#cb5-483" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">flex</span> <span class="op">=</span> <span class="st">"1"</span><span class="op">;</span></span>
+<span id="cb5-484"><a href="#cb5-484" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">textAlign</span> <span class="op">=</span> <span class="st">"right"</span><span class="op">;</span></span>
+<span id="cb5-485"><a href="#cb5-485" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">"static"</span><span class="op">;</span></span>
+<span id="cb5-486"><a href="#cb5-486" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">wordWrap</span> <span class="op">=</span> <span class="st">"break-word"</span><span class="op">;</span></span>
+<span id="cb5-487"><a href="#cb5-487" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">overflowWrap</span> <span class="op">=</span> <span class="st">"break-word"</span><span class="op">;</span></span>
+<span id="cb5-488"><a href="#cb5-488" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">whiteSpace</span> <span class="op">=</span> <span class="st">"normal"</span><span class="op">;</span></span>
+<span id="cb5-489"><a href="#cb5-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-490"><a href="#cb5-490" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">appendChild</span>(textSpan)<span class="op">;</span></span>
+<span id="cb5-491"><a href="#cb5-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-492"><a href="#cb5-492" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-493"><a href="#cb5-493" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-494"><a href="#cb5-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-495"><a href="#cb5-495" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
+<span id="cb5-496"><a href="#cb5-496" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-497"><a href="#cb5-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-498"><a href="#cb5-498" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">pkgfmt</span>(pkg) {</span>
+<span id="cb5-499"><a href="#cb5-499" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
+<span id="cb5-500"><a href="#cb5-500" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> <span class="st">"hover"</span></span>
+<span id="cb5-501"><a href="#cb5-501" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-502"><a href="#cb5-502" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> pkg<span class="op">;</span></span>
+<span id="cb5-503"><a href="#cb5-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-504"><a href="#cb5-504" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-505"><a href="#cb5-505" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-506"><a href="#cb5-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-507"><a href="#cb5-507" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-508"><a href="#cb5-508" aria-hidden="true" tabindex="-1"></a>        localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">"orgmetricsRepo"</span><span class="op">,</span> pkg)<span class="op">;</span></span>
+<span id="cb5-509"><a href="#cb5-509" aria-hidden="true" tabindex="-1"></a>        th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span><span class="op">=</span><span class="st">"#a0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-510"><a href="#cb5-510" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span><span class="op">=</span><span class="st">"/repometrics-demo/repo.html"</span><span class="op">;</span></span>
+<span id="cb5-511"><a href="#cb5-511" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb5-512"><a href="#cb5-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-513"><a href="#cb5-513" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
+<span id="cb5-514"><a href="#cb5-514" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-515"><a href="#cb5-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-516"><a href="#cb5-516" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">ctbfmt</span>(ctb) {</span>
+<span id="cb5-517"><a href="#cb5-517" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
+<span id="cb5-518"><a href="#cb5-518" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> <span class="st">"hover"</span></span>
+<span id="cb5-519"><a href="#cb5-519" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-520"><a href="#cb5-520" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> ctb<span class="op">;</span></span>
+<span id="cb5-521"><a href="#cb5-521" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-522"><a href="#cb5-522" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-523"><a href="#cb5-523" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-524"><a href="#cb5-524" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-525"><a href="#cb5-525" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-526"><a href="#cb5-526" aria-hidden="true" tabindex="-1"></a>        localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">'orgmetricsMaintainer'</span><span class="op">,</span> ctb)<span class="op">;</span></span>
+<span id="cb5-527"><a href="#cb5-527" aria-hidden="true" tabindex="-1"></a>        th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span><span class="op">=</span><span class="st">"#a0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-528"><a href="#cb5-528" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span><span class="op">=</span><span class="st">"/repometrics-demo/contributor.html"</span><span class="op">;</span></span>
+<span id="cb5-529"><a href="#cb5-529" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb5-530"><a href="#cb5-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-531"><a href="#cb5-531" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
+<span id="cb5-532"><a href="#cb5-532" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-5-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<!---
+******** END UTILITY FUNCTIONS ********
+--->
+</section>
+<section id="aggregate-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="aggregate-metrics">Aggregate metrics</h2>
+<p>This second presents aggregated results from statistics assessed for each repository, and aggregated across the organizations into four distinct categories:</p>
+<ol type="1">
+<li><em>Development</em>: Metrics of both code development and maintainer continuity and diversity. High scores reflect repositories with high levels of code development from a diverse community of maintainers.</li>
+<li><em>GitHub</em>: Metrics derived from GitHub issues and pull requests. High scores reflect repositories with active use of issues, pull requests, code reviews, and rapid responses from core maintainers to issues or pull requests opened by wider community members.</li>
+<li><em>Popularity</em>: Metrics of repository popularity, derived from CRAN download numbers (where applicable), GitHub stars and forks, and issue comments from user communities beyond core maintainers.</li>
+<li><em>Dependencies and Releases</em>: High scores reflect repositories with fewer dependencies and frequent releases.</li>
+</ol>
+<p>The <em>Overall</em> column is an average of all metrics across all of these four categorical groupings, and provides an overall metric of repository health.</p>
+<!---
+******** START PLOT OF AVERAGE METRICS OVER DATES ********
+--->
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="612" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 611;"><span id="cb6-612"><a href="#cb6-612" aria-hidden="true" tabindex="-1"></a>metricsData <span class="op">=</span> {</span>
+<span id="cb6-613"><a href="#cb6-613" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(metrics_dates_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb6-614"><a href="#cb6-614" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb6-615"><a href="#cb6-615" aria-hidden="true" tabindex="-1"></a>        <span class="dt">date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(row<span class="op">.</span><span class="at">date</span>)</span>
+<span id="cb6-616"><a href="#cb6-616" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb6-617"><a href="#cb6-617" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="621" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 620;"><span id="cb7-621"><a href="#cb7-621" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb7-622"><a href="#cb7-622" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb7-623"><a href="#cb7-623" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb7-624"><a href="#cb7-624" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb7-625"><a href="#cb7-625" aria-hidden="true" tabindex="-1"></a>        <span class="dt">swatchHeight</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb7-626"><a href="#cb7-626" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Development"</span><span class="op">,</span> <span class="st">"GitHub"</span><span class="op">,</span> <span class="st">"Popularity"</span><span class="op">,</span> <span class="st">"Dep.+Rel."</span><span class="op">,</span> <span class="st">"Overall"</span>]<span class="op">,</span></span>
+<span id="cb7-627"><a href="#cb7-627" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb7-628"><a href="#cb7-628" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb7-629"><a href="#cb7-629" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">lineY</span>(metricsData<span class="op">,</span> {</span>
+<span id="cb7-630"><a href="#cb7-630" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb7-631"><a href="#cb7-631" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb7-632"><a href="#cb7-632" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb7-633"><a href="#cb7-633" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span>  <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb7-634"><a href="#cb7-634" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,5"</span><span class="op">,</span></span>
+<span id="cb7-635"><a href="#cb7-635" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb7-636"><a href="#cb7-636" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(metricsData<span class="op">,</span> {</span>
+<span id="cb7-637"><a href="#cb7-637" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb7-638"><a href="#cb7-638" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb7-639"><a href="#cb7-639" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb7-640"><a href="#cb7-640" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb7-641"><a href="#cb7-641" aria-hidden="true" tabindex="-1"></a>            <span class="dt">ci</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb7-642"><a href="#cb7-642" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb7-643"><a href="#cb7-643" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">axisY</span>({</span>
+<span id="cb7-644"><a href="#cb7-644" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb7-645"><a href="#cb7-645" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb7-646"><a href="#cb7-646" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb7-647"><a href="#cb7-647" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb7-648"><a href="#cb7-648" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb7-649"><a href="#cb7-649" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"utc"</span><span class="op">,</span></span>
+<span id="cb7-650"><a href="#cb7-650" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [d3<span class="op">.</span><span class="fu">min</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)<span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)]<span class="op">,</span></span>
+<span id="cb7-651"><a href="#cb7-651" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"%Y"</span><span class="op">,</span> </span>
+<span id="cb7-652"><a href="#cb7-652" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ticks</span><span class="op">:</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(metricsData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span><span class="op">.</span><span class="fu">getFullYear</span>()))]<span class="op">.</span><span class="fu">map</span>(year <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">-01-01`</span>))<span class="op">,</span></span>
+<span id="cb7-653"><a href="#cb7-653" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb7-654"><a href="#cb7-654" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb7-655"><a href="#cb7-655" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb7-656"><a href="#cb7-656" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">'16px'</span><span class="op">,</span></span>
+<span id="cb7-657"><a href="#cb7-657" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-658"><a href="#cb7-658" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<!---
+******** END PLOT OF AVERAGE METRICS OVER DATES ********
+--->
+<!---
+******** START REPO-LEVEL METRICS TABLE ********
+--->
+<p>The following table shows metrics for each package, for the latest time period only aggregated into each of the four groups. Clicking on the “package” values will lead to the repository maintenance page with further details of the selected package or repository.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="690" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 689;"><span id="cb8-690"><a href="#cb8-690" aria-hidden="true" tabindex="-1"></a>metricsGroupedTable <span class="op">=</span> {</span>
+<span id="cb8-691"><a href="#cb8-691" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(metrics_table_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb8-692"><a href="#cb8-692" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb8-693"><a href="#cb8-693" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb8-694"><a href="#cb8-694" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="698" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 697;"><span id="cb9-698"><a href="#cb9-698" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(metricsGroupedTable<span class="op">,</span> {</span>
+<span id="cb9-699"><a href="#cb9-699" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb9-700"><a href="#cb9-700" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb9-701"><a href="#cb9-701" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-702"><a href="#cb9-702" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-703"><a href="#cb9-703" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-704"><a href="#cb9-704" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-705"><a href="#cb9-705" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-706"><a href="#cb9-706" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb9-707"><a href="#cb9-707" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb9-708"><a href="#cb9-708" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
+<span id="cb9-709"><a href="#cb9-709" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">development</span>))<span class="op">,</span></span>
+<span id="cb9-710"><a href="#cb9-710" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">issues</span>))<span class="op">,</span></span>
+<span id="cb9-711"><a href="#cb9-711" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">popularity</span>))<span class="op">,</span></span>
+<span id="cb9-712"><a href="#cb9-712" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">meta</span>))<span class="op">,</span></span>
+<span id="cb9-713"><a href="#cb9-713" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">total</span>))<span class="op">,</span></span>
+<span id="cb9-714"><a href="#cb9-714" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb9-715"><a href="#cb9-715" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb9-716"><a href="#cb9-716" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Development"</span><span class="op">,</span> <span class="st">"Code development and maintenance metrics"</span>)<span class="op">,</span></span>
+<span id="cb9-717"><a href="#cb9-717" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Issues"</span><span class="op">,</span> <span class="st">"GitHub issues and pull request activity"</span>)<span class="op">,</span></span>
+<span id="cb9-718"><a href="#cb9-718" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Popularity"</span><span class="op">,</span> <span class="st">"Project popularity on CRAN (where applicable) and GitHub"</span>)<span class="op">,</span></span>
+<span id="cb9-719"><a href="#cb9-719" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Dependencies and releases"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">,</span></span>
+<span id="cb9-720"><a href="#cb9-720" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Overall"</span><span class="op">,</span> <span class="st">"Average across all four categories of metrics."</span>)<span class="op">,</span></span>
+<span id="cb9-721"><a href="#cb9-721" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb9-722"><a href="#cb9-722" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-9" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<!---
+******** END REPO-LEVEL METRICS TABLE ********
+--->
+<!---
+******** START PLOT OF MAINTENANCE DEFICIT OVER DATES ********
+--->
+</section>
+<section id="maintenance-deficit" class="level2">
+<h2 class="anchored" data-anchor-id="maintenance-deficit">Maintenance deficit</h2>
+<p>This next graph shows the maintenance deficit over time, as the difference between community engagement and developer responsiveness. Repositories with high community engagement yet low developer responsiveness have a high maintenance deficit, and vice-versa. The “Deficit” scores are scaled to fix within the same range as the metrics of community engagement and developer responsiveness.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="762" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 761;"><span id="cb10-762"><a href="#cb10-762" aria-hidden="true" tabindex="-1"></a>maintenanceData <span class="op">=</span> {</span>
+<span id="cb10-763"><a href="#cb10-763" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(maintenance_ts_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb10-764"><a href="#cb10-764" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb10-765"><a href="#cb10-765" aria-hidden="true" tabindex="-1"></a>        <span class="dt">date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(row<span class="op">.</span><span class="at">date</span>)</span>
+<span id="cb10-766"><a href="#cb10-766" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb10-767"><a href="#cb10-767" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-10" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb11" data-startfrom="771" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 770;"><span id="cb11-771"><a href="#cb11-771" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb11-772"><a href="#cb11-772" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb11-773"><a href="#cb11-773" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb11-774"><a href="#cb11-774" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-775"><a href="#cb11-775" aria-hidden="true" tabindex="-1"></a>        <span class="dt">swatchHeight</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb11-776"><a href="#cb11-776" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Comm. Engage."</span><span class="op">,</span> <span class="st">"Dev. Resp."</span><span class="op">,</span> <span class="st">"Deficit"</span>]<span class="op">,</span></span>
+<span id="cb11-777"><a href="#cb11-777" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb11-778"><a href="#cb11-778" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb11-779"><a href="#cb11-779" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">lineY</span>(maintenanceData<span class="op">,</span> {</span>
+<span id="cb11-780"><a href="#cb11-780" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb11-781"><a href="#cb11-781" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-782"><a href="#cb11-782" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-783"><a href="#cb11-783" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span>  <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb11-784"><a href="#cb11-784" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,5"</span><span class="op">,</span></span>
+<span id="cb11-785"><a href="#cb11-785" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb11-786"><a href="#cb11-786" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(maintenanceData<span class="op">,</span> {</span>
+<span id="cb11-787"><a href="#cb11-787" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb11-788"><a href="#cb11-788" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-789"><a href="#cb11-789" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-790"><a href="#cb11-790" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb11-791"><a href="#cb11-791" aria-hidden="true" tabindex="-1"></a>            <span class="dt">ci</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb11-792"><a href="#cb11-792" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb11-793"><a href="#cb11-793" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">axisY</span>({</span>
+<span id="cb11-794"><a href="#cb11-794" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb11-795"><a href="#cb11-795" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb11-796"><a href="#cb11-796" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb11-797"><a href="#cb11-797" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb11-798"><a href="#cb11-798" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb11-799"><a href="#cb11-799" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"utc"</span><span class="op">,</span></span>
+<span id="cb11-800"><a href="#cb11-800" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [d3<span class="op">.</span><span class="fu">min</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)<span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)]<span class="op">,</span></span>
+<span id="cb11-801"><a href="#cb11-801" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"%Y"</span><span class="op">,</span></span>
+<span id="cb11-802"><a href="#cb11-802" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ticks</span><span class="op">:</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(metricsData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span><span class="op">.</span><span class="fu">getFullYear</span>()))]<span class="op">.</span><span class="fu">map</span>(year <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">-01-01`</span>))<span class="op">,</span></span>
+<span id="cb11-803"><a href="#cb11-803" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb11-804"><a href="#cb11-804" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb11-805"><a href="#cb11-805" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb11-806"><a href="#cb11-806" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">'16px'</span><span class="op">,</span></span>
+<span id="cb11-807"><a href="#cb11-807" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-808"><a href="#cb11-808" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-11" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<p>And these are maintenance deficit values for individual repositories (packages), for the latest time period only.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb12" data-startfrom="828" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 827;"><span id="cb12-828"><a href="#cb12-828" aria-hidden="true" tabindex="-1"></a>maintenanceRepoData <span class="op">=</span> {</span>
+<span id="cb12-829"><a href="#cb12-829" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(maintenance_repo_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb12-830"><a href="#cb12-830" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb12-831"><a href="#cb12-831" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb12-832"><a href="#cb12-832" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-12" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb13" data-startfrom="836" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 835;"><span id="cb13-836"><a href="#cb13-836" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(maintenanceRepoData<span class="op">,</span> {</span>
+<span id="cb13-837"><a href="#cb13-837" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb13-838"><a href="#cb13-838" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb13-839"><a href="#cb13-839" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb13-840"><a href="#cb13-840" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb13-841"><a href="#cb13-841" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb13-842"><a href="#cb13-842" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-843"><a href="#cb13-843" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb13-844"><a href="#cb13-844" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
+<span id="cb13-845"><a href="#cb13-845" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">comm_engage</span>))<span class="op">,</span></span>
+<span id="cb13-846"><a href="#cb13-846" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">dev_resp</span>))<span class="op">,</span></span>
+<span id="cb13-847"><a href="#cb13-847" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">maintenance</span>))<span class="op">,</span></span>
+<span id="cb13-848"><a href="#cb13-848" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-849"><a href="#cb13-849" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb13-850"><a href="#cb13-850" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Community Engagement"</span><span class="op">,</span> <span class="st">"Community Engagement metrics"</span>)<span class="op">,</span></span>
+<span id="cb13-851"><a href="#cb13-851" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Developer Responsivness"</span><span class="op">,</span> <span class="st">"Developer Responsiveness metrics"</span>)<span class="op">,</span></span>
+<span id="cb13-852"><a href="#cb13-852" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="fu">tooltip</span>(</span>
+<span id="cb13-853"><a href="#cb13-853" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Maintenance Deficit"</span><span class="op">,</span></span>
+<span id="cb13-854"><a href="#cb13-854" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Community Engagment minus Developer Responsivess (rescaled)"</span></span>
+<span id="cb13-855"><a href="#cb13-855" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb13-856"><a href="#cb13-856" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-857"><a href="#cb13-857" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-13" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="additional-metrics-and-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="additional-metrics-and-indicators">Additional metrics and indicators</h2>
+<p>The following show several more distinct indicators of maintenance need, all of which are assessed over the most recent period of repository activity:</p>
+<ul>
+<li><em>Ctb. Absence</em>: A measure of “contributor absence” for each repository, indicating maintenance deficit arising through absence of primary contributors.</li>
+<li><em>Resp. Time</em>: The average time for a core maintainer to respond to a new issue or pull request</li>
+<li><em>Issue Labels</em>: The proportion of issues with labels</li>
+<li><em>Prop. Bugs</em>: The proportion of new issues opened that were bug reports</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb14" data-startfrom="891" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 890;"><span id="cb14-891"><a href="#cb14-891" aria-hidden="true" tabindex="-1"></a>extraMetricsTable <span class="op">=</span> {</span>
+<span id="cb14-892"><a href="#cb14-892" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(data_extra_metrics_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb14-893"><a href="#cb14-893" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb14-894"><a href="#cb14-894" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb14-895"><a href="#cb14-895" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-14" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb15" data-startfrom="899" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 898;"><span id="cb15-899"><a href="#cb15-899" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(extraMetricsTable<span class="op">,</span> {</span>
+<span id="cb15-900"><a href="#cb15-900" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb15-901"><a href="#cb15-901" aria-hidden="true" tabindex="-1"></a>        <span class="dt">repo</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb15-902"><a href="#cb15-902" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-903"><a href="#cb15-903" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-904"><a href="#cb15-904" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-905"><a href="#cb15-905" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-906"><a href="#cb15-906" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb15-907"><a href="#cb15-907" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb15-908"><a href="#cb15-908" aria-hidden="true" tabindex="-1"></a>        <span class="dt">repo</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
+<span id="cb15-909"><a href="#cb15-909" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">ctb_absence</span>))<span class="op">,</span></span>
+<span id="cb15-910"><a href="#cb15-910" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">response</span>))<span class="op">,</span></span>
+<span id="cb15-911"><a href="#cb15-911" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">labels</span>))<span class="op">,</span></span>
+<span id="cb15-912"><a href="#cb15-912" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">bugs</span>))<span class="op">,</span></span>
+<span id="cb15-913"><a href="#cb15-913" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb15-914"><a href="#cb15-914" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb15-915"><a href="#cb15-915" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
+<span id="cb15-916"><a href="#cb15-916" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Resp. Time"</span><span class="op">,</span> <span class="st">"Time to respond to GitHub issues and pull requests"</span>)<span class="op">,</span></span>
+<span id="cb15-917"><a href="#cb15-917" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Issue Labels"</span><span class="op">,</span> <span class="st">"Proportion of labelled issues"</span>)<span class="op">,</span></span>
+<span id="cb15-918"><a href="#cb15-918" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Prop. Bugs"</span><span class="op">,</span> <span class="st">"Proportion of issues and PRs which are about bugs."</span>)<span class="op">,</span></span>
+<span id="cb15-919"><a href="#cb15-919" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb15-920"><a href="#cb15-920" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-15" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<hr>
+<section id="contributor-absence" class="level3">
+<h3 class="anchored" data-anchor-id="contributor-absence">Contributor Absence</h3>
+<p>Finally, this table shows a metric of main contributor absence. Values are only shown for main contributors who have been recently absent from repositories. A contributor who has been entirely absent during the most recent period, and was responsible for 100% of the commits from some number, <em>n</em>, repositories, would have a contributor absence score of <em>n</em>. The same contributor absence of <em>n</em> could also reflect somebody contributing exactly 50% of the code to 2<span class="math inline">\(\times\)</span><em>n</em> repositories, and being entirely absent during the recent period. Any contributions by that contributor during the recent period would reduce the absence factor. In general, high absence factors describe recently absent contributors who have previously been major contributors to numerous repositories.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb16" data-startfrom="983" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 982;"><span id="cb16-983"><a href="#cb16-983" aria-hidden="true" tabindex="-1"></a>Plot <span class="op">=</span> <span class="im">import</span>(<span class="st">"https://esm.sh/@observablehq/plot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-16" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb17" data-startfrom="988" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 987;"><span id="cb17-988"><a href="#cb17-988" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb <span class="op">=</span> {</span>
+<span id="cb17-989"><a href="#cb17-989" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_abs_ctb_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb17-990"><a href="#cb17-990" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb17-991"><a href="#cb17-991" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb17-992"><a href="#cb17-992" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-993"><a href="#cb17-993" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb_len <span class="op">=</span> ctb_abs_ctb<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-17-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-17-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb18" data-startfrom="997" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 996;"><span id="cb18-997"><a href="#cb18-997" aria-hidden="true" tabindex="-1"></a><span class="co">// The 'ctbfmt' function set the localStorage 'orgmetricsMaintainer' value, but</span></span>
+<span id="cb18-998"><a href="#cb18-998" aria-hidden="true" tabindex="-1"></a><span class="co">// the inputs here are full names, no GitHub handles, so unless the are</span></span>
+<span id="cb18-999"><a href="#cb18-999" aria-hidden="true" tabindex="-1"></a><span class="co">// identical, this currently fails and needs to be fixed.</span></span>
+<span id="cb18-1000"><a href="#cb18-1000" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ctb_abs_ctb<span class="op">,</span> {</span>
+<span id="cb18-1001"><a href="#cb18-1001" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb18-1002"><a href="#cb18-1002" aria-hidden="true" tabindex="-1"></a>        <span class="dt">name</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb18-1003"><a href="#cb18-1003" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb18-1004"><a href="#cb18-1004" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb18-1005"><a href="#cb18-1005" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-1006"><a href="#cb18-1006" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb18-1007"><a href="#cb18-1007" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">ctbfmt</span>(d)<span class="op">,</span></span>
+<span id="cb18-1008"><a href="#cb18-1008" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(ctb_abs_ctb<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">measure</span>))<span class="op">,</span></span>
+<span id="cb18-1009"><a href="#cb18-1009" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-1010"><a href="#cb18-1010" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb18-1011"><a href="#cb18-1011" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
+<span id="cb18-1012"><a href="#cb18-1012" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-1013"><a href="#cb18-1013" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-18" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="maintenance-priorities" class="level2">
 <h2 class="anchored" data-anchor-id="maintenance-priorities">Maintenance Priorities</h2>
 <p>This section links to repositories with distinct maintenance priorities.</p>
@@ -344,96 +1057,96 @@ between
 <h3 class="anchored">Development burstiness</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'incidence')">incidence</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'incidence')">incidence</a>
 </p>
 </div>
 <div style="padding-bottom: 1rem; padding-top: 0px; border-bottom: 1px solid #eee;">
 <h3 class="anchored">Number of dependencies</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
 </p>
 </div>
 <div style="padding-bottom: 1rem; padding-top: 0px; border-bottom: 1px solid #eee;">
 <h3 class="anchored">Issue response time</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
 </p>
 </div>
 <div style="padding-bottom: 1rem; padding-top: 0px; border-bottom: 1px solid #eee;">
 <h3 class="anchored">PR response time</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
 </p>
 </div>
 <div style="padding-bottom: 1rem; padding-top: 0px; border-bottom: 1px solid #eee;">
 <h3 class="anchored">PR review time</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
 </p>
 </div>
 <div style="padding-bottom: 1rem; padding-top: 0px; border-bottom: 1px solid #eee;">
 <h3 class="anchored">Release frequency</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
 </p>
 </div>
 <div style="padding-bottom: 1rem; padding-top: 0px; border-bottom: 1px solid #eee;">
 <h3 class="anchored">Response time</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
 </p>
 </div>
 <div style="padding-bottom: 1rem; padding-top: 0px; border-bottom: 1px solid #eee;">
 <h3 class="anchored">Time to close issues</h3>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
+<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
 </p>
 </div>
 
@@ -445,6 +1158,17 @@ between
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InBrZ19ub2RlcyA9IHtcbiAgICByZXR1cm4gdHJhbnNwb3NlKG5vZGVzX2luKS5tYXAocm93ID0+ICh7XG4gICAgICAgIC4uLnJvdyxcbiAgICB9KSk7XG59XG5wa2dfZWRnZXMgPSB7XG4gICAgcmV0dXJuIHRyYW5zcG9zZShlZGdlc19pbikubWFwKHJvdyA9PiAoe1xuICAgICAgICAuLi5yb3csXG4gICAgfSkpO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoic3RyZW5ndGggPSAtNDAwO1xuXG5jaGFydCA9IHtcblxuICAgIGNvbnN0IHdpZHRoID0gOTI4O1xuICAgIGNvbnN0IGhlaWdodCA9IDYwMDtcblxuICAgIGNvbnN0IHR5cGVzID0gQXJyYXkuZnJvbShuZXcgU2V0KHBrZ19ub2Rlcy5tYXAoZCA9PiBkLmdyb3VwKSkpO1xuXG4gICAgY29uc3QgY29sb3IgPSBkMy5zY2FsZU9yZGluYWwodHlwZXMsIGQzLnNjaGVtZUNhdGVnb3J5MTApO1xuXG4gICAgY29uc3Qgc2ltdWxhdGlvbiA9IGQzLmZvcmNlU2ltdWxhdGlvbihwa2dfbm9kZXMpXG4gICAgICAgIC5mb3JjZShcImxpbmtcIiwgZDMuZm9yY2VMaW5rKHBrZ19lZGdlcykuaWQoZCA9PiBkLmlkKSlcbiAgICAgICAgLmZvcmNlKFwiY2hhcmdlXCIsIGQzLmZvcmNlTWFueUJvZHkoKS5zdHJlbmd0aChzdHJlbmd0aCkpXG4gICAgICAgIC5mb3JjZShcInhcIiwgZDMuZm9yY2VYKCkpXG4gICAgICAgIC5mb3JjZShcInlcIiwgZDMuZm9yY2VZKCkpO1xuXG4gICAgY29uc3Qgc3ZnID0gZDMuY3JlYXRlKFwic3ZnXCIpXG4gICAgICAgIC5hdHRyKFwidmlld0JveFwiLCBbLXdpZHRoIC8gMiwgLWhlaWdodCAvIDIsIHdpZHRoLCBoZWlnaHRdKVxuICAgICAgICAuYXR0cihcIndpZHRoXCIsIHdpZHRoKVxuICAgICAgICAuYXR0cihcImhlaWdodFwiLCBoZWlnaHQpXG4gICAgICAgIC5hdHRyKFwic3R5bGVcIiwgXCJtYXgtd2lkdGg6IDEwMCU7IGhlaWdodDogYXV0bzsgZm9udDogMTRweCBzYW5zLXNlcmlmO1wiKTtcblxuICAgIGNvbnN0IGxpbmsgPSBzdmcuYXBwZW5kKFwiZ1wiKVxuICAgICAgICAuYXR0cihcImZpbGxcIiwgXCJub25lXCIpXG4gICAgICAgIC5hdHRyKFwic3Ryb2tlLXdpZHRoXCIsIDEuNSlcbiAgICAgICAgLnNlbGVjdEFsbChcInBhdGhcIilcbiAgICAgICAgLmRhdGEocGtnX2VkZ2VzKVxuICAgICAgICAuam9pbihcInBhdGhcIilcbiAgICAgICAgICAgIC5hdHRyKFwic3Ryb2tlXCIsIFwiZ3JheVwiKVxuICAgICAgICAgICAgLmF0dHIoXCJzdHJva2Utd2lkdGhcIiwgZCA9PiBkLnZhbHVlKTtcblxuICAgIGNvbnN0IG5vZGUgPSBzdmcuYXBwZW5kKFwiZ1wiKVxuICAgICAgICAuc2VsZWN0QWxsKFwiZ1wiKVxuICAgICAgICAuZGF0YShwa2dfbm9kZXMpXG4gICAgICAgIC5qb2luKFwiZ1wiKVxuICAgICAgICAgICAgLmNhbGwoZHJhZyhzaW11bGF0aW9uKSk7XG5cbiAgICBub2RlLmFwcGVuZChcImNpcmNsZVwiKVxuICAgICAgICAuYXR0cihcInN0cm9rZVwiLCBcIndoaXRlXCIpXG4gICAgICAgIC5hdHRyKFwic3Ryb2tlLXdpZHRoXCIsIDEuNSlcbiAgICAgICAgLmRhdGEocGtnX25vZGVzKVxuICAgICAgICAuam9pbihcImNpcmNsZVwiKVxuICAgICAgICAgICAgLmF0dHIoXCJmaWxsXCIsIGQgPT4gY29sb3IoZC5ncm91cCkpXG4gICAgICAgICAgICAuYXR0cihcInJcIiwgZCA9PiBkLnNpemUpO1xuXG4gICAgbm9kZS5hcHBlbmQoXCJ0ZXh0XCIpXG4gICAgICAgIC5hdHRyKFwieFwiLCA4KVxuICAgICAgICAuYXR0cihcInlcIiwgXCIwLjMxZW1cIilcbiAgICAgICAgLnRleHQoZCA9PiBkLmlkKVxuICAgICAgICAuaHRtbChkID0+XG4gICAgICAgICAgICBgPGEgaHJlZj1cIi9yZXBvbWV0cmljcy1kZW1vL3JlcG8uaHRtbFwiXG4gICAgICAgICAgICAgICAgb25jbGljaz1cImxvY2FsU3RvcmFnZS5zZXRJdGVtKCdvcmdtZXRyaWNzUmVwbycsICcke2QuaWR9JylcIj4ke2QuaWR9PC9hPmApXG4gICAgICAgIC5jbG9uZSh0cnVlKS5sb3dlcigpXG4gICAgICAgICAgICAuYXR0cihcImZpbGxcIiwgXCJub25lXCIpXG4gICAgICAgICAgICAuYXR0cihcInN0cm9rZVwiLCBcIndoaXRlXCIpXG4gICAgICAgICAgICAuYXR0cihcInN0cm9rZS13aWR0aFwiLCAzKTtcblxuICAgIHNpbXVsYXRpb24ub24oXCJ0aWNrXCIsICgpID0+IHtcbiAgICAgICAgbGluay5hdHRyKFwiZFwiLCBsaW5rQXJjKTtcbiAgICAgICAgbm9kZS5hdHRyKFwidHJhbnNmb3JtXCIsIGQgPT4gYHRyYW5zbGF0ZSgke2QueH0sJHtkLnl9KWApO1xuICAgIH0pO1xuXG4gICAgaW52YWxpZGF0aW9uLnRoZW4oKCkgPT4gc2ltdWxhdGlvbi5zdG9wKCkpO1xuXG4gICAgcmV0dXJuIE9iamVjdC5hc3NpZ24oc3ZnLm5vZGUoKSwge3NjYWxlczoge2NvbG9yfX0pO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZnVuY3Rpb24gbGlua0FyYyhkKSB7XG4gICAgY29uc3QgciA9IE1hdGguaHlwb3QoZC50YXJnZXQueCAtIGQuc291cmNlLngsIGQudGFyZ2V0LnkgLSBkLnNvdXJjZS55KTtcbiAgICByZXR1cm4gYFxuICAgIE0ke2Quc291cmNlLnh9LCR7ZC5zb3VyY2UueX1cbiAgICBBJHtyfSwke3J9IDAgMCwxICR7ZC50YXJnZXQueH0sJHtkLnRhcmdldC55fVxuICAgIGA7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJkcmFnID0gc2ltdWxhdGlvbiA9PiB7XG5cbiAgICBmdW5jdGlvbiBkcmFnc3RhcnRlZChldmVudCwgZCkge1xuICAgICAgICBpZiAoIWV2ZW50LmFjdGl2ZSkgc2ltdWxhdGlvbi5hbHBoYVRhcmdldCgwLjMpLnJlc3RhcnQoKTtcbiAgICAgICAgZC5meCA9IGQueDtcbiAgICAgICAgZC5meSA9IGQueTtcbiAgICB9XG5cbiAgICBmdW5jdGlvbiBkcmFnZ2VkKGV2ZW50LCBkKSB7XG4gICAgICAgIGQuZnggPSBldmVudC54O1xuICAgICAgICBkLmZ5ID0gZXZlbnQueTtcbiAgICB9XG5cbiAgICBmdW5jdGlvbiBkcmFnZW5kZWQoZXZlbnQsIGQpIHtcbiAgICAgICAgaWYgKCFldmVudC5hY3RpdmUpIHNpbXVsYXRpb24uYWxwaGFUYXJnZXQoMCk7XG4gICAgICAgIGQuZnggPSBudWxsO1xuICAgICAgICBkLmZ5ID0gbnVsbDtcbiAgICB9XG5cbiAgICByZXR1cm4gZDMuZHJhZygpXG4gICAgICAgIC5vbihcInN0YXJ0XCIsIGRyYWdzdGFydGVkKVxuICAgICAgICAub24oXCJkcmFnXCIsIGRyYWdnZWQpXG4gICAgICAgIC5vbihcImVuZFwiLCBkcmFnZW5kZWQpO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZnVuY3Rpb24gc3BhcmtiYXIobWF4KSB7XG4gIGNvbnN0IGNvbG91clNjYWxlID0gZDMuc2NhbGVTZXF1ZW50aWFsKGQzLmludGVycG9sYXRlQ29vbClcbiAgICAuZG9tYWluKFswLCBtYXhdKTtcblxuICByZXR1cm4gKHgpID0+IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJcbiAgICBiYWNrZ3JvdW5kOiAke2NvbG91clNjYWxlKHgpfTtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgd2lkdGg6ICR7MTAwICogeCAvIG1heH0lO1xuICAgIGZsb2F0OiByaWdodDtcbiAgICBwYWRkaW5nLXJpZ2h0OiAzcHg7XG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogZW5kO1wiPiR7eC50b0ZpeGVkKDIpLnRvTG9jYWxlU3RyaW5nKFwiZW4tVVNcIil9YFxufVxuXG5mdW5jdGlvbiB0b29sdGlwKHRpdGxlLCBleHBsKSB7XG4gICAgY29uc3QgdGggPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwidGhcIik7XG5cbiAgICB0aC50aXRsZSA9IGV4cGxcblxuICAgIHRoLnN0eWxlLmRpc3BsYXkgPSBcImZsZXhcIjtcbiAgICB0aC5zdHlsZS5qdXN0aWZ5Q29udGVudCA9IFwiZmxleC1lbmRcIjtcbiAgICB0aC5zdHlsZS5iYWNrZ3JvdW5kQ29sb3IgPSBcIiNmMGY4ZmZcIjtcbiAgICB0aC5zdHlsZS53aWR0aCA9IFwiMTAwJVwiO1xuICAgIHRoLnN0eWxlLnBvc2l0aW9uID0gXCJyZWxhdGl2ZVwiO1xuXG4gICAgY29uc3QgdGV4dFNwYW4gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwic3BhblwiKTtcblxuICAgIHRleHRTcGFuLnRleHRDb250ZW50ID0gdGl0bGU7XG4gICAgdGV4dFNwYW4uc3R5bGUuZmxleCA9IFwiMVwiO1xuICAgIHRleHRTcGFuLnN0eWxlLnRleHRBbGlnbiA9IFwicmlnaHRcIjtcbiAgICB0ZXh0U3Bhbi5zdHlsZS5wb3NpdGlvbiA9IFwic3RhdGljXCI7XG4gICAgdGV4dFNwYW4uc3R5bGUud29yZFdyYXAgPSBcImJyZWFrLXdvcmRcIjtcbiAgICB0ZXh0U3Bhbi5zdHlsZS5vdmVyZmxvd1dyYXAgPSBcImJyZWFrLXdvcmRcIjtcbiAgICB0ZXh0U3Bhbi5zdHlsZS53aGl0ZVNwYWNlID0gXCJub3JtYWxcIjtcblxuICAgIHRoLmFwcGVuZENoaWxkKHRleHRTcGFuKTtcblxuICAgIHRoLmFkZEV2ZW50TGlzdGVuZXIoXCJtb3VzZW92ZXJcIiwgKCkgPT4gdGguc3R5bGUuYmFja2dyb3VuZCA9IFwiI2QwZThmZlwiKTtcbiAgICB0aC5hZGRFdmVudExpc3RlbmVyKFwibW91c2VvdXRcIiwgKCkgPT4gdGguc3R5bGUuYmFja2dyb3VuZCA9IFwiI2YwZjhmZlwiKTtcblxuICAgIHJldHVybiB0aDtcbn1cblxuZnVuY3Rpb24gcGtnZm10KHBrZykge1xuICAgIGNvbnN0IHRoID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcInRoXCIpO1xuICAgIHRoLnRpdGxlID0gXCJob3ZlclwiXG4gICAgdGguc3R5bGUuYmFja2dyb3VuZCA9IFwiI2YwZjhmZlwiO1xuICAgIHRoLnRleHRDb250ZW50ID0gcGtnO1xuXG4gICAgdGguYWRkRXZlbnRMaXN0ZW5lcihcIm1vdXNlb3ZlclwiLCAoKSA9PiB0aC5zdHlsZS5iYWNrZ3JvdW5kID0gXCIjZDBlOGZmXCIpO1xuICAgIHRoLmFkZEV2ZW50TGlzdGVuZXIoXCJtb3VzZW91dFwiLCAoKSA9PiB0aC5zdHlsZS5iYWNrZ3JvdW5kID0gXCIjZjBmOGZmXCIpO1xuXG4gICAgdGguYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsICgpID0+IHtcbiAgICAgICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oXCJvcmdtZXRyaWNzUmVwb1wiLCBwa2cpO1xuICAgICAgICB0aC5zdHlsZS5iYWNrZ3JvdW5kPVwiI2EwZjhmZlwiO1xuICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZj1cIi9yZXBvbWV0cmljcy1kZW1vL3JlcG8uaHRtbFwiO1xuICAgIH0pO1xuXG4gICAgcmV0dXJuIHRoO1xufVxuXG5mdW5jdGlvbiBjdGJmbXQoY3RiKSB7XG4gICAgY29uc3QgdGggPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwidGhcIik7XG4gICAgdGgudGl0bGUgPSBcImhvdmVyXCJcbiAgICB0aC5zdHlsZS5iYWNrZ3JvdW5kID0gXCIjZjBmOGZmXCI7XG4gICAgdGgudGV4dENvbnRlbnQgPSBjdGI7XG5cbiAgICB0aC5hZGRFdmVudExpc3RlbmVyKFwibW91c2VvdmVyXCIsICgpID0+IHRoLnN0eWxlLmJhY2tncm91bmQgPSBcIiNkMGU4ZmZcIik7XG4gICAgdGguYWRkRXZlbnRMaXN0ZW5lcihcIm1vdXNlb3V0XCIsICgpID0+IHRoLnN0eWxlLmJhY2tncm91bmQgPSBcIiNmMGY4ZmZcIik7XG5cbiAgICB0aC5hZGRFdmVudExpc3RlbmVyKFwiY2xpY2tcIiwgKCkgPT4ge1xuICAgICAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnb3JnbWV0cmljc01haW50YWluZXInLCBjdGIpO1xuICAgICAgICB0aC5zdHlsZS5iYWNrZ3JvdW5kPVwiI2EwZjhmZlwiO1xuICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZj1cIi9yZXBvbWV0cmljcy1kZW1vL2NvbnRyaWJ1dG9yLmh0bWxcIjtcbiAgICB9KTtcblxuICAgIHJldHVybiB0aDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1ldHJpY3NEYXRhID0ge1xuICAgIHJldHVybiB0cmFuc3Bvc2UobWV0cmljc19kYXRlc19pbikubWFwKHJvdyA9PiAoe1xuICAgICAgICAuLi5yb3csXG4gICAgICAgIGRhdGU6IG5ldyBEYXRlKHJvdy5kYXRlKVxuICAgIH0pKTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gICAgY29sb3I6IHtcbiAgICAgICAgbGVnZW5kOiB0cnVlLFxuICAgICAgICBsYWJlbDogXCJuYW1lXCIsXG4gICAgICAgIHN3YXRjaEhlaWdodDogNCxcbiAgICAgICAgZG9tYWluOiBbXCJEZXZlbG9wbWVudFwiLCBcIkdpdEh1YlwiLCBcIlBvcHVsYXJpdHlcIiwgXCJEZXAuK1JlbC5cIiwgXCJPdmVyYWxsXCJdLFxuICAgIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5saW5lWShtZXRyaWNzRGF0YSwge1xuICAgICAgICAgICAgeDogXCJkYXRlXCIsXG4gICAgICAgICAgICB5OiBcInZhbHVlXCIsXG4gICAgICAgICAgICBzdHJva2U6IFwibmFtZVwiLFxuICAgICAgICAgICAgc3Ryb2tlV2lkdGg6ICAyLFxuICAgICAgICAgICAgc3Ryb2tlRGFzaGFycmF5OiBcIjIsNVwiLFxuICAgICAgICB9KSxcbiAgICAgICAgUGxvdC5saW5lYXJSZWdyZXNzaW9uWShtZXRyaWNzRGF0YSwge1xuICAgICAgICAgICAgeDogXCJkYXRlXCIsXG4gICAgICAgICAgICB5OiBcInZhbHVlXCIsXG4gICAgICAgICAgICBzdHJva2U6IFwibmFtZVwiLFxuICAgICAgICAgICAgc3Ryb2tlV2lkdGg6IDIsXG4gICAgICAgICAgICBjaTogMFxuICAgICAgICB9KSxcbiAgICAgICAgUGxvdC5heGlzWSh7XG4gICAgICAgICAgICBsYWJlbDogbnVsbCxcbiAgICAgICAgfSksXG4gICAgXSxcbiAgICB4OiB7XG4gICAgICAgIGdyaWQ6IHRydWUsXG4gICAgICAgIHR5cGU6IFwidXRjXCIsXG4gICAgICAgIGRvbWFpbjogW2QzLm1pbihtZXRyaWNzRGF0YSwgZCA9PiBkLmRhdGUpLCBkMy5tYXgobWV0cmljc0RhdGEsIGQgPT4gZC5kYXRlKV0sXG4gICAgICAgIHRpY2tGb3JtYXQ6IFwiJVlcIiwgXG4gICAgICAgIHRpY2tzOiBbLi4ubmV3IFNldChtZXRyaWNzRGF0YS5tYXAoZCA9PiBkLmRhdGUuZ2V0RnVsbFllYXIoKSkpXS5tYXAoeWVhciA9PiBuZXcgRGF0ZShgJHt5ZWFyfS0wMS0wMWApKSxcbiAgICB9LFxuICAgIHk6IHsgZ3JpZDogdHJ1ZSB9LFxuICAgIHN0eWxlOiB7XG4gICAgICAgIGZvbnRTaXplOiAnMTZweCcsXG4gICAgfVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1ldHJpY3NHcm91cGVkVGFibGUgPSB7XG4gICAgcmV0dXJuIHRyYW5zcG9zZShtZXRyaWNzX3RhYmxlX2luKS5tYXAocm93ID0+ICh7XG4gICAgICAgIC4uLnJvdyxcbiAgICB9KSk7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJJbnB1dHMudGFibGUobWV0cmljc0dyb3VwZWRUYWJsZSwge1xuICAgIHdpZHRoOiB7XG4gICAgICAgIHBhY2thZ2U6IDEwMCxcbiAgICAgICAgdG90YWw6IDIwMCxcbiAgICAgICAgZGV2ZWxvcG1lbnQ6IDIwMCxcbiAgICAgICAgaXNzdWVzOiAyMDAsXG4gICAgICAgIHBvcHVsYXJpdHk6IDIwMCxcbiAgICAgICAgbWV0YTogMjAwLFxuICAgIH0sXG4gICAgZm9ybWF0OiB7XG4gICAgICAgIHBhY2thZ2U6IGQgPT4gcGtnZm10KGQpLFxuICAgICAgICBkZXZlbG9wbWVudDogc3BhcmtiYXIoZDMubWF4KG1ldHJpY3NHcm91cGVkVGFibGUsIGQgPT4gZC5kZXZlbG9wbWVudCkpLFxuICAgICAgICBpc3N1ZXM6IHNwYXJrYmFyKGQzLm1heChtZXRyaWNzR3JvdXBlZFRhYmxlLCBkID0+IGQuaXNzdWVzKSksXG4gICAgICAgIHBvcHVsYXJpdHk6IHNwYXJrYmFyKGQzLm1heChtZXRyaWNzR3JvdXBlZFRhYmxlLCBkID0+IGQucG9wdWxhcml0eSkpLFxuICAgICAgICBtZXRhOiBzcGFya2JhcihkMy5tYXgobWV0cmljc0dyb3VwZWRUYWJsZSwgZCA9PiBkLm1ldGEpKSxcbiAgICAgICAgdG90YWw6IHNwYXJrYmFyKGQzLm1heChtZXRyaWNzR3JvdXBlZFRhYmxlLCBkID0+IGQudG90YWwpKSxcbiAgICB9LFxuICAgIGhlYWRlcjoge1xuICAgICAgICBkZXZlbG9wbWVudDogdG9vbHRpcChcIkRldmVsb3BtZW50XCIsIFwiQ29kZSBkZXZlbG9wbWVudCBhbmQgbWFpbnRlbmFuY2UgbWV0cmljc1wiKSxcbiAgICAgICAgaXNzdWVzOiB0b29sdGlwKFwiSXNzdWVzXCIsIFwiR2l0SHViIGlzc3VlcyBhbmQgcHVsbCByZXF1ZXN0IGFjdGl2aXR5XCIpLFxuICAgICAgICBwb3B1bGFyaXR5OiB0b29sdGlwKFwiUG9wdWxhcml0eVwiLCBcIlByb2plY3QgcG9wdWxhcml0eSBvbiBDUkFOICh3aGVyZSBhcHBsaWNhYmxlKSBhbmQgR2l0SHViXCIpLFxuICAgICAgICBtZXRhOiB0b29sdGlwKFwiRGVwZW5kZW5jaWVzIGFuZCByZWxlYXNlc1wiLCBcIlwiKSxcbiAgICAgICAgdG90YWw6IHRvb2x0aXAoXCJPdmVyYWxsXCIsIFwiQXZlcmFnZSBhY3Jvc3MgYWxsIGZvdXIgY2F0ZWdvcmllcyBvZiBtZXRyaWNzLlwiKSxcbiAgICB9LFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJtYWludGVuYW5jZURhdGEgPSB7XG4gICAgcmV0dXJuIHRyYW5zcG9zZShtYWludGVuYW5jZV90c19pbikubWFwKHJvdyA9PiAoe1xuICAgICAgICAuLi5yb3csXG4gICAgICAgIGRhdGU6IG5ldyBEYXRlKHJvdy5kYXRlKVxuICAgIH0pKTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTEiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICAgIGNvbG9yOiB7XG4gICAgICAgIGxlZ2VuZDogdHJ1ZSxcbiAgICAgICAgbGFiZWw6IFwibmFtZVwiLFxuICAgICAgICBzd2F0Y2hIZWlnaHQ6IDQsXG4gICAgICAgIGRvbWFpbjogW1wiQ29tbS4gRW5nYWdlLlwiLCBcIkRldi4gUmVzcC5cIiwgXCJEZWZpY2l0XCJdLFxuICAgIH0sXG4gICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5saW5lWShtYWludGVuYW5jZURhdGEsIHtcbiAgICAgICAgICAgIHg6IFwiZGF0ZVwiLFxuICAgICAgICAgICAgeTogXCJ2YWx1ZVwiLFxuICAgICAgICAgICAgc3Ryb2tlOiBcIm5hbWVcIixcbiAgICAgICAgICAgIHN0cm9rZVdpZHRoOiAgMixcbiAgICAgICAgICAgIHN0cm9rZURhc2hhcnJheTogXCIyLDVcIixcbiAgICAgICAgfSksXG4gICAgICAgIFBsb3QubGluZWFyUmVncmVzc2lvblkobWFpbnRlbmFuY2VEYXRhLCB7XG4gICAgICAgICAgICB4OiBcImRhdGVcIixcbiAgICAgICAgICAgIHk6IFwidmFsdWVcIixcbiAgICAgICAgICAgIHN0cm9rZTogXCJuYW1lXCIsXG4gICAgICAgICAgICBzdHJva2VXaWR0aDogMixcbiAgICAgICAgICAgIGNpOiAwXG4gICAgICAgIH0pLFxuICAgICAgICBQbG90LmF4aXNZKHtcbiAgICAgICAgICAgIGxhYmVsOiBudWxsLFxuICAgICAgICB9KSxcbiAgICBdLFxuICAgIHg6IHtcbiAgICAgICAgZ3JpZDogdHJ1ZSxcbiAgICAgICAgdHlwZTogXCJ1dGNcIixcbiAgICAgICAgZG9tYWluOiBbZDMubWluKG1ldHJpY3NEYXRhLCBkID0+IGQuZGF0ZSksIGQzLm1heChtZXRyaWNzRGF0YSwgZCA9PiBkLmRhdGUpXSxcbiAgICAgICAgdGlja0Zvcm1hdDogXCIlWVwiLFxuICAgICAgICB0aWNrczogWy4uLm5ldyBTZXQobWV0cmljc0RhdGEubWFwKGQgPT4gZC5kYXRlLmdldEZ1bGxZZWFyKCkpKV0ubWFwKHllYXIgPT4gbmV3IERhdGUoYCR7eWVhcn0tMDEtMDFgKSksXG4gICAgfSxcbiAgICB5OiB7IGdyaWQ6IHRydWUgfSxcbiAgICBzdHlsZToge1xuICAgICAgICBmb250U2l6ZTogJzE2cHgnLFxuICAgIH1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoibWFpbnRlbmFuY2VSZXBvRGF0YSA9IHtcbiAgICByZXR1cm4gdHJhbnNwb3NlKG1haW50ZW5hbmNlX3JlcG9faW4pLm1hcChyb3cgPT4gKHtcbiAgICAgICAgLi4ucm93LFxuICAgIH0pKTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJJbnB1dHMudGFibGUobWFpbnRlbmFuY2VSZXBvRGF0YSwge1xuICAgIHdpZHRoOiB7XG4gICAgICAgIHBhY2thZ2U6IDEwMCxcbiAgICAgICAgY29tbV9lbmdhZ2U6IDIwMCxcbiAgICAgICAgZGV2X3Jlc3A6IDIwMCxcbiAgICAgICAgbWFpbnRlbmFuY2U6IDIwMCxcbiAgICB9LFxuICAgIGZvcm1hdDoge1xuICAgICAgICBwYWNrYWdlOiBkID0+IHBrZ2ZtdChkKSxcbiAgICAgICAgY29tbV9lbmdhZ2U6IHNwYXJrYmFyKGQzLm1heChtYWludGVuYW5jZVJlcG9EYXRhLCBkID0+IGQuY29tbV9lbmdhZ2UpKSxcbiAgICAgICAgZGV2X3Jlc3A6IHNwYXJrYmFyKGQzLm1heChtYWludGVuYW5jZVJlcG9EYXRhLCBkID0+IGQuZGV2X3Jlc3ApKSxcbiAgICAgICAgbWFpbnRlbmFuY2U6IHNwYXJrYmFyKGQzLm1heChtYWludGVuYW5jZVJlcG9EYXRhLCBkID0+IGQubWFpbnRlbmFuY2UpKSxcbiAgICB9LFxuICAgIGhlYWRlcjoge1xuICAgICAgICBjb21tX2VuZ2FnZTogdG9vbHRpcChcIkNvbW11bml0eSBFbmdhZ2VtZW50XCIsIFwiQ29tbXVuaXR5IEVuZ2FnZW1lbnQgbWV0cmljc1wiKSxcbiAgICAgICAgZGV2X3Jlc3A6IHRvb2x0aXAoXCJEZXZlbG9wZXIgUmVzcG9uc2l2bmVzc1wiLCBcIkRldmVsb3BlciBSZXNwb25zaXZlbmVzcyBtZXRyaWNzXCIpLFxuICAgICAgICBtYWludGVuYW5jZTogdG9vbHRpcChcbiAgICAgICAgICAgIFwiTWFpbnRlbmFuY2UgRGVmaWNpdFwiLFxuICAgICAgICAgICAgXCJDb21tdW5pdHkgRW5nYWdtZW50IG1pbnVzIERldmVsb3BlciBSZXNwb25zaXZlc3MgKHJlc2NhbGVkKVwiXG4gICAgICAgICksXG4gICAgfSxcbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE0IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZXh0cmFNZXRyaWNzVGFibGUgPSB7XG4gICAgcmV0dXJuIHRyYW5zcG9zZShkYXRhX2V4dHJhX21ldHJpY3NfaW4pLm1hcChyb3cgPT4gKHtcbiAgICAgICAgLi4ucm93LFxuICAgIH0pKTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJJbnB1dHMudGFibGUoZXh0cmFNZXRyaWNzVGFibGUsIHtcbiAgICB3aWR0aDoge1xuICAgICAgICByZXBvOiAxMDAsXG4gICAgICAgIGN0Yl9hYnNlbmNlOiAyMDAsXG4gICAgICAgIHJlc3BvbnNlOiAyMDAsXG4gICAgICAgIGxhYmVsczogMjAwLFxuICAgICAgICBidWdzOiAyMDAsXG4gICAgfSxcbiAgICBmb3JtYXQ6IHtcbiAgICAgICAgcmVwbzogZCA9PiBwa2dmbXQoZCksXG4gICAgICAgIGN0Yl9hYnNlbmNlOiBzcGFya2JhcihkMy5tYXgoZXh0cmFNZXRyaWNzVGFibGUsIGQgPT4gZC5jdGJfYWJzZW5jZSkpLFxuICAgICAgICByZXNwb25zZTogc3BhcmtiYXIoZDMubWF4KGV4dHJhTWV0cmljc1RhYmxlLCBkID0+IGQucmVzcG9uc2UpKSxcbiAgICAgICAgbGFiZWxzOiBzcGFya2JhcihkMy5tYXgoZXh0cmFNZXRyaWNzVGFibGUsIGQgPT4gZC5sYWJlbHMpKSxcbiAgICAgICAgYnVnczogc3BhcmtiYXIoZDMubWF4KGV4dHJhTWV0cmljc1RhYmxlLCBkID0+IGQuYnVncykpLFxuICAgIH0sXG4gICAgaGVhZGVyOiB7XG4gICAgICAgIGN0Yl9hYnNlbmNlOiB0b29sdGlwKFwiQ3RiLiBBYnNlbmNlXCIsIFwiQ29udHJpYnV0b3IgYWJzZW5jZSBmYWN0b3JcIiksXG4gICAgICAgIHJlc3BvbnNlOiB0b29sdGlwKFwiUmVzcC4gVGltZVwiLCBcIlRpbWUgdG8gcmVzcG9uZCB0byBHaXRIdWIgaXNzdWVzIGFuZCBwdWxsIHJlcXVlc3RzXCIpLFxuICAgICAgICBsYWJlbHM6IHRvb2x0aXAoXCJJc3N1ZSBMYWJlbHNcIiwgXCJQcm9wb3J0aW9uIG9mIGxhYmVsbGVkIGlzc3Vlc1wiKSxcbiAgICAgICAgYnVnczogdG9vbHRpcChcIlByb3AuIEJ1Z3NcIiwgXCJQcm9wb3J0aW9uIG9mIGlzc3VlcyBhbmQgUFJzIHdoaWNoIGFyZSBhYm91dCBidWdzLlwiKSxcbiAgICB9LFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90ID0gaW1wb3J0KFwiaHR0cHM6Ly9lc20uc2gvQG9ic2VydmFibGVocS9wbG90XCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE3IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiY3RiX2Fic19jdGIgPSB7XG4gICAgcmV0dXJuIHRyYW5zcG9zZShjdGJfYWJzX2N0Yl9pbikubWFwKHJvdyA9PiAoe1xuICAgICAgICAuLi5yb3csXG4gICAgfSkpO1xufVxuY3RiX2Fic19jdGJfbGVuID0gY3RiX2Fic19jdGIubGVuZ3RoO1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFRoZSAnY3RiZm10JyBmdW5jdGlvbiBzZXQgdGhlIGxvY2FsU3RvcmFnZSAnb3JnbWV0cmljc01haW50YWluZXInIHZhbHVlLCBidXRcbi8vIHRoZSBpbnB1dHMgaGVyZSBhcmUgZnVsbCBuYW1lcywgbm8gR2l0SHViIGhhbmRsZXMsIHNvIHVubGVzcyB0aGUgYXJlXG4vLyBpZGVudGljYWwsIHRoaXMgY3VycmVudGx5IGZhaWxzIGFuZCBuZWVkcyB0byBiZSBmaXhlZC5cbklucHV0cy50YWJsZShjdGJfYWJzX2N0Yiwge1xuICAgIHdpZHRoOiB7XG4gICAgICAgIG5hbWU6IDIwMCxcbiAgICAgICAgbG9naW46IDIwMCxcbiAgICAgICAgbWVhc3VyZTogMjAwLFxuICAgIH0sXG4gICAgZm9ybWF0OiB7XG4gICAgICAgIGxvZ2luOiBkID0+IGN0YmZtdChkKSxcbiAgICAgICAgbWVhc3VyZTogc3BhcmtiYXIoZDMubWF4KGN0Yl9hYnNfY3RiLCBkID0+IGQubWVhc3VyZSkpLFxuICAgIH0sXG4gICAgaGVhZGVyOiB7XG4gICAgICAgIG1lYXN1cmU6IHRvb2x0aXAoXCJDdGIuIEFic2VuY2VcIiwgXCJDb250cmlidXRvciBhYnNlbmNlIGZhY3RvclwiKSxcbiAgICB9LFxufSlcbiJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
