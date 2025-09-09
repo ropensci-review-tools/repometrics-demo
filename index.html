@@ -270,7 +270,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#repository-network" id="toc-repository-network" class="nav-link active" data-scroll-target="#repository-network">Repository Network</a></li>
+  <li><a href="#package-network" id="toc-package-network" class="nav-link active" data-scroll-target="#package-network">Package Network</a></li>
   <li><a href="#aggregate-metrics" id="toc-aggregate-metrics" class="nav-link" data-scroll-target="#aggregate-metrics">Aggregate metrics</a></li>
   <li><a href="#maintenance-deficit" id="toc-maintenance-deficit" class="nav-link" data-scroll-target="#maintenance-deficit">Maintenance deficit</a></li>
   <li><a href="#additional-metrics-and-indicators" id="toc-additional-metrics-and-indicators" class="nav-link" data-scroll-target="#additional-metrics-and-indicators">Additional metrics and indicators</a>
@@ -303,7 +303,7 @@ window.Quarto = {
 </header>
 
 
-<p>This dashboard presents metrics and models for each repository within the <a href="https://github.com/epiverse-trace"><code>epiverse-trace</code></a>, <a href="https://github.com/reconhub"><code>reconhub</code></a>, and <a href="https://github.com/reconverse"><code>reconverse</code></a> GitHub organizations, and some related packages from other sources. These organizations are linked under the <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-github " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> icon on the top right. The dashboard is intended to demonstrate the kinds of analyses and insights that are possible, and is expected to change and develop a lot. Please provide feedback by clicking on the <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-github " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> symbol and selecting “<em>Feedback</em>”.</p>
+<p>This dashboard presents metrics and models for each repository within the <a href="https://github.com/epiverse-trace"><code>epiverse-trace</code></a>, <a href="https://github.com/reconhub"><code>reconhub</code></a>, and <a href="https://github.com/reconverse"><code>reconverse</code></a> GitHub organizations, and some related repositories from other sources. These organizations are linked under the <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-github " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> icon on the top right. The dashboard is intended to demonstrate the kinds of analyses and insights that are possible, and is expected to change and develop a lot. Please provide feedback by clicking on the <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-github " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> symbol and selecting “<em>Feedback</em>”.</p>
 <div class="cell">
 <div class="cell-output-display">
 
@@ -322,17 +322,17 @@ window.Quarto = {
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-1-square " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z"></path>
 <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"></path></svg>
-32 from reconhub
+32 from <a style="color:white; text-decoration:underline;" href="https://github.com/reconhub">reconhub</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-2-square " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306Z"></path>
 <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"></path></svg>
-31 from epiverse-trace
+31 from <a style="color:white; text-decoration:underline;" href="https://github.com/epiverse-trace">epiverse-trace</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-3-square " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M7.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318Z"></path>
 <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"></path></svg>
-6 from reconverse
+6 from <a style="color:white; text-decoration:underline;" href="https://github.com/reconverse">reconverse</a>
 </p>
 </div>
 </div>
@@ -341,35 +341,35 @@ window.Quarto = {
 </div>
 </div>
 <div class="bslib-grid-item bslib-gap-spacing html-fill-container">
-<div class="card bslib-card bslib-mb-spacing html-fill-container bslib-value-box bg-yellow showcase-top-right" data-bslib-card-init="" data-require-bs-caller="card() value_box()" data-require-bs-version="5 5">
+<div class="card bslib-card bslib-mb-spacing html-fill-container bslib-value-box bg-gradient-yellow-orange showcase-top-right" data-bslib-card-init="" data-require-bs-caller="card() value_box()" data-require-bs-version="5 5">
 <div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto; padding:0;">
 <div class="value-box-grid html-fill-item" style="--bslib-grid-height:auto;--bslib-grid-height-mobile:auto;---bslib-value-box-showcase-w:40%;---bslib-value-box-showcase-w-fs:1fr;---bslib-value-box-showcase-max-h:75px;---bslib-value-box-showcase-max-h-fs:67%;">
 <div class="value-box-showcase html-fill-item html-fill-container"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-tools " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"></path></svg></div>
 <div class="value-box-area html-fill-item html-fill-container">
 <p class="value-box-title">Urgent mainetance required</p>
-<p class="value-box-value">5 packages</p>
+<p class="value-box-value">5 repositories</p>
 <div>
 <p>with high community engagement, yet low developer responsiveness:</p>
 <br>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'EpiEstim')">EpiEstim</a>
+<a href="./repometrics-demo/repo.html" style="color:white; text-decoration:underline;" onclick="localStorage.setItem('orgmetricsRepo',  'EpiEstim')">EpiEstim</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'epireview')">epireview</a>
+<a href="./repometrics-demo/repo.html" style="color:white; text-decoration:underline;" onclick="localStorage.setItem('orgmetricsRepo',  'epireview')">epireview</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'incidence')">incidence</a>
+<a href="./repometrics-demo/repo.html" style="color:white; text-decoration:underline;" onclick="localStorage.setItem('orgmetricsRepo',  'incidence')">incidence</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'sandpaper')">sandpaper</a>
+<a href="./repometrics-demo/repo.html" style="color:white; text-decoration:underline;" onclick="localStorage.setItem('orgmetricsRepo',  'sandpaper')">sandpaper</a>
 </p>
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-caret-right " style="height:1em;width:1em;fill:currentColor;vertical-align:-0.125em;" aria-hidden="true" role="img"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path></svg>
-<a href="./repometrics-demo/repo.html" onclick="localStorage.setItem('orgmetricsRepo', 'varnish')">varnish</a>
+<a href="./repometrics-demo/repo.html" style="color:white; text-decoration:underline;" onclick="localStorage.setItem('orgmetricsRepo',  'varnish')">varnish</a>
 </p>
 </div>
 </div>
@@ -436,23 +436,24 @@ between
 <ol type="1">
 <li>This main page which provides an organizational overview, and identifies maintenance priorities across all repositories.</li>
 <li>A <a href="./repo.html">repository maintenance</a> page providing additional detail on maintenance needs of any selected repository.</li>
-<li>A <a href="./contributor.html">contributor</a> page with details of individual maintainers and contributors, their packages and co-contributors.</li>
+<li>A <a href="./contributor.html">contributor</a> page with details of individual maintainers and contributors, their repositories and co-contributors.</li>
 <li>A <a href="./models.html"><em>Community Health</em></a> providing additional detail on scores for the various <a href="https://chaoss.community/kb-metrics-and-metrics-models/">CHAOSS (<em>Community Health Analytics in Open Source Software</em>) models and metrics</a> for each repository.</li>
 </ol>
-<section id="repository-network" class="level2">
-<h2 class="anchored" data-anchor-id="repository-network">Repository Network</h2>
+<p>This dashboard currently only considers repositories which are R packages, and thus every repository is also a package. Some aspects measured here, like the following dependency network, rely on structures specific to R packages, while other aspects are more related to the structure of repositories on GitHub. The terms “repository” and “package” may nevertheless be considered interchangeable.</p>
+<section id="package-network" class="level2">
+<h2 class="anchored" data-anchor-id="package-network">Package Network</h2>
 <p>This graph shows dependencies between all packages which use any other organization package. Nodes show individual packages, with circles for each package scaled by total numbers of dependent packages; that is, numbers of other packages which depend on that package. Edges connect dependent packages, with thicknesses scaled by total numbers of function calls by all dependent packages.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="323" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 322;"><span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>pkg_nodes <span class="op">=</span> {</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(nodes_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>pkg_edges <span class="op">=</span> {</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(edges_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="342" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 341;"><span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>pkg_nodes <span class="op">=</span> {</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(nodes_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>pkg_edges <span class="op">=</span> {</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(edges_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -470,73 +471,73 @@ between
 </div>
 <!--------- break -------->
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="339" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 338;"><span id="cb2-339"><a href="#cb2-339" aria-hidden="true" tabindex="-1"></a>strength <span class="op">=</span> <span class="op">-</span><span class="dv">400</span><span class="op">;</span></span>
-<span id="cb2-340"><a href="#cb2-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> {</span>
-<span id="cb2-342"><a href="#cb2-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> width <span class="op">=</span> <span class="dv">928</span><span class="op">;</span></span>
-<span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> height <span class="op">=</span> <span class="dv">600</span><span class="op">;</span></span>
-<span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> types <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(pkg_nodes<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">group</span>)))<span class="op">;</span></span>
-<span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> color <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(types<span class="op">,</span> d3<span class="op">.</span><span class="at">schemeCategory10</span>)<span class="op">;</span></span>
-<span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> simulation <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceSimulation</span>(pkg_nodes)</span>
-<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"link"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceLink</span>(pkg_edges)<span class="op">.</span><span class="fu">id</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span>))</span>
-<span id="cb2-352"><a href="#cb2-352" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"charge"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceManyBody</span>()<span class="op">.</span><span class="fu">strength</span>(strength))</span>
-<span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"x"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceX</span>())</span>
-<span id="cb2-354"><a href="#cb2-354" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"y"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceY</span>())<span class="op">;</span></span>
-<span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-356"><a href="#cb2-356" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">"svg"</span>)</span>
-<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"viewBox"</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
-<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"width"</span><span class="op">,</span> width)</span>
-<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"height"</span><span class="op">,</span> height)</span>
-<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"style"</span><span class="op">,</span> <span class="st">"max-width: 100%; height: auto; font: 14px sans-serif;"</span>)<span class="op">;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="358" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 357;"><span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a>strength <span class="op">=</span> <span class="op">-</span><span class="dv">400</span><span class="op">;</span></span>
+<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> {</span>
 <span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> link <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
-<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"none"</span>)</span>
-<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="fl">1.5</span>)</span>
-<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"path"</span>)</span>
-<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_edges)</span>
-<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"path"</span>)</span>
-<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"gray"</span>)</span>
-<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
-<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> node <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
-<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"g"</span>)</span>
-<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_nodes)</span>
-<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"g"</span>)</span>
-<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">call</span>(<span class="fu">drag</span>(simulation))<span class="op">;</span></span>
-<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>    node<span class="op">.</span><span class="fu">append</span>(<span class="st">"circle"</span>)</span>
-<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"white"</span>)</span>
-<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="fl">1.5</span>)</span>
-<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_nodes)</span>
-<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"circle"</span>)</span>
-<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">color</span>(d<span class="op">.</span><span class="at">group</span>))</span>
-<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">size</span>)<span class="op">;</span></span>
-<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a>    node<span class="op">.</span><span class="fu">append</span>(<span class="st">"text"</span>)</span>
-<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x"</span><span class="op">,</span> <span class="dv">8</span>)</span>
-<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y"</span><span class="op">,</span> <span class="st">"0.31em"</span>)</span>
-<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span>)</span>
-<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">html</span>(d <span class="kw">=&gt;</span></span>
-<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a>            <span class="vs">`&lt;a href="/repometrics-demo/repo.html"</span></span>
-<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a><span class="vs">                onclick="localStorage.setItem('orgmetricsRepo', '</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}</span><span class="vs">')"&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}</span><span class="vs">&lt;/a&gt;`</span>)</span>
-<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">clone</span>(<span class="kw">true</span>)<span class="op">.</span><span class="fu">lower</span>()</span>
-<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"none"</span>)</span>
-<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"white"</span>)</span>
-<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="dv">3</span>)<span class="op">;</span></span>
-<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a>    simulation<span class="op">.</span><span class="fu">on</span>(<span class="st">"tick"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb2-398"><a href="#cb2-398" aria-hidden="true" tabindex="-1"></a>        link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"d"</span><span class="op">,</span> linkArc)<span class="op">;</span></span>
-<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="vs">`translate(</span><span class="sc">${</span>d<span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">y</span><span class="sc">}</span><span class="vs">)`</span>)<span class="op">;</span></span>
-<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-402"><a href="#cb2-402" aria-hidden="true" tabindex="-1"></a>    invalidation<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> simulation<span class="op">.</span><span class="fu">stop</span>())<span class="op">;</span></span>
+<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> width <span class="op">=</span> <span class="dv">928</span><span class="op">;</span></span>
+<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> height <span class="op">=</span> <span class="dv">600</span><span class="op">;</span></span>
+<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> types <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(pkg_nodes<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">group</span>)))<span class="op">;</span></span>
+<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> color <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(types<span class="op">,</span> d3<span class="op">.</span><span class="at">schemeCategory10</span>)<span class="op">;</span></span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> simulation <span class="op">=</span> d3<span class="op">.</span><span class="fu">forceSimulation</span>(pkg_nodes)</span>
+<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"link"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceLink</span>(pkg_edges)<span class="op">.</span><span class="fu">id</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span>))</span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"charge"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceManyBody</span>()<span class="op">.</span><span class="fu">strength</span>(strength))</span>
+<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"x"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceX</span>())</span>
+<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">force</span>(<span class="st">"y"</span><span class="op">,</span> d3<span class="op">.</span><span class="fu">forceY</span>())<span class="op">;</span></span>
+<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">"svg"</span>)</span>
+<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"viewBox"</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
+<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"width"</span><span class="op">,</span> width)</span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"height"</span><span class="op">,</span> height)</span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"style"</span><span class="op">,</span> <span class="st">"max-width: 100%; height: auto; font: 14px sans-serif;"</span>)<span class="op">;</span></span>
+<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> link <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"none"</span>)</span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="fl">1.5</span>)</span>
+<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"path"</span>)</span>
+<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_edges)</span>
+<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"path"</span>)</span>
+<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"gray"</span>)</span>
+<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> node <span class="op">=</span> svg<span class="op">.</span><span class="fu">append</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_nodes)</span>
+<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"g"</span>)</span>
+<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">call</span>(<span class="fu">drag</span>(simulation))<span class="op">;</span></span>
+<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a>    node<span class="op">.</span><span class="fu">append</span>(<span class="st">"circle"</span>)</span>
+<span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"white"</span>)</span>
+<span id="cb2-398"><a href="#cb2-398" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="fl">1.5</span>)</span>
+<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">data</span>(pkg_nodes)</span>
+<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">join</span>(<span class="st">"circle"</span>)</span>
+<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">color</span>(d<span class="op">.</span><span class="at">group</span>))</span>
+<span id="cb2-402"><a href="#cb2-402" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"r"</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">size</span>)<span class="op">;</span></span>
 <span id="cb2-403"><a href="#cb2-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
-<span id="cb2-405"><a href="#cb2-405" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a>    node<span class="op">.</span><span class="fu">append</span>(<span class="st">"text"</span>)</span>
+<span id="cb2-405"><a href="#cb2-405" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"x"</span><span class="op">,</span> <span class="dv">8</span>)</span>
+<span id="cb2-406"><a href="#cb2-406" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">"y"</span><span class="op">,</span> <span class="st">"0.31em"</span>)</span>
+<span id="cb2-407"><a href="#cb2-407" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span>)</span>
+<span id="cb2-408"><a href="#cb2-408" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">html</span>(d <span class="kw">=&gt;</span></span>
+<span id="cb2-409"><a href="#cb2-409" aria-hidden="true" tabindex="-1"></a>            <span class="vs">`&lt;a href="/repometrics-demo/repo.html"</span></span>
+<span id="cb2-410"><a href="#cb2-410" aria-hidden="true" tabindex="-1"></a><span class="vs">                onclick="localStorage.setItem('orgmetricsRepo', '</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}</span><span class="vs">')"&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">id</span><span class="sc">}</span><span class="vs">&lt;/a&gt;`</span>)</span>
+<span id="cb2-411"><a href="#cb2-411" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">clone</span>(<span class="kw">true</span>)<span class="op">.</span><span class="fu">lower</span>()</span>
+<span id="cb2-412"><a href="#cb2-412" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"fill"</span><span class="op">,</span> <span class="st">"none"</span>)</span>
+<span id="cb2-413"><a href="#cb2-413" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke"</span><span class="op">,</span> <span class="st">"white"</span>)</span>
+<span id="cb2-414"><a href="#cb2-414" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">attr</span>(<span class="st">"stroke-width"</span><span class="op">,</span> <span class="dv">3</span>)<span class="op">;</span></span>
+<span id="cb2-415"><a href="#cb2-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-416"><a href="#cb2-416" aria-hidden="true" tabindex="-1"></a>    simulation<span class="op">.</span><span class="fu">on</span>(<span class="st">"tick"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb2-417"><a href="#cb2-417" aria-hidden="true" tabindex="-1"></a>        link<span class="op">.</span><span class="fu">attr</span>(<span class="st">"d"</span><span class="op">,</span> linkArc)<span class="op">;</span></span>
+<span id="cb2-418"><a href="#cb2-418" aria-hidden="true" tabindex="-1"></a>        node<span class="op">.</span><span class="fu">attr</span>(<span class="st">"transform"</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="vs">`translate(</span><span class="sc">${</span>d<span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">y</span><span class="sc">}</span><span class="vs">)`</span>)<span class="op">;</span></span>
+<span id="cb2-419"><a href="#cb2-419" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb2-420"><a href="#cb2-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-421"><a href="#cb2-421" aria-hidden="true" tabindex="-1"></a>    invalidation<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> simulation<span class="op">.</span><span class="fu">stop</span>())<span class="op">;</span></span>
+<span id="cb2-422"><a href="#cb2-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-423"><a href="#cb2-423" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
+<span id="cb2-424"><a href="#cb2-424" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -553,13 +554,13 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="408" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 407;"><span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">linkArc</span>(d) {</span>
-<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> r <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">hypot</span>(d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span> <span class="op">-</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span><span class="op">,</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span> <span class="op">-</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
-<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`</span></span>
-<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a><span class="vs">    M</span><span class="sc">${</span>d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span><span class="sc">}</span></span>
-<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a><span class="vs">    A</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs"> 0 0,1 </span><span class="sc">${</span>d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span><span class="sc">}</span></span>
-<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
-<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="427" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 426;"><span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">linkArc</span>(d) {</span>
+<span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> r <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">hypot</span>(d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span> <span class="op">-</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span><span class="op">,</span> d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span> <span class="op">-</span> d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span>)<span class="op">;</span></span>
+<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`</span></span>
+<span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a><span class="vs">    M</span><span class="sc">${</span>d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">source</span><span class="op">.</span><span class="at">y</span><span class="sc">}</span></span>
+<span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a><span class="vs">    A</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>r<span class="sc">}</span><span class="vs"> 0 0,1 </span><span class="sc">${</span>d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">x</span><span class="sc">}</span><span class="vs">,</span><span class="sc">${</span>d<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">y</span><span class="sc">}</span></span>
+<span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
+<span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -567,30 +568,30 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="418" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 417;"><span id="cb4-418"><a href="#cb4-418" aria-hidden="true" tabindex="-1"></a>drag <span class="op">=</span> simulation <span class="kw">=&gt;</span> {</span>
-<span id="cb4-419"><a href="#cb4-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-420"><a href="#cb4-420" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragstarted</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
-<span id="cb4-421"><a href="#cb4-421" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="fl">0.3</span>)<span class="op">.</span><span class="fu">restart</span>()<span class="op">;</span></span>
-<span id="cb4-422"><a href="#cb4-422" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> d<span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
-<span id="cb4-423"><a href="#cb4-423" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> d<span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
-<span id="cb4-424"><a href="#cb4-424" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-425"><a href="#cb4-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-426"><a href="#cb4-426" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragged</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
-<span id="cb4-427"><a href="#cb4-427" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
-<span id="cb4-428"><a href="#cb4-428" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
-<span id="cb4-429"><a href="#cb4-429" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-430"><a href="#cb4-430" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-431"><a href="#cb4-431" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragended</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
-<span id="cb4-432"><a href="#cb4-432" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="dv">0</span>)<span class="op">;</span></span>
-<span id="cb4-433"><a href="#cb4-433" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb4-434"><a href="#cb4-434" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb4-435"><a href="#cb4-435" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-436"><a href="#cb4-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-437"><a href="#cb4-437" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">drag</span>()</span>
-<span id="cb4-438"><a href="#cb4-438" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"start"</span><span class="op">,</span> dragstarted)</span>
-<span id="cb4-439"><a href="#cb4-439" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"drag"</span><span class="op">,</span> dragged)</span>
-<span id="cb4-440"><a href="#cb4-440" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"end"</span><span class="op">,</span> dragended)<span class="op">;</span></span>
-<span id="cb4-441"><a href="#cb4-441" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="437" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 436;"><span id="cb4-437"><a href="#cb4-437" aria-hidden="true" tabindex="-1"></a>drag <span class="op">=</span> simulation <span class="kw">=&gt;</span> {</span>
+<span id="cb4-438"><a href="#cb4-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-439"><a href="#cb4-439" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragstarted</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb4-440"><a href="#cb4-440" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="fl">0.3</span>)<span class="op">.</span><span class="fu">restart</span>()<span class="op">;</span></span>
+<span id="cb4-441"><a href="#cb4-441" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> d<span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb4-442"><a href="#cb4-442" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> d<span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb4-443"><a href="#cb4-443" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-444"><a href="#cb4-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-445"><a href="#cb4-445" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragged</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb4-446"><a href="#cb4-446" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">x</span><span class="op">;</span></span>
+<span id="cb4-447"><a href="#cb4-447" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb4-448"><a href="#cb4-448" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-449"><a href="#cb4-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-450"><a href="#cb4-450" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">dragended</span>(<span class="bu">event</span><span class="op">,</span> d) {</span>
+<span id="cb4-451"><a href="#cb4-451" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="op">!</span><span class="bu">event</span><span class="op">.</span><span class="at">active</span>) simulation<span class="op">.</span><span class="fu">alphaTarget</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb4-452"><a href="#cb4-452" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fx</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-453"><a href="#cb4-453" aria-hidden="true" tabindex="-1"></a>        d<span class="op">.</span><span class="at">fy</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-454"><a href="#cb4-454" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-455"><a href="#cb4-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-456"><a href="#cb4-456" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> d3<span class="op">.</span><span class="fu">drag</span>()</span>
+<span id="cb4-457"><a href="#cb4-457" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"start"</span><span class="op">,</span> dragstarted)</span>
+<span id="cb4-458"><a href="#cb4-458" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"drag"</span><span class="op">,</span> dragged)</span>
+<span id="cb4-459"><a href="#cb4-459" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">on</span>(<span class="st">"end"</span><span class="op">,</span> dragended)<span class="op">;</span></span>
+<span id="cb4-460"><a href="#cb4-460" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="declaration">
 
@@ -602,86 +603,86 @@ between
 ******** START UTILITY FUNCTIONS ********
 --->
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="454" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 453;"><span id="cb5-454"><a href="#cb5-454" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sparkbar</span>(max) {</span>
-<span id="cb5-455"><a href="#cb5-455" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> colourScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleSequential</span>(d3<span class="op">.</span><span class="at">interpolateCool</span>)</span>
-<span id="cb5-456"><a href="#cb5-456" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> max])<span class="op">;</span></span>
-<span id="cb5-457"><a href="#cb5-457" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-458"><a href="#cb5-458" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (x) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="</span></span>
-<span id="cb5-459"><a href="#cb5-459" aria-hidden="true" tabindex="-1"></a><span class="vs">    background: </span><span class="sc">${</span><span class="fu">colourScale</span>(x)<span class="sc">}</span><span class="vs">;</span></span>
-<span id="cb5-460"><a href="#cb5-460" aria-hidden="true" tabindex="-1"></a><span class="vs">    color: black;</span></span>
-<span id="cb5-461"><a href="#cb5-461" aria-hidden="true" tabindex="-1"></a><span class="vs">    width: </span><span class="sc">${</span><span class="dv">100</span> <span class="op">*</span> x <span class="op">/</span> max<span class="sc">}</span><span class="vs">%;</span></span>
-<span id="cb5-462"><a href="#cb5-462" aria-hidden="true" tabindex="-1"></a><span class="vs">    float: right;</span></span>
-<span id="cb5-463"><a href="#cb5-463" aria-hidden="true" tabindex="-1"></a><span class="vs">    padding-right: 3px;</span></span>
-<span id="cb5-464"><a href="#cb5-464" aria-hidden="true" tabindex="-1"></a><span class="vs">    box-sizing: border-box;</span></span>
-<span id="cb5-465"><a href="#cb5-465" aria-hidden="true" tabindex="-1"></a><span class="vs">    overflow: visible;</span></span>
-<span id="cb5-466"><a href="#cb5-466" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: flex;</span></span>
-<span id="cb5-467"><a href="#cb5-467" aria-hidden="true" tabindex="-1"></a><span class="vs">    justify-content: end;"&gt;</span><span class="sc">${</span>x<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"en-US"</span>)<span class="sc">}</span><span class="vs">`</span></span>
-<span id="cb5-468"><a href="#cb5-468" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-469"><a href="#cb5-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-470"><a href="#cb5-470" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">tooltip</span>(title<span class="op">,</span> expl) {</span>
-<span id="cb5-471"><a href="#cb5-471" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
-<span id="cb5-472"><a href="#cb5-472" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-473"><a href="#cb5-473" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> expl</span>
-<span id="cb5-474"><a href="#cb5-474" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-475"><a href="#cb5-475" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">"flex"</span><span class="op">;</span></span>
-<span id="cb5-476"><a href="#cb5-476" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">justifyContent</span> <span class="op">=</span> <span class="st">"flex-end"</span><span class="op">;</span></span>
-<span id="cb5-477"><a href="#cb5-477" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">backgroundColor</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
-<span id="cb5-478"><a href="#cb5-478" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">width</span> <span class="op">=</span> <span class="st">"100%"</span><span class="op">;</span></span>
-<span id="cb5-479"><a href="#cb5-479" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">"relative"</span><span class="op">;</span></span>
-<span id="cb5-480"><a href="#cb5-480" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-481"><a href="#cb5-481" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> textSpan <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"span"</span>)<span class="op">;</span></span>
-<span id="cb5-482"><a href="#cb5-482" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-483"><a href="#cb5-483" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> title<span class="op">;</span></span>
-<span id="cb5-484"><a href="#cb5-484" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">flex</span> <span class="op">=</span> <span class="st">"1"</span><span class="op">;</span></span>
-<span id="cb5-485"><a href="#cb5-485" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">textAlign</span> <span class="op">=</span> <span class="st">"right"</span><span class="op">;</span></span>
-<span id="cb5-486"><a href="#cb5-486" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">"static"</span><span class="op">;</span></span>
-<span id="cb5-487"><a href="#cb5-487" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">wordWrap</span> <span class="op">=</span> <span class="st">"break-word"</span><span class="op">;</span></span>
-<span id="cb5-488"><a href="#cb5-488" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">overflowWrap</span> <span class="op">=</span> <span class="st">"break-word"</span><span class="op">;</span></span>
-<span id="cb5-489"><a href="#cb5-489" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">whiteSpace</span> <span class="op">=</span> <span class="st">"normal"</span><span class="op">;</span></span>
-<span id="cb5-490"><a href="#cb5-490" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-491"><a href="#cb5-491" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">appendChild</span>(textSpan)<span class="op">;</span></span>
-<span id="cb5-492"><a href="#cb5-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-493"><a href="#cb5-493" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
-<span id="cb5-494"><a href="#cb5-494" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
-<span id="cb5-495"><a href="#cb5-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-496"><a href="#cb5-496" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
-<span id="cb5-497"><a href="#cb5-497" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-498"><a href="#cb5-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-499"><a href="#cb5-499" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">pkgfmt</span>(pkg) {</span>
-<span id="cb5-500"><a href="#cb5-500" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
-<span id="cb5-501"><a href="#cb5-501" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> <span class="st">"hover"</span></span>
-<span id="cb5-502"><a href="#cb5-502" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
-<span id="cb5-503"><a href="#cb5-503" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> pkg<span class="op">;</span></span>
-<span id="cb5-504"><a href="#cb5-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-505"><a href="#cb5-505" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
-<span id="cb5-506"><a href="#cb5-506" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
-<span id="cb5-507"><a href="#cb5-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-508"><a href="#cb5-508" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb5-509"><a href="#cb5-509" aria-hidden="true" tabindex="-1"></a>        localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">"orgmetricsRepo"</span><span class="op">,</span> pkg)<span class="op">;</span></span>
-<span id="cb5-510"><a href="#cb5-510" aria-hidden="true" tabindex="-1"></a>        th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span><span class="op">=</span><span class="st">"#a0f8ff"</span><span class="op">;</span></span>
-<span id="cb5-511"><a href="#cb5-511" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span><span class="op">=</span><span class="st">"/repometrics-demo/repo.html"</span><span class="op">;</span></span>
-<span id="cb5-512"><a href="#cb5-512" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb5-513"><a href="#cb5-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-514"><a href="#cb5-514" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
-<span id="cb5-515"><a href="#cb5-515" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-516"><a href="#cb5-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-517"><a href="#cb5-517" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">ctbfmt</span>(ctb) {</span>
-<span id="cb5-518"><a href="#cb5-518" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
-<span id="cb5-519"><a href="#cb5-519" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> <span class="st">"hover"</span></span>
-<span id="cb5-520"><a href="#cb5-520" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
-<span id="cb5-521"><a href="#cb5-521" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> ctb<span class="op">;</span></span>
-<span id="cb5-522"><a href="#cb5-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-523"><a href="#cb5-523" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
-<span id="cb5-524"><a href="#cb5-524" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
-<span id="cb5-525"><a href="#cb5-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-526"><a href="#cb5-526" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb5-527"><a href="#cb5-527" aria-hidden="true" tabindex="-1"></a>        localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">'orgmetricsMaintainer'</span><span class="op">,</span> ctb)<span class="op">;</span></span>
-<span id="cb5-528"><a href="#cb5-528" aria-hidden="true" tabindex="-1"></a>        th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span><span class="op">=</span><span class="st">"#a0f8ff"</span><span class="op">;</span></span>
-<span id="cb5-529"><a href="#cb5-529" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span><span class="op">=</span><span class="st">"/repometrics-demo/contributor.html"</span><span class="op">;</span></span>
-<span id="cb5-530"><a href="#cb5-530" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb5-531"><a href="#cb5-531" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-532"><a href="#cb5-532" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
-<span id="cb5-533"><a href="#cb5-533" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="473" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 472;"><span id="cb5-473"><a href="#cb5-473" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sparkbar</span>(max) {</span>
+<span id="cb5-474"><a href="#cb5-474" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> colourScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleSequential</span>(d3<span class="op">.</span><span class="at">interpolateCool</span>)</span>
+<span id="cb5-475"><a href="#cb5-475" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> max])<span class="op">;</span></span>
+<span id="cb5-476"><a href="#cb5-476" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-477"><a href="#cb5-477" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (x) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="</span></span>
+<span id="cb5-478"><a href="#cb5-478" aria-hidden="true" tabindex="-1"></a><span class="vs">    background: </span><span class="sc">${</span><span class="fu">colourScale</span>(x)<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb5-479"><a href="#cb5-479" aria-hidden="true" tabindex="-1"></a><span class="vs">    color: black;</span></span>
+<span id="cb5-480"><a href="#cb5-480" aria-hidden="true" tabindex="-1"></a><span class="vs">    width: </span><span class="sc">${</span><span class="dv">100</span> <span class="op">*</span> x <span class="op">/</span> max<span class="sc">}</span><span class="vs">%;</span></span>
+<span id="cb5-481"><a href="#cb5-481" aria-hidden="true" tabindex="-1"></a><span class="vs">    float: right;</span></span>
+<span id="cb5-482"><a href="#cb5-482" aria-hidden="true" tabindex="-1"></a><span class="vs">    padding-right: 3px;</span></span>
+<span id="cb5-483"><a href="#cb5-483" aria-hidden="true" tabindex="-1"></a><span class="vs">    box-sizing: border-box;</span></span>
+<span id="cb5-484"><a href="#cb5-484" aria-hidden="true" tabindex="-1"></a><span class="vs">    overflow: visible;</span></span>
+<span id="cb5-485"><a href="#cb5-485" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: flex;</span></span>
+<span id="cb5-486"><a href="#cb5-486" aria-hidden="true" tabindex="-1"></a><span class="vs">    justify-content: end;"&gt;</span><span class="sc">${</span>x<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"en-US"</span>)<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb5-487"><a href="#cb5-487" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-488"><a href="#cb5-488" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-489"><a href="#cb5-489" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">tooltip</span>(title<span class="op">,</span> expl) {</span>
+<span id="cb5-490"><a href="#cb5-490" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
+<span id="cb5-491"><a href="#cb5-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-492"><a href="#cb5-492" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> expl</span>
+<span id="cb5-493"><a href="#cb5-493" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-494"><a href="#cb5-494" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">"flex"</span><span class="op">;</span></span>
+<span id="cb5-495"><a href="#cb5-495" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">justifyContent</span> <span class="op">=</span> <span class="st">"flex-end"</span><span class="op">;</span></span>
+<span id="cb5-496"><a href="#cb5-496" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">backgroundColor</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-497"><a href="#cb5-497" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">width</span> <span class="op">=</span> <span class="st">"100%"</span><span class="op">;</span></span>
+<span id="cb5-498"><a href="#cb5-498" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">"relative"</span><span class="op">;</span></span>
+<span id="cb5-499"><a href="#cb5-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-500"><a href="#cb5-500" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> textSpan <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"span"</span>)<span class="op">;</span></span>
+<span id="cb5-501"><a href="#cb5-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-502"><a href="#cb5-502" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> title<span class="op">;</span></span>
+<span id="cb5-503"><a href="#cb5-503" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">flex</span> <span class="op">=</span> <span class="st">"1"</span><span class="op">;</span></span>
+<span id="cb5-504"><a href="#cb5-504" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">textAlign</span> <span class="op">=</span> <span class="st">"right"</span><span class="op">;</span></span>
+<span id="cb5-505"><a href="#cb5-505" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">position</span> <span class="op">=</span> <span class="st">"static"</span><span class="op">;</span></span>
+<span id="cb5-506"><a href="#cb5-506" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">wordWrap</span> <span class="op">=</span> <span class="st">"break-word"</span><span class="op">;</span></span>
+<span id="cb5-507"><a href="#cb5-507" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">overflowWrap</span> <span class="op">=</span> <span class="st">"break-word"</span><span class="op">;</span></span>
+<span id="cb5-508"><a href="#cb5-508" aria-hidden="true" tabindex="-1"></a>    textSpan<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">whiteSpace</span> <span class="op">=</span> <span class="st">"normal"</span><span class="op">;</span></span>
+<span id="cb5-509"><a href="#cb5-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-510"><a href="#cb5-510" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">appendChild</span>(textSpan)<span class="op">;</span></span>
+<span id="cb5-511"><a href="#cb5-511" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-512"><a href="#cb5-512" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-513"><a href="#cb5-513" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-514"><a href="#cb5-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-515"><a href="#cb5-515" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
+<span id="cb5-516"><a href="#cb5-516" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-517"><a href="#cb5-517" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-518"><a href="#cb5-518" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">pkgfmt</span>(pkg) {</span>
+<span id="cb5-519"><a href="#cb5-519" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
+<span id="cb5-520"><a href="#cb5-520" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> <span class="st">"hover"</span></span>
+<span id="cb5-521"><a href="#cb5-521" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-522"><a href="#cb5-522" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> pkg<span class="op">;</span></span>
+<span id="cb5-523"><a href="#cb5-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-524"><a href="#cb5-524" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-525"><a href="#cb5-525" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-526"><a href="#cb5-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-527"><a href="#cb5-527" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-528"><a href="#cb5-528" aria-hidden="true" tabindex="-1"></a>        localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">"orgmetricsRepo"</span><span class="op">,</span> pkg)<span class="op">;</span></span>
+<span id="cb5-529"><a href="#cb5-529" aria-hidden="true" tabindex="-1"></a>        th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span><span class="op">=</span><span class="st">"#a0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-530"><a href="#cb5-530" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span><span class="op">=</span><span class="st">"/repometrics-demo/repo.html"</span><span class="op">;</span></span>
+<span id="cb5-531"><a href="#cb5-531" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb5-532"><a href="#cb5-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-533"><a href="#cb5-533" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
+<span id="cb5-534"><a href="#cb5-534" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-535"><a href="#cb5-535" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-536"><a href="#cb5-536" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">ctbfmt</span>(ctb) {</span>
+<span id="cb5-537"><a href="#cb5-537" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> th <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"th"</span>)<span class="op">;</span></span>
+<span id="cb5-538"><a href="#cb5-538" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">title</span> <span class="op">=</span> <span class="st">"hover"</span></span>
+<span id="cb5-539"><a href="#cb5-539" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-540"><a href="#cb5-540" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> ctb<span class="op">;</span></span>
+<span id="cb5-541"><a href="#cb5-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-542"><a href="#cb5-542" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseover"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#d0e8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-543"><a href="#cb5-543" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"mouseout"</span><span class="op">,</span> () <span class="kw">=&gt;</span> th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> <span class="st">"#f0f8ff"</span>)<span class="op">;</span></span>
+<span id="cb5-544"><a href="#cb5-544" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-545"><a href="#cb5-545" aria-hidden="true" tabindex="-1"></a>    th<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"click"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-546"><a href="#cb5-546" aria-hidden="true" tabindex="-1"></a>        localStorage<span class="op">.</span><span class="fu">setItem</span>(<span class="st">'orgmetricsMaintainer'</span><span class="op">,</span> ctb)<span class="op">;</span></span>
+<span id="cb5-547"><a href="#cb5-547" aria-hidden="true" tabindex="-1"></a>        th<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span><span class="op">=</span><span class="st">"#a0f8ff"</span><span class="op">;</span></span>
+<span id="cb5-548"><a href="#cb5-548" aria-hidden="true" tabindex="-1"></a>        <span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span><span class="op">=</span><span class="st">"/repometrics-demo/contributor.html"</span><span class="op">;</span></span>
+<span id="cb5-549"><a href="#cb5-549" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb5-550"><a href="#cb5-550" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-551"><a href="#cb5-551" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> th<span class="op">;</span></span>
+<span id="cb5-552"><a href="#cb5-552" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-5-1" data-nodetype="declaration">
@@ -729,12 +730,12 @@ between
 ******** START PLOT OF AVERAGE METRICS OVER DATES ********
 --->
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="613" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 612;"><span id="cb6-613"><a href="#cb6-613" aria-hidden="true" tabindex="-1"></a>metricsData <span class="op">=</span> {</span>
-<span id="cb6-614"><a href="#cb6-614" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(metrics_dates_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb6-615"><a href="#cb6-615" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb6-616"><a href="#cb6-616" aria-hidden="true" tabindex="-1"></a>        <span class="dt">date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(row<span class="op">.</span><span class="at">date</span>)</span>
-<span id="cb6-617"><a href="#cb6-617" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb6-618"><a href="#cb6-618" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="632" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 631;"><span id="cb6-632"><a href="#cb6-632" aria-hidden="true" tabindex="-1"></a>metricsData <span class="op">=</span> {</span>
+<span id="cb6-633"><a href="#cb6-633" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(metrics_dates_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb6-634"><a href="#cb6-634" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb6-635"><a href="#cb6-635" aria-hidden="true" tabindex="-1"></a>        <span class="dt">date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(row<span class="op">.</span><span class="at">date</span>)</span>
+<span id="cb6-636"><a href="#cb6-636" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb6-637"><a href="#cb6-637" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="declaration">
 
@@ -742,44 +743,44 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="622" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 621;"><span id="cb7-622"><a href="#cb7-622" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb7-623"><a href="#cb7-623" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb7-624"><a href="#cb7-624" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb7-625"><a href="#cb7-625" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb7-626"><a href="#cb7-626" aria-hidden="true" tabindex="-1"></a>        <span class="dt">swatchHeight</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
-<span id="cb7-627"><a href="#cb7-627" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Development"</span><span class="op">,</span> <span class="st">"GitHub"</span><span class="op">,</span> <span class="st">"Popularity"</span><span class="op">,</span> <span class="st">"Dep.+Rel."</span><span class="op">,</span> <span class="st">"Overall"</span>]<span class="op">,</span></span>
-<span id="cb7-628"><a href="#cb7-628" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb7-629"><a href="#cb7-629" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb7-630"><a href="#cb7-630" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">lineY</span>(metricsData<span class="op">,</span> {</span>
-<span id="cb7-631"><a href="#cb7-631" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
-<span id="cb7-632"><a href="#cb7-632" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb7-633"><a href="#cb7-633" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb7-634"><a href="#cb7-634" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span>  <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb7-635"><a href="#cb7-635" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,5"</span><span class="op">,</span></span>
-<span id="cb7-636"><a href="#cb7-636" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb7-637"><a href="#cb7-637" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(metricsData<span class="op">,</span> {</span>
-<span id="cb7-638"><a href="#cb7-638" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
-<span id="cb7-639"><a href="#cb7-639" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb7-640"><a href="#cb7-640" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb7-641"><a href="#cb7-641" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb7-642"><a href="#cb7-642" aria-hidden="true" tabindex="-1"></a>            <span class="dt">ci</span><span class="op">:</span> <span class="dv">0</span></span>
-<span id="cb7-643"><a href="#cb7-643" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb7-644"><a href="#cb7-644" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">axisY</span>({</span>
-<span id="cb7-645"><a href="#cb7-645" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb7-646"><a href="#cb7-646" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb7-647"><a href="#cb7-647" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
-<span id="cb7-648"><a href="#cb7-648" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb7-649"><a href="#cb7-649" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb7-650"><a href="#cb7-650" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"utc"</span><span class="op">,</span></span>
-<span id="cb7-651"><a href="#cb7-651" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [d3<span class="op">.</span><span class="fu">min</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)<span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)]<span class="op">,</span></span>
-<span id="cb7-652"><a href="#cb7-652" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"%Y"</span><span class="op">,</span> </span>
-<span id="cb7-653"><a href="#cb7-653" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ticks</span><span class="op">:</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(metricsData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span><span class="op">.</span><span class="fu">getFullYear</span>()))]<span class="op">.</span><span class="fu">map</span>(year <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">-01-01`</span>))<span class="op">,</span></span>
-<span id="cb7-654"><a href="#cb7-654" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb7-655"><a href="#cb7-655" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb7-656"><a href="#cb7-656" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
-<span id="cb7-657"><a href="#cb7-657" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">'16px'</span><span class="op">,</span></span>
-<span id="cb7-658"><a href="#cb7-658" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb7-659"><a href="#cb7-659" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="641" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 640;"><span id="cb7-641"><a href="#cb7-641" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb7-642"><a href="#cb7-642" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb7-643"><a href="#cb7-643" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb7-644"><a href="#cb7-644" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb7-645"><a href="#cb7-645" aria-hidden="true" tabindex="-1"></a>        <span class="dt">swatchHeight</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb7-646"><a href="#cb7-646" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Development"</span><span class="op">,</span> <span class="st">"GitHub"</span><span class="op">,</span> <span class="st">"Popularity"</span><span class="op">,</span> <span class="st">"Dep.+Rel."</span><span class="op">,</span> <span class="st">"Overall"</span>]<span class="op">,</span></span>
+<span id="cb7-647"><a href="#cb7-647" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb7-648"><a href="#cb7-648" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb7-649"><a href="#cb7-649" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">lineY</span>(metricsData<span class="op">,</span> {</span>
+<span id="cb7-650"><a href="#cb7-650" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb7-651"><a href="#cb7-651" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb7-652"><a href="#cb7-652" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb7-653"><a href="#cb7-653" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span>  <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb7-654"><a href="#cb7-654" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,5"</span><span class="op">,</span></span>
+<span id="cb7-655"><a href="#cb7-655" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb7-656"><a href="#cb7-656" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(metricsData<span class="op">,</span> {</span>
+<span id="cb7-657"><a href="#cb7-657" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb7-658"><a href="#cb7-658" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb7-659"><a href="#cb7-659" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb7-660"><a href="#cb7-660" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb7-661"><a href="#cb7-661" aria-hidden="true" tabindex="-1"></a>            <span class="dt">ci</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb7-662"><a href="#cb7-662" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb7-663"><a href="#cb7-663" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">axisY</span>({</span>
+<span id="cb7-664"><a href="#cb7-664" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb7-665"><a href="#cb7-665" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb7-666"><a href="#cb7-666" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb7-667"><a href="#cb7-667" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb7-668"><a href="#cb7-668" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb7-669"><a href="#cb7-669" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"utc"</span><span class="op">,</span></span>
+<span id="cb7-670"><a href="#cb7-670" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [d3<span class="op">.</span><span class="fu">min</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)<span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)]<span class="op">,</span></span>
+<span id="cb7-671"><a href="#cb7-671" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"%Y"</span><span class="op">,</span> </span>
+<span id="cb7-672"><a href="#cb7-672" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ticks</span><span class="op">:</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(metricsData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span><span class="op">.</span><span class="fu">getFullYear</span>()))]<span class="op">.</span><span class="fu">map</span>(year <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">-01-01`</span>))<span class="op">,</span></span>
+<span id="cb7-673"><a href="#cb7-673" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb7-674"><a href="#cb7-674" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb7-675"><a href="#cb7-675" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb7-676"><a href="#cb7-676" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">'16px'</span><span class="op">,</span></span>
+<span id="cb7-677"><a href="#cb7-677" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-678"><a href="#cb7-678" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="expression">
 
@@ -794,11 +795,11 @@ between
 --->
 <p>The following table shows metrics for each package, for the latest time period only aggregated into each of the four groups. Clicking on the “package” values will lead to the repository maintenance page with further details of the selected package or repository.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="691" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 690;"><span id="cb8-691"><a href="#cb8-691" aria-hidden="true" tabindex="-1"></a>metricsGroupedTable <span class="op">=</span> {</span>
-<span id="cb8-692"><a href="#cb8-692" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(metrics_table_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb8-693"><a href="#cb8-693" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb8-694"><a href="#cb8-694" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb8-695"><a href="#cb8-695" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="710" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 709;"><span id="cb8-710"><a href="#cb8-710" aria-hidden="true" tabindex="-1"></a>metricsGroupedTable <span class="op">=</span> {</span>
+<span id="cb8-711"><a href="#cb8-711" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(metrics_table_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb8-712"><a href="#cb8-712" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb8-713"><a href="#cb8-713" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb8-714"><a href="#cb8-714" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="declaration">
 
@@ -806,31 +807,31 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="699" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 698;"><span id="cb9-699"><a href="#cb9-699" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(metricsGroupedTable<span class="op">,</span> {</span>
-<span id="cb9-700"><a href="#cb9-700" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb9-701"><a href="#cb9-701" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
-<span id="cb9-702"><a href="#cb9-702" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb9-703"><a href="#cb9-703" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb9-704"><a href="#cb9-704" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb9-705"><a href="#cb9-705" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb9-706"><a href="#cb9-706" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb9-707"><a href="#cb9-707" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb9-708"><a href="#cb9-708" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb9-709"><a href="#cb9-709" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
-<span id="cb9-710"><a href="#cb9-710" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">development</span>))<span class="op">,</span></span>
-<span id="cb9-711"><a href="#cb9-711" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">issues</span>))<span class="op">,</span></span>
-<span id="cb9-712"><a href="#cb9-712" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">popularity</span>))<span class="op">,</span></span>
-<span id="cb9-713"><a href="#cb9-713" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">meta</span>))<span class="op">,</span></span>
-<span id="cb9-714"><a href="#cb9-714" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">total</span>))<span class="op">,</span></span>
-<span id="cb9-715"><a href="#cb9-715" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb9-716"><a href="#cb9-716" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb9-717"><a href="#cb9-717" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Development"</span><span class="op">,</span> <span class="st">"Code development and maintenance metrics"</span>)<span class="op">,</span></span>
-<span id="cb9-718"><a href="#cb9-718" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Issues"</span><span class="op">,</span> <span class="st">"GitHub issues and pull request activity"</span>)<span class="op">,</span></span>
-<span id="cb9-719"><a href="#cb9-719" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Popularity"</span><span class="op">,</span> <span class="st">"Project popularity on CRAN (where applicable) and GitHub"</span>)<span class="op">,</span></span>
-<span id="cb9-720"><a href="#cb9-720" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Dependencies and releases"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">,</span></span>
-<span id="cb9-721"><a href="#cb9-721" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Overall"</span><span class="op">,</span> <span class="st">"Average across all four categories of metrics."</span>)<span class="op">,</span></span>
-<span id="cb9-722"><a href="#cb9-722" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb9-723"><a href="#cb9-723" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="718" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 717;"><span id="cb9-718"><a href="#cb9-718" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(metricsGroupedTable<span class="op">,</span> {</span>
+<span id="cb9-719"><a href="#cb9-719" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb9-720"><a href="#cb9-720" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb9-721"><a href="#cb9-721" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-722"><a href="#cb9-722" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-723"><a href="#cb9-723" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-724"><a href="#cb9-724" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-725"><a href="#cb9-725" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-726"><a href="#cb9-726" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb9-727"><a href="#cb9-727" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb9-728"><a href="#cb9-728" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
+<span id="cb9-729"><a href="#cb9-729" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">development</span>))<span class="op">,</span></span>
+<span id="cb9-730"><a href="#cb9-730" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">issues</span>))<span class="op">,</span></span>
+<span id="cb9-731"><a href="#cb9-731" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">popularity</span>))<span class="op">,</span></span>
+<span id="cb9-732"><a href="#cb9-732" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">meta</span>))<span class="op">,</span></span>
+<span id="cb9-733"><a href="#cb9-733" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(metricsGroupedTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">total</span>))<span class="op">,</span></span>
+<span id="cb9-734"><a href="#cb9-734" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb9-735"><a href="#cb9-735" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb9-736"><a href="#cb9-736" aria-hidden="true" tabindex="-1"></a>        <span class="dt">development</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Development"</span><span class="op">,</span> <span class="st">"Code development and maintenance metrics"</span>)<span class="op">,</span></span>
+<span id="cb9-737"><a href="#cb9-737" aria-hidden="true" tabindex="-1"></a>        <span class="dt">issues</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Issues"</span><span class="op">,</span> <span class="st">"GitHub issues and pull request activity"</span>)<span class="op">,</span></span>
+<span id="cb9-738"><a href="#cb9-738" aria-hidden="true" tabindex="-1"></a>        <span class="dt">popularity</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Popularity"</span><span class="op">,</span> <span class="st">"Project popularity on CRAN (where applicable) and GitHub"</span>)<span class="op">,</span></span>
+<span id="cb9-739"><a href="#cb9-739" aria-hidden="true" tabindex="-1"></a>        <span class="dt">meta</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Dependencies and releases"</span><span class="op">,</span> <span class="st">""</span>)<span class="op">,</span></span>
+<span id="cb9-740"><a href="#cb9-740" aria-hidden="true" tabindex="-1"></a>        <span class="dt">total</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Overall"</span><span class="op">,</span> <span class="st">"Average across all four categories of metrics."</span>)<span class="op">,</span></span>
+<span id="cb9-741"><a href="#cb9-741" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb9-742"><a href="#cb9-742" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="expression">
 
@@ -848,12 +849,12 @@ between
 <h2 class="anchored" data-anchor-id="maintenance-deficit">Maintenance deficit</h2>
 <p>This next graph shows the maintenance deficit over time, as the difference between community engagement and developer responsiveness. Repositories with high community engagement yet low developer responsiveness have a high maintenance deficit, and vice-versa. The “Deficit” scores are scaled to fix within the same range as the metrics of community engagement and developer responsiveness.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="763" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 762;"><span id="cb10-763"><a href="#cb10-763" aria-hidden="true" tabindex="-1"></a>maintenanceData <span class="op">=</span> {</span>
-<span id="cb10-764"><a href="#cb10-764" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(maintenance_ts_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb10-765"><a href="#cb10-765" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb10-766"><a href="#cb10-766" aria-hidden="true" tabindex="-1"></a>        <span class="dt">date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(row<span class="op">.</span><span class="at">date</span>)</span>
-<span id="cb10-767"><a href="#cb10-767" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb10-768"><a href="#cb10-768" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="782" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 781;"><span id="cb10-782"><a href="#cb10-782" aria-hidden="true" tabindex="-1"></a>maintenanceData <span class="op">=</span> {</span>
+<span id="cb10-783"><a href="#cb10-783" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(maintenance_ts_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb10-784"><a href="#cb10-784" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb10-785"><a href="#cb10-785" aria-hidden="true" tabindex="-1"></a>        <span class="dt">date</span><span class="op">:</span> <span class="kw">new</span> <span class="bu">Date</span>(row<span class="op">.</span><span class="at">date</span>)</span>
+<span id="cb10-786"><a href="#cb10-786" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb10-787"><a href="#cb10-787" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-10" data-nodetype="declaration">
 
@@ -861,44 +862,44 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb11" data-startfrom="772" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 771;"><span id="cb11-772"><a href="#cb11-772" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb11-773"><a href="#cb11-773" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb11-774"><a href="#cb11-774" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb11-775"><a href="#cb11-775" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb11-776"><a href="#cb11-776" aria-hidden="true" tabindex="-1"></a>        <span class="dt">swatchHeight</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
-<span id="cb11-777"><a href="#cb11-777" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Comm. Engage."</span><span class="op">,</span> <span class="st">"Dev. Resp."</span><span class="op">,</span> <span class="st">"Deficit"</span>]<span class="op">,</span></span>
-<span id="cb11-778"><a href="#cb11-778" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb11-779"><a href="#cb11-779" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb11-780"><a href="#cb11-780" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">lineY</span>(maintenanceData<span class="op">,</span> {</span>
-<span id="cb11-781"><a href="#cb11-781" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
-<span id="cb11-782"><a href="#cb11-782" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb11-783"><a href="#cb11-783" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb11-784"><a href="#cb11-784" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span>  <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb11-785"><a href="#cb11-785" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,5"</span><span class="op">,</span></span>
-<span id="cb11-786"><a href="#cb11-786" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb11-787"><a href="#cb11-787" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(maintenanceData<span class="op">,</span> {</span>
-<span id="cb11-788"><a href="#cb11-788" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
-<span id="cb11-789"><a href="#cb11-789" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
-<span id="cb11-790"><a href="#cb11-790" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
-<span id="cb11-791"><a href="#cb11-791" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb11-792"><a href="#cb11-792" aria-hidden="true" tabindex="-1"></a>            <span class="dt">ci</span><span class="op">:</span> <span class="dv">0</span></span>
-<span id="cb11-793"><a href="#cb11-793" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb11-794"><a href="#cb11-794" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">axisY</span>({</span>
-<span id="cb11-795"><a href="#cb11-795" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb11-796"><a href="#cb11-796" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
-<span id="cb11-797"><a href="#cb11-797" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
-<span id="cb11-798"><a href="#cb11-798" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb11-799"><a href="#cb11-799" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb11-800"><a href="#cb11-800" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"utc"</span><span class="op">,</span></span>
-<span id="cb11-801"><a href="#cb11-801" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [d3<span class="op">.</span><span class="fu">min</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)<span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)]<span class="op">,</span></span>
-<span id="cb11-802"><a href="#cb11-802" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"%Y"</span><span class="op">,</span></span>
-<span id="cb11-803"><a href="#cb11-803" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ticks</span><span class="op">:</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(metricsData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span><span class="op">.</span><span class="fu">getFullYear</span>()))]<span class="op">.</span><span class="fu">map</span>(year <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">-01-01`</span>))<span class="op">,</span></span>
-<span id="cb11-804"><a href="#cb11-804" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb11-805"><a href="#cb11-805" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb11-806"><a href="#cb11-806" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
-<span id="cb11-807"><a href="#cb11-807" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">'16px'</span><span class="op">,</span></span>
-<span id="cb11-808"><a href="#cb11-808" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb11-809"><a href="#cb11-809" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb11" data-startfrom="791" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 790;"><span id="cb11-791"><a href="#cb11-791" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb11-792"><a href="#cb11-792" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb11-793"><a href="#cb11-793" aria-hidden="true" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb11-794"><a href="#cb11-794" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-795"><a href="#cb11-795" aria-hidden="true" tabindex="-1"></a>        <span class="dt">swatchHeight</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb11-796"><a href="#cb11-796" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Comm. Engage."</span><span class="op">,</span> <span class="st">"Dev. Resp."</span><span class="op">,</span> <span class="st">"Deficit"</span>]<span class="op">,</span></span>
+<span id="cb11-797"><a href="#cb11-797" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb11-798"><a href="#cb11-798" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb11-799"><a href="#cb11-799" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">lineY</span>(maintenanceData<span class="op">,</span> {</span>
+<span id="cb11-800"><a href="#cb11-800" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb11-801"><a href="#cb11-801" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-802"><a href="#cb11-802" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-803"><a href="#cb11-803" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span>  <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb11-804"><a href="#cb11-804" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,5"</span><span class="op">,</span></span>
+<span id="cb11-805"><a href="#cb11-805" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb11-806"><a href="#cb11-806" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">linearRegressionY</span>(maintenanceData<span class="op">,</span> {</span>
+<span id="cb11-807"><a href="#cb11-807" aria-hidden="true" tabindex="-1"></a>            <span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span></span>
+<span id="cb11-808"><a href="#cb11-808" aria-hidden="true" tabindex="-1"></a>            <span class="dt">y</span><span class="op">:</span> <span class="st">"value"</span><span class="op">,</span></span>
+<span id="cb11-809"><a href="#cb11-809" aria-hidden="true" tabindex="-1"></a>            <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span></span>
+<span id="cb11-810"><a href="#cb11-810" aria-hidden="true" tabindex="-1"></a>            <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb11-811"><a href="#cb11-811" aria-hidden="true" tabindex="-1"></a>            <span class="dt">ci</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb11-812"><a href="#cb11-812" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb11-813"><a href="#cb11-813" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">axisY</span>({</span>
+<span id="cb11-814"><a href="#cb11-814" aria-hidden="true" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb11-815"><a href="#cb11-815" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb11-816"><a href="#cb11-816" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
+<span id="cb11-817"><a href="#cb11-817" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb11-818"><a href="#cb11-818" aria-hidden="true" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb11-819"><a href="#cb11-819" aria-hidden="true" tabindex="-1"></a>        <span class="dt">type</span><span class="op">:</span> <span class="st">"utc"</span><span class="op">,</span></span>
+<span id="cb11-820"><a href="#cb11-820" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [d3<span class="op">.</span><span class="fu">min</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)<span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(metricsData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span>)]<span class="op">,</span></span>
+<span id="cb11-821"><a href="#cb11-821" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"%Y"</span><span class="op">,</span></span>
+<span id="cb11-822"><a href="#cb11-822" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ticks</span><span class="op">:</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(metricsData<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">date</span><span class="op">.</span><span class="fu">getFullYear</span>()))]<span class="op">.</span><span class="fu">map</span>(year <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="bu">Date</span>(<span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">-01-01`</span>))<span class="op">,</span></span>
+<span id="cb11-823"><a href="#cb11-823" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb11-824"><a href="#cb11-824" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> { <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
+<span id="cb11-825"><a href="#cb11-825" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb11-826"><a href="#cb11-826" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">'16px'</span><span class="op">,</span></span>
+<span id="cb11-827"><a href="#cb11-827" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-828"><a href="#cb11-828" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-11" data-nodetype="expression">
 
@@ -907,11 +908,11 @@ between
 </div>
 <p>And these are maintenance deficit values for individual repositories (packages), for the latest time period only.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb12" data-startfrom="829" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 828;"><span id="cb12-829"><a href="#cb12-829" aria-hidden="true" tabindex="-1"></a>maintenanceRepoData <span class="op">=</span> {</span>
-<span id="cb12-830"><a href="#cb12-830" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(maintenance_repo_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb12-831"><a href="#cb12-831" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb12-832"><a href="#cb12-832" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb12-833"><a href="#cb12-833" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb12" data-startfrom="848" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 847;"><span id="cb12-848"><a href="#cb12-848" aria-hidden="true" tabindex="-1"></a>maintenanceRepoData <span class="op">=</span> {</span>
+<span id="cb12-849"><a href="#cb12-849" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(maintenance_repo_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb12-850"><a href="#cb12-850" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb12-851"><a href="#cb12-851" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb12-852"><a href="#cb12-852" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-12" data-nodetype="declaration">
 
@@ -919,28 +920,28 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb13" data-startfrom="837" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 836;"><span id="cb13-837"><a href="#cb13-837" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(maintenanceRepoData<span class="op">,</span> {</span>
-<span id="cb13-838"><a href="#cb13-838" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb13-839"><a href="#cb13-839" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
-<span id="cb13-840"><a href="#cb13-840" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb13-841"><a href="#cb13-841" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb13-842"><a href="#cb13-842" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb13-843"><a href="#cb13-843" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb13-844"><a href="#cb13-844" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb13-845"><a href="#cb13-845" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
-<span id="cb13-846"><a href="#cb13-846" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">comm_engage</span>))<span class="op">,</span></span>
-<span id="cb13-847"><a href="#cb13-847" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">dev_resp</span>))<span class="op">,</span></span>
-<span id="cb13-848"><a href="#cb13-848" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">maintenance</span>))<span class="op">,</span></span>
-<span id="cb13-849"><a href="#cb13-849" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb13-850"><a href="#cb13-850" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb13-851"><a href="#cb13-851" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Community Engagement"</span><span class="op">,</span> <span class="st">"Community Engagement metrics"</span>)<span class="op">,</span></span>
-<span id="cb13-852"><a href="#cb13-852" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Developer Responsivness"</span><span class="op">,</span> <span class="st">"Developer Responsiveness metrics"</span>)<span class="op">,</span></span>
-<span id="cb13-853"><a href="#cb13-853" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="fu">tooltip</span>(</span>
-<span id="cb13-854"><a href="#cb13-854" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Maintenance Deficit"</span><span class="op">,</span></span>
-<span id="cb13-855"><a href="#cb13-855" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Community Engagment minus Developer Responsivess (rescaled)"</span></span>
-<span id="cb13-856"><a href="#cb13-856" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
-<span id="cb13-857"><a href="#cb13-857" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb13-858"><a href="#cb13-858" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb13" data-startfrom="856" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 855;"><span id="cb13-856"><a href="#cb13-856" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(maintenanceRepoData<span class="op">,</span> {</span>
+<span id="cb13-857"><a href="#cb13-857" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb13-858"><a href="#cb13-858" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb13-859"><a href="#cb13-859" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb13-860"><a href="#cb13-860" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb13-861"><a href="#cb13-861" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb13-862"><a href="#cb13-862" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-863"><a href="#cb13-863" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb13-864"><a href="#cb13-864" aria-hidden="true" tabindex="-1"></a>        <span class="dt">package</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
+<span id="cb13-865"><a href="#cb13-865" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">comm_engage</span>))<span class="op">,</span></span>
+<span id="cb13-866"><a href="#cb13-866" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">dev_resp</span>))<span class="op">,</span></span>
+<span id="cb13-867"><a href="#cb13-867" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(maintenanceRepoData<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">maintenance</span>))<span class="op">,</span></span>
+<span id="cb13-868"><a href="#cb13-868" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-869"><a href="#cb13-869" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb13-870"><a href="#cb13-870" aria-hidden="true" tabindex="-1"></a>        <span class="dt">comm_engage</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Community Engagement"</span><span class="op">,</span> <span class="st">"Community Engagement metrics"</span>)<span class="op">,</span></span>
+<span id="cb13-871"><a href="#cb13-871" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dev_resp</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Developer Responsivness"</span><span class="op">,</span> <span class="st">"Developer Responsiveness metrics"</span>)<span class="op">,</span></span>
+<span id="cb13-872"><a href="#cb13-872" aria-hidden="true" tabindex="-1"></a>        <span class="dt">maintenance</span><span class="op">:</span> <span class="fu">tooltip</span>(</span>
+<span id="cb13-873"><a href="#cb13-873" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Maintenance Deficit"</span><span class="op">,</span></span>
+<span id="cb13-874"><a href="#cb13-874" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Community Engagment minus Developer Responsivess (rescaled)"</span></span>
+<span id="cb13-875"><a href="#cb13-875" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb13-876"><a href="#cb13-876" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb13-877"><a href="#cb13-877" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-13" data-nodetype="expression">
 
@@ -959,11 +960,11 @@ between
 <li><em>Prop. Bugs</em>: The proportion of new issues opened that were bug reports</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb14" data-startfrom="892" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 891;"><span id="cb14-892"><a href="#cb14-892" aria-hidden="true" tabindex="-1"></a>extraMetricsTable <span class="op">=</span> {</span>
-<span id="cb14-893"><a href="#cb14-893" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(data_extra_metrics_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb14-894"><a href="#cb14-894" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb14-895"><a href="#cb14-895" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb14-896"><a href="#cb14-896" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb14" data-startfrom="911" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 910;"><span id="cb14-911"><a href="#cb14-911" aria-hidden="true" tabindex="-1"></a>extraMetricsTable <span class="op">=</span> {</span>
+<span id="cb14-912"><a href="#cb14-912" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(data_extra_metrics_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb14-913"><a href="#cb14-913" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb14-914"><a href="#cb14-914" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb14-915"><a href="#cb14-915" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-14" data-nodetype="declaration">
 
@@ -971,28 +972,28 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb15" data-startfrom="900" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 899;"><span id="cb15-900"><a href="#cb15-900" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(extraMetricsTable<span class="op">,</span> {</span>
-<span id="cb15-901"><a href="#cb15-901" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb15-902"><a href="#cb15-902" aria-hidden="true" tabindex="-1"></a>        <span class="dt">repo</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
-<span id="cb15-903"><a href="#cb15-903" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb15-904"><a href="#cb15-904" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb15-905"><a href="#cb15-905" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb15-906"><a href="#cb15-906" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb15-907"><a href="#cb15-907" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb15-908"><a href="#cb15-908" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb15-909"><a href="#cb15-909" aria-hidden="true" tabindex="-1"></a>        <span class="dt">repo</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
-<span id="cb15-910"><a href="#cb15-910" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">ctb_absence</span>))<span class="op">,</span></span>
-<span id="cb15-911"><a href="#cb15-911" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">response</span>))<span class="op">,</span></span>
-<span id="cb15-912"><a href="#cb15-912" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">labels</span>))<span class="op">,</span></span>
-<span id="cb15-913"><a href="#cb15-913" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">bugs</span>))<span class="op">,</span></span>
-<span id="cb15-914"><a href="#cb15-914" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb15-915"><a href="#cb15-915" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb15-916"><a href="#cb15-916" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
-<span id="cb15-917"><a href="#cb15-917" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Resp. Time"</span><span class="op">,</span> <span class="st">"Time to respond to GitHub issues and pull requests"</span>)<span class="op">,</span></span>
-<span id="cb15-918"><a href="#cb15-918" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Issue Labels"</span><span class="op">,</span> <span class="st">"Proportion of labelled issues"</span>)<span class="op">,</span></span>
-<span id="cb15-919"><a href="#cb15-919" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Prop. Bugs"</span><span class="op">,</span> <span class="st">"Proportion of issues and PRs which are about bugs."</span>)<span class="op">,</span></span>
-<span id="cb15-920"><a href="#cb15-920" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb15-921"><a href="#cb15-921" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb15" data-startfrom="919" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 918;"><span id="cb15-919"><a href="#cb15-919" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(extraMetricsTable<span class="op">,</span> {</span>
+<span id="cb15-920"><a href="#cb15-920" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb15-921"><a href="#cb15-921" aria-hidden="true" tabindex="-1"></a>        <span class="dt">repo</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb15-922"><a href="#cb15-922" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-923"><a href="#cb15-923" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-924"><a href="#cb15-924" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-925"><a href="#cb15-925" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb15-926"><a href="#cb15-926" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb15-927"><a href="#cb15-927" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb15-928"><a href="#cb15-928" aria-hidden="true" tabindex="-1"></a>        <span class="dt">repo</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">pkgfmt</span>(d)<span class="op">,</span></span>
+<span id="cb15-929"><a href="#cb15-929" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">ctb_absence</span>))<span class="op">,</span></span>
+<span id="cb15-930"><a href="#cb15-930" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">response</span>))<span class="op">,</span></span>
+<span id="cb15-931"><a href="#cb15-931" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">labels</span>))<span class="op">,</span></span>
+<span id="cb15-932"><a href="#cb15-932" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(extraMetricsTable<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">bugs</span>))<span class="op">,</span></span>
+<span id="cb15-933"><a href="#cb15-933" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb15-934"><a href="#cb15-934" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb15-935"><a href="#cb15-935" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ctb_absence</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
+<span id="cb15-936"><a href="#cb15-936" aria-hidden="true" tabindex="-1"></a>        <span class="dt">response</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Resp. Time"</span><span class="op">,</span> <span class="st">"Time to respond to GitHub issues and pull requests"</span>)<span class="op">,</span></span>
+<span id="cb15-937"><a href="#cb15-937" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labels</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Issue Labels"</span><span class="op">,</span> <span class="st">"Proportion of labelled issues"</span>)<span class="op">,</span></span>
+<span id="cb15-938"><a href="#cb15-938" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bugs</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Prop. Bugs"</span><span class="op">,</span> <span class="st">"Proportion of issues and PRs which are about bugs."</span>)<span class="op">,</span></span>
+<span id="cb15-939"><a href="#cb15-939" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb15-940"><a href="#cb15-940" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-15" data-nodetype="expression">
 
@@ -1004,7 +1005,7 @@ between
 <h3 class="anchored" data-anchor-id="contributor-absence">Contributor Absence</h3>
 <p>Finally, this table shows a metric of main contributor absence. Values are only shown for main contributors who have been recently absent from repositories. A contributor who has been entirely absent during the most recent period, and was responsible for 100% of the commits from some number, <em>n</em>, repositories, would have a contributor absence score of <em>n</em>. The same contributor absence of <em>n</em> could also reflect somebody contributing exactly 50% of the code to 2<span class="math inline">\(\times\)</span><em>n</em> repositories, and being entirely absent during the recent period. Any contributions by that contributor during the recent period would reduce the absence factor. In general, high absence factors describe recently absent contributors who have previously been major contributors to numerous repositories.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb16" data-startfrom="984" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 983;"><span id="cb16-984"><a href="#cb16-984" aria-hidden="true" tabindex="-1"></a>Plot <span class="op">=</span> <span class="im">import</span>(<span class="st">"https://esm.sh/@observablehq/plot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb16" data-startfrom="1003" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1002;"><span id="cb16-1003"><a href="#cb16-1003" aria-hidden="true" tabindex="-1"></a>Plot <span class="op">=</span> <span class="im">import</span>(<span class="st">"https://esm.sh/@observablehq/plot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-16" data-nodetype="declaration">
 
@@ -1012,12 +1013,12 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb17" data-startfrom="989" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 988;"><span id="cb17-989"><a href="#cb17-989" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb <span class="op">=</span> {</span>
-<span id="cb17-990"><a href="#cb17-990" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_abs_ctb_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
-<span id="cb17-991"><a href="#cb17-991" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
-<span id="cb17-992"><a href="#cb17-992" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
-<span id="cb17-993"><a href="#cb17-993" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb17-994"><a href="#cb17-994" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb_len <span class="op">=</span> ctb_abs_ctb<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb17" data-startfrom="1008" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1007;"><span id="cb17-1008"><a href="#cb17-1008" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb <span class="op">=</span> {</span>
+<span id="cb17-1009"><a href="#cb17-1009" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">transpose</span>(ctb_abs_ctb_in)<span class="op">.</span><span class="fu">map</span>(row <span class="kw">=&gt;</span> ({</span>
+<span id="cb17-1010"><a href="#cb17-1010" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span>row<span class="op">,</span></span>
+<span id="cb17-1011"><a href="#cb17-1011" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb17-1012"><a href="#cb17-1012" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-1013"><a href="#cb17-1013" aria-hidden="true" tabindex="-1"></a>ctb_abs_ctb_len <span class="op">=</span> ctb_abs_ctb<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-17-1" data-nodetype="declaration">
@@ -1034,23 +1035,23 @@ between
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb18" data-startfrom="998" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 997;"><span id="cb18-998"><a href="#cb18-998" aria-hidden="true" tabindex="-1"></a><span class="co">// The 'ctbfmt' function set the localStorage 'orgmetricsMaintainer' value, but</span></span>
-<span id="cb18-999"><a href="#cb18-999" aria-hidden="true" tabindex="-1"></a><span class="co">// the inputs here are full names, no GitHub handles, so unless the are</span></span>
-<span id="cb18-1000"><a href="#cb18-1000" aria-hidden="true" tabindex="-1"></a><span class="co">// identical, this currently fails and needs to be fixed.</span></span>
-<span id="cb18-1001"><a href="#cb18-1001" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ctb_abs_ctb<span class="op">,</span> {</span>
-<span id="cb18-1002"><a href="#cb18-1002" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb18-1003"><a href="#cb18-1003" aria-hidden="true" tabindex="-1"></a>        <span class="dt">name</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb18-1004"><a href="#cb18-1004" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb18-1005"><a href="#cb18-1005" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb18-1006"><a href="#cb18-1006" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb18-1007"><a href="#cb18-1007" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb18-1008"><a href="#cb18-1008" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">ctbfmt</span>(d)<span class="op">,</span></span>
-<span id="cb18-1009"><a href="#cb18-1009" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(ctb_abs_ctb<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">measure</span>))<span class="op">,</span></span>
-<span id="cb18-1010"><a href="#cb18-1010" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb18-1011"><a href="#cb18-1011" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb18-1012"><a href="#cb18-1012" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
-<span id="cb18-1013"><a href="#cb18-1013" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb18-1014"><a href="#cb18-1014" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb18" data-startfrom="1017" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1016;"><span id="cb18-1017"><a href="#cb18-1017" aria-hidden="true" tabindex="-1"></a><span class="co">// The 'ctbfmt' function set the localStorage 'orgmetricsMaintainer' value, but</span></span>
+<span id="cb18-1018"><a href="#cb18-1018" aria-hidden="true" tabindex="-1"></a><span class="co">// the inputs here are full names, no GitHub handles, so unless the are</span></span>
+<span id="cb18-1019"><a href="#cb18-1019" aria-hidden="true" tabindex="-1"></a><span class="co">// identical, this currently fails and needs to be fixed.</span></span>
+<span id="cb18-1020"><a href="#cb18-1020" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ctb_abs_ctb<span class="op">,</span> {</span>
+<span id="cb18-1021"><a href="#cb18-1021" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb18-1022"><a href="#cb18-1022" aria-hidden="true" tabindex="-1"></a>        <span class="dt">name</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb18-1023"><a href="#cb18-1023" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb18-1024"><a href="#cb18-1024" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb18-1025"><a href="#cb18-1025" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-1026"><a href="#cb18-1026" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb18-1027"><a href="#cb18-1027" aria-hidden="true" tabindex="-1"></a>        <span class="dt">login</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="fu">ctbfmt</span>(d)<span class="op">,</span></span>
+<span id="cb18-1028"><a href="#cb18-1028" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(ctb_abs_ctb<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">measure</span>))<span class="op">,</span></span>
+<span id="cb18-1029"><a href="#cb18-1029" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-1030"><a href="#cb18-1030" aria-hidden="true" tabindex="-1"></a>    <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb18-1031"><a href="#cb18-1031" aria-hidden="true" tabindex="-1"></a>        <span class="dt">measure</span><span class="op">:</span> <span class="fu">tooltip</span>(<span class="st">"Ctb. Absence"</span><span class="op">,</span> <span class="st">"Contributor absence factor"</span>)<span class="op">,</span></span>
+<span id="cb18-1032"><a href="#cb18-1032" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb18-1033"><a href="#cb18-1033" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-18" data-nodetype="expression">
 
