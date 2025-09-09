@@ -804,6 +804,10 @@ around 0.5 with only a very few extreme values. The lower 10% of values may,
 for example, be all those below a value of 0.4. Clicking on the following
 button will toggle to display all values.
 
+The model names shown on the bars are hyperlinked; clicking on any will take
+you to the model definitions on the [CHAOSS Models
+pages](https://chaoss.community/kbtopic/all-metrics-models/).
+
 ```{ojs plot-latest}
 Plot = import("https://esm.sh/@observablehq/plot");
 ```
@@ -841,17 +845,30 @@ rm_metrics = rm_metrics_models['metrics'];
 metricsTextMap = rm_metrics.reduce((map, item) => {
     return map.set(String(item.name), item.airtable_name);
 }, new Map());
+metricsUrlMap = rm_metrics.reduce((map, item) => {
+    return map.set(String(item.name), item.url);
+}, new Map());
+modelsUrlMap = rm_model_text.reduce((map, item) => {
+    return map.set(String(item.name), item.url);
+}, new Map());
 ```
 
 ```{ojs}
-// ------ load metrics and models data from R input and replace variables with
-// ------ text from repometrics JSON file.
+// ------ load metrics and models data from R input, replace variables with
+// ------ text from repometrics JSON file, and all model URLs
 
 modelsAll = {
-    return transpose(models_in).map(row => ({
-        ...row,
-    }));
+    return transpose(models_in).map(row => {
+        const key = String(row.name);
+        const keyUrl = modelsUrlMap.has(key) ? modelsUrlMap.get(key) :
+            "https://chaoss.community/kbtopic/all-metrics-models/";
+        return {
+            ...row,
+            url: keyUrl
+        }
+    });
 }
+
 modelRepoVarnames = modelsAll.filter(function(mod) {
     return mod.package === repo && mod.name !== "final"
 })
@@ -868,7 +885,8 @@ metricsAll = metricsTranspose.map(item => {
     const key = String(item.name);
     return {
         ...item,
-        name: metricsTextMap.has(key) ? metricsTextMap.get(key) : item.name
+        name: metricsTextMap.has(key) ? metricsTextMap.get(key) : item.name,
+        url: metricsUrlMap.has(key) ? metricsUrlMap.get(key) : item.url
     }
 })
 ```
@@ -933,9 +951,10 @@ Plot.plot({
             })
         ),
         Plot.text(modelRepoFilt, {
-            x: (d) => d.value < 0 ? 0 : d.value,
-            y: "name",
-            text: "name",
+            x: d => d.value < 0 ? 0 : d.value,
+            y: d => d.name,
+            text: d => d.name,
+            href: d => d.url,
             textAnchor: "start",
             fontSize: 16,
             dx: 5
@@ -954,7 +973,8 @@ Plot.plot({
 This graph provides more detailed insight into the state of the selected
 repository, through showing values for individual [CHAOSS
 metrics](https://chaoss.community/kbtopic/all-metrics/) used to inform the
-aggregate models.
+aggregate models. As for models, the names of the metrics are hyperlinked to
+the CHAOSS definitions, many of which are for general collections of metrics.
 
 ```{ojs}
 metrics = outliersOnly === "true" ?
@@ -965,6 +985,7 @@ metrics = outliersOnly === "true" ?
 metricsRepo = metrics.filter(function(mod) {
     return mod.package === repo
 })
+
 metricsPlotHeight = metricsRepo.length * oneBarHeight + 100;
 ```
 
@@ -1003,8 +1024,9 @@ Plot.plot({
         ),
         Plot.text(metricsRepo, {
             x: (d) => d.value < 0 ? 0 : d.value,
-            y: "name",
-            text: "name",
+            y: d => d.name,
+            text: d => d.name,
+            href: d => d.url,
             textAnchor: "start",
             fontSize: 16,
             dx: 5

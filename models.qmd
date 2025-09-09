@@ -113,31 +113,44 @@ Plot.plot({
 The following section shows values for each individual model of community
 health for all repositories.
 
+```{ojs load-json-data}
+// -------- READ JS DATA
+json_data = FileAttachment("results-json-data.json").json();
+rm_metrics_models = json_data['rm_metrics_models'];
+rm_models = rm_metrics_models['models'];
+rm_model_text = rm_metrics_models['model_names'];
+modelsTextMap = rm_model_text.reduce((map, item) => {
+    return map.set(String(item.name), item.airtable_name);
+}, new Map());
+modelsUrlMap = rm_model_text.reduce((map, item) => {
+    return map.set(String(item.name), item.url);
+}, new Map());
+```
+
+
 ```{ojs comm-health-vars}
-commHealthVars = [
-    "collab_devel_index",
-    "comm_serv_support",
-    "comm_welcoming",
-    "community_activity",
-    "dev_responsiveness",
-    "oss_compliance",
-    "proj_awareness",
-    "proj_engagement",
-    "starter_health",
-    "viability_community",
-    "viability_gov",
-    "viability_starter",
-    "viability_strategy"
-]
+commHealthVars = Array.from(modelsTextMap.keys());
+commHealthText = commHealthVars.map(item => {
+    return modelsTextMap.has(item) ? modelsTextMap.get(item) : "";
+})
 viewof commHealthVar = Inputs.select(
-    commHealthVars,
-    { multiple: "false", label: "Community Health Variable" }
+    rm_model_text,
+    {
+        multiple: "false",
+        label: "Community Health Variable",
+        format: x => x.airtable_name,
+    }
 );
+
+htl.html`<div>
+Click this link for description of the <a href="${commHealthVar.url}" target="_blank">
+<i>${commHealthVar.airtable_name}</i></a> CHAOSS model.
+</div>`
 ```
 
 ```{ojs}
 models_filtered = models_all.filter(function(mod) {
-    return mod.name === commHealthVar
+    return mod.name === commHealthVar.name
 })
 ```
 
@@ -193,7 +206,9 @@ Plot.plot({
 ## Community health for individual repositories
 
 The following section shows all models of community health for a selected
-repository.
+repository. The names of the models are hyperlinked to the definitions within
+the specific pages of the [CHAOSS
+models](https://chaoss.community/kbtopic/all-metrics-models/).
 
 ```{ojs get-all-models}
 // Get array of unique repo names for input selector:
@@ -210,19 +225,33 @@ viewof repo = Inputs.select(
         label: htl.html`<b>Repository:</b>`
     }
 )
-localStorage.setItem("orgmetricsRepo", repo.toString());
+tmpval = localStorage.setItem("orgmetricsRepo", repo.toString());
 ```
 
 ```{ojs}
-model_repo = models_all.filter(function(mod) {
+models_with_url = models_all.map(item => {
+    const key = item.name;
+    const url = modelsUrlMap.has(key) ? modelsUrlMap.get(key) :
+        "https://chaoss.community/kbtopic/all-metrics-models/";
+    const fullname = modelsTextMap.has(key) ? modelsTextMap.get(key) : item.name
+    return {
+        ...item,
+        fullname: fullname,
+        url: url
+    }
+})
+model_repo = models_with_url.filter(function(mod) {
     return mod.package === repo && mod.name !== "final"
 })
 model_repo_len = model_repo.length
+bar_ht_mult = model_repo_len > 20 ? 20 : 40;
 ```
+
+
 
 ```{ojs plot-filtered-repo}
 Plot.plot({
-    height: 40 * model_repo_len,
+    height: bar_ht_mult * model_repo_len,
     marginLeft: 60,
     marginRight: 160,
     marginTop: 50,
@@ -236,26 +265,27 @@ Plot.plot({
     y: { grid: true },
     marks: [
         Plot.barX(model_repo, {
-            y: "name",
-            x: "value",
+            y: d => d.fullname,
+            x: d => d.value,
             sort: {y: "-x" },
-            fill: "value",
+            fill: d => d.value,
         }),
         Plot.barX(model_repo,
             Plot.pointer(
             {
-                y: "name",
-                x: "value",
+                y: d => d.fullname,
+                x: d => d.value,
                 sort: {y: "-x" },
                 stroke: "gray",
-                fill: "value",
+                fill: d => d.value,
                 strokeWidth: 2,
             })
         ),
         Plot.text(model_repo, {
-            x: (d) => d.value < 0 ? 0 : d.value,
-            y: "name",
-            text: "name",
+            x: d => d.value,
+            y: d => d.fullname,
+            text: d => d.fullname,
+            href: d => d.url,
             textAnchor: "start",
             fontSize: 16,
             dx: 5
