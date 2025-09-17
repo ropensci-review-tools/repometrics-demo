@@ -1102,7 +1102,7 @@ bslib::page_fillable (
                 tags$p (
                     bsicons::bs_icon ("caret-right"),
                     tags$a (
-                        href = "/repometrics-demo/repo.html",
+                        href = "/repo.html",
                         onclick = sprintf ("localStorage.setItem('orgmetricsRepo', '%s')", i$text),
                         i$text
                     )
@@ -1112,7 +1112,7 @@ bslib::page_fillable (
                     tags$p (
                         bsicons::bs_icon ("caret-right"),
                         tags$a (
-                            href = "/repometrics-demo/repo.html",
+                            href = "/repo.html",
                             onclick = sprintf ("localStorage.setItem('orgmetricsRepo', '%s')", i$text [j]),
                             i$text [j]
                         )
